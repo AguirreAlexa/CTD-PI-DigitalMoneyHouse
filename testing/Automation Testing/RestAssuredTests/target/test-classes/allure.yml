@@ -1,0 +1,10 @@
+allure:
+  results:
+    directory: target/allure-results
+  link:
+    issue:
+      pattern: http://localhost:8095
+    tms:
+      pattern: http://localhost:8095
+
+

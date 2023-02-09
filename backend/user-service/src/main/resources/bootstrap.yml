@@ -1,0 +1,58 @@
+server:
+  port: 9091
+
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://eureka-service:8761/eureka
+  instance:
+    preferIpAddress: true
+
+spring:
+  application:
+    name: user-service
+  main:
+    allow-circular-references: true
+  datasource:
+    url: jdbc:mysql://mysql:3306/dhmoney
+    username: grupo9
+    password: grupo9
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      dll-auto: update
+    show-sql: true
+    datasource:
+      url: jdbc:mysql://mysql:3306/dhmoney
+      username: grupo9
+      password: grupo9
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${d-h-m.keycloak.serverUrl}/realms/${d-h-m.keycloak.realm}
+          jwk-set-uri: ${d-h-m.keycloak.serverUrl}/realms/${d-h-m.keycloak.realm}/protocol/openid-connect/certs
+        client:
+          registration:
+            users-client:
+              provider: keycloak
+              client-id: ${d-h-m.keycloak.clientId}
+              client-secret: ${d-h-m.keycloak.clientSecret}
+              authorization-grant-type: client_credentials
+            provider:
+              users-client:
+                end-session-uri: ${d-h-m.keycloak.serverUrl}/realms/${d-h-m.keycloak.realm}/protocol/openid-connect/logout
+                issuer-uri: ${d-h-m.keycloak.serverUrl}/realms/${d-h-m.keycloak.realm}
+                jwk-set-uri: ${d-h-m.keycloak.serverUrl}/realms/${d-h-m.keycloak.realm}/protocol/openid-connect/certs
+
+
+d-h-m:
+  keycloak:
+    realm: dmh
+    clientId: users-client
+    clientSecret: teOj64LjSghDICHfjnAQf6AZDZ0IhrwI
+    serverUrl: http://keycloak:8080
+    tokenEndpoint: ${d-h-m.keycloak.serverUrl}/realms/${d-h-m.keycloak.realm}/protocol/openid-connect/token

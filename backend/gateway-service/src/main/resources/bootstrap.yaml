@@ -1,0 +1,80 @@
+server:
+  port: 9090
+
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://eureka-service:8761/eureka
+  instance:
+    preferIpAddress: true
+
+spring:
+  application:
+    name: gateway-service
+  main:
+    web-application-type: reactive
+    allow-bean-definition-overriding: true
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/user/logout,/user/update,/user/login,/user/register
+        - id: account-service
+          uri: lb://account-service/
+          predicates:
+            - Path=/account/**
+          filters:
+            - RemoveRequestHeader=Cookie
+        - id: card-service
+          uri: lb://card-service/
+          predicates:
+            - Path=/cards/**
+          filters:
+            - RemoveRequestHeader=Cookie
+        - id: transaction-service
+          uri: lb://transaction-service/
+          predicates:
+            - Path=/transaction/**
+          filters:
+            - RemoveRequestHeader=Cookie
+      default-filters:
+        - TokenRelay
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${d-h-m.keycloak.serverUrl}/realms/${d-h-m.keycloak.realm}
+      client:
+        registration:
+          users-client:
+            provider: keycloak
+            client-id: ${d-h-m.keycloak.clientId}
+            scope: openid
+            client-secret: ${d-h-m.keycloak.clientSecret}
+            authorization-grant-type: authorization_code
+            #redirect-uri: ${d-h-m.keycloak.serverUrl}/login/oauth2/code/${d-h-m.keycloak.clientId}
+        provider:
+          keycloak:
+            authorization-uri: ${d-h-m.keycloak.serverUrl}/realms/${d-h-m.keycloak.realm}/protocol/openid-connect/auth
+            userinfo-uri: ${d-h-m.keycloak.serverUrl}/realms/${d-h-m.keycloak.realm}/protocol/openid-connect/userinfo
+            user-name-attribute: preferred_username
+            token-uri: ${d-h-m.keycloak.serverUrl}/realms/${d-h-m.keycloak.realm}/protocol/openid-connect/token
+            end-session-uri: ${d-h-m.keycloak.serverUrl}/realms/${d-h-m.keycloak.realm}/protocol/openid-connect/logout
+            issuer-uri: ${d-h-m.keycloak.serverUrl}/realms/${d-h-m.keycloak.realm}
+            jwk-set-uri: ${d-h-m.keycloak.serverUrl}/realms/${d-h-m.keycloak.realm}/protocol/openid-connect/certs
+
+d-h-m:
+  keycloak:
+    realm: dmh
+    clientId: users-client
+    clientSecret: teOj64LjSghDICHfjnAQf6AZDZ0IhrwI
+    serverUrl: http://keycloak:8080
+    tokenEndpoint: ${d-h-m.keycloak.serverUrl}/realms/${d-h-m.keycloak.realm}/protocol/openid-connect/token

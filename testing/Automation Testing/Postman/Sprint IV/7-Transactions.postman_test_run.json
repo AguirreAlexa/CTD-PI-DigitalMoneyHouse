@@ -1,0 +1,2215 @@
+{
+	"id": "0e8d6a91-53e3-4917-8b52-e4f7d5f081a3",
+	"name": "7-Transactions",
+	"timestamp": "2022-12-13T00:27:00.661Z",
+	"collection_id": "16623392-20df2187-1c00-42b3-b146-cc1e26ea998b",
+	"folder_id": 0,
+	"environment_id": "16623392-f10a9206-ee8f-4872-8445-93e63769eec2",
+	"totalPass": 236,
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "e68605a2-db0f-463d-a367-4d365e3beeb9",
+			"name": "Crear una transaction",
+			"url": "http://localhost:9090/transaction",
+			"time": 3619,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate detail to be string": true,
+				"Validate type to be string": true,
+				"Validate accountOriginId to be a number": true,
+				"Validate accountDestinyId to be a number": true,
+				"Validate amount to be a number": true,
+				"Validate date to be a string": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate detail to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountOriginId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountDestinyId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate amount to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate date to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3619
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate detail to be string": true,
+					"Validate type to be string": true,
+					"Validate accountOriginId to be a number": true,
+					"Validate accountDestinyId to be a number": true,
+					"Validate amount to be a number": true,
+					"Validate date to be a string": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "3b29a698-4892-4019-937b-1fda4624b972",
+			"name": "Crear una transaction - token invalido",
+			"url": "http://localhost:9090/transaction",
+			"time": 6,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "eae389cb-62a8-48b3-8e9c-c127519f5c9d",
+			"name": "Crear una transaction - token vacio",
+			"url": "http://localhost:9090/transaction",
+			"time": 5,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "580887aa-bb9b-4d16-a52f-c97a1ee33109",
+			"name": "Crear una transaction sin account Origin",
+			"url": "http://localhost:9090/transaction",
+			"time": 44,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status 400": true,
+				"Validate message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status 400": true,
+					"Validate message": true
+				}
+			]
+		},
+		{
+			"id": "f014df0d-974f-4933-8b6b-d893c25271cc",
+			"name": "Crear una transaction account  origin null",
+			"url": "http://localhost:9090/transaction",
+			"time": 25,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status 400": true,
+				"Validate message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				25
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status 400": true,
+					"Validate message": true
+				}
+			]
+		},
+		{
+			"id": "6d0dedd1-b50f-40d2-b864-49e610501c62",
+			"name": "Crear una transaction account origin empty",
+			"url": "http://localhost:9090/transaction",
+			"time": 25,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status 400": true,
+				"Validate message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				25
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status 400": true,
+					"Validate message": true
+				}
+			]
+		},
+		{
+			"id": "0eae1f28-076b-46c6-b3f9-ef3b09bcaf2c",
+			"name": "Crear una transaction sin account Destiny",
+			"url": "http://localhost:9090/transaction",
+			"time": 68,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status 400": true,
+				"Validate message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				68
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status 400": true,
+					"Validate message": true
+				}
+			]
+		},
+		{
+			"id": "ce890c28-9690-41da-8253-ffe74060d4a0",
+			"name": "Crear una transaction account Destiny null",
+			"url": "http://localhost:9090/transaction",
+			"time": 70,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status 400": true,
+				"Validate message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				70
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status 400": true,
+					"Validate message": true
+				}
+			]
+		},
+		{
+			"id": "2fb62e70-ceed-41ca-9f66-e7cfae6630df",
+			"name": "Crear una transaction account Destiny empty",
+			"url": "http://localhost:9090/transaction",
+			"time": 94,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status 400": true,
+				"Validate message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				94
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status 400": true,
+					"Validate message": true
+				}
+			]
+		},
+		{
+			"id": "2aa8ed98-8adb-4530-9a4b-3d93bef89ebc",
+			"name": "Crear una transaction sin amount",
+			"url": "http://localhost:9090/transaction",
+			"time": 111,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status 400": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				111
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status 400": true
+				}
+			]
+		},
+		{
+			"id": "640d6096-dace-45e9-8d57-58e171eb4408",
+			"name": "Crear una transaction amount null",
+			"url": "http://localhost:9090/transaction",
+			"time": 105,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status 400": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				105
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status 400": true
+				}
+			]
+		},
+		{
+			"id": "833bfb11-06fc-4d97-8ea2-307cacf7d048",
+			"name": "Crear una transaction amount empty",
+			"url": "http://localhost:9090/transaction",
+			"time": 112,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status 400": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				112
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status 400": true
+				}
+			]
+		},
+		{
+			"id": "9d97b0aa-3ebf-43c0-b019-33b74c322fc0",
+			"name": "Crear una transaction sin date",
+			"url": "http://localhost:9090/transaction",
+			"time": 150,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate detail to be string": true,
+				"Validate type to be string": true,
+				"Validate accountOriginId to be a number": true,
+				"Validate accountDestinyId to be a number": true,
+				"Validate amount to be a number": true,
+				"Validate date to be a string": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate detail to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountOriginId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountDestinyId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate amount to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate date to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				150
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate detail to be string": true,
+					"Validate type to be string": true,
+					"Validate accountOriginId to be a number": true,
+					"Validate accountDestinyId to be a number": true,
+					"Validate amount to be a number": true,
+					"Validate date to be a string": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "88bc3e6a-50a9-4872-8170-58c239713ce9",
+			"name": "Crear una transaction date null",
+			"url": "http://localhost:9090/transaction",
+			"time": 159,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate detail to be string": true,
+				"Validate type to be string": true,
+				"Validate accountOriginId to be a number": true,
+				"Validate accountDestinyId to be a number": true,
+				"Validate amount to be a number": true,
+				"Validate date to be a string": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate detail to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountOriginId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountDestinyId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate amount to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate date to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				159
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate detail to be string": true,
+					"Validate type to be string": true,
+					"Validate accountOriginId to be a number": true,
+					"Validate accountDestinyId to be a number": true,
+					"Validate amount to be a number": true,
+					"Validate date to be a string": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "db1a5af8-162c-4995-bf76-dea25ef8fb62",
+			"name": "Crear una transaction date empty",
+			"url": "http://localhost:9090/transaction",
+			"time": 169,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate detail to be string": true,
+				"Validate type to be string": true,
+				"Validate accountOriginId to be a number": true,
+				"Validate accountDestinyId to be a number": true,
+				"Validate amount to be a number": true,
+				"Validate date to be a string": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate detail to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountOriginId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountDestinyId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate amount to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate date to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				169
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate detail to be string": true,
+					"Validate type to be string": true,
+					"Validate accountOriginId to be a number": true,
+					"Validate accountDestinyId to be a number": true,
+					"Validate amount to be a number": true,
+					"Validate date to be a string": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "d56f901c-bf8a-471f-9e9d-a0e6044a2c5a",
+			"name": "Crear una transaction sin detail",
+			"url": "http://localhost:9090/transaction",
+			"time": 171,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate detail to be string": true,
+				"Validate type to be string": true,
+				"Validate accountOriginId to be a number": true,
+				"Validate accountDestinyId to be a number": true,
+				"Validate amount to be a number": true,
+				"Validate date to be a string": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate detail to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountOriginId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountDestinyId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate amount to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate date to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				171
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate detail to be string": true,
+					"Validate type to be string": true,
+					"Validate accountOriginId to be a number": true,
+					"Validate accountDestinyId to be a number": true,
+					"Validate amount to be a number": true,
+					"Validate date to be a string": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "d5c2b94a-87cd-4272-85e1-b1321c0de76a",
+			"name": "Crear una transaction detail null",
+			"url": "http://localhost:9090/transaction",
+			"time": 173,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate detail to be string": true,
+				"Validate type to be string": true,
+				"Validate accountOriginId to be a number": true,
+				"Validate accountDestinyId to be a number": true,
+				"Validate amount to be a number": true,
+				"Validate date to be a string": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate detail to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountOriginId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountDestinyId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate amount to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate date to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				173
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate detail to be string": true,
+					"Validate type to be string": true,
+					"Validate accountOriginId to be a number": true,
+					"Validate accountDestinyId to be a number": true,
+					"Validate amount to be a number": true,
+					"Validate date to be a string": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "563d07bd-a63b-4351-bca4-30350cccfc57",
+			"name": "Crear una transaction detail empty",
+			"url": "http://localhost:9090/transaction",
+			"time": 156,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate detail to be string": true,
+				"Validate type to be string": true,
+				"Validate accountOriginId to be a number": true,
+				"Validate accountDestinyId to be a number": true,
+				"Validate amount to be a number": true,
+				"Validate date to be a string": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate detail to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountOriginId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountDestinyId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate amount to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate date to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				156
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate detail to be string": true,
+					"Validate type to be string": true,
+					"Validate accountOriginId to be a number": true,
+					"Validate accountDestinyId to be a number": true,
+					"Validate amount to be a number": true,
+					"Validate date to be a string": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "8fc764c7-0071-4eec-bc8b-4e6384b850ad",
+			"name": "Crear una transaction sin type",
+			"url": "http://localhost:9090/transaction",
+			"time": 153,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate detail to be string": true,
+				"Validate type to be string": true,
+				"Validate accountOriginId to be a number": true,
+				"Validate accountDestinyId to be a number": true,
+				"Validate amount to be a number": true,
+				"Validate date to be a string": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate detail to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountOriginId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountDestinyId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate amount to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate date to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				153
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate detail to be string": true,
+					"Validate type to be string": true,
+					"Validate accountOriginId to be a number": true,
+					"Validate accountDestinyId to be a number": true,
+					"Validate amount to be a number": true,
+					"Validate date to be a string": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "db049c6e-3fc7-46fe-9116-9f0e6e7309a4",
+			"name": "Crear una transaction type null",
+			"url": "http://localhost:9090/transaction",
+			"time": 205,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate detail to be string": true,
+				"Validate type to be string": true,
+				"Validate accountOriginId to be a number": true,
+				"Validate accountDestinyId to be a number": true,
+				"Validate amount to be a number": true,
+				"Validate date to be a string": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate detail to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountOriginId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountDestinyId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate amount to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate date to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				205
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate detail to be string": true,
+					"Validate type to be string": true,
+					"Validate accountOriginId to be a number": true,
+					"Validate accountDestinyId to be a number": true,
+					"Validate amount to be a number": true,
+					"Validate date to be a string": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "15b740b4-fa23-410d-a637-3f26fe181534",
+			"name": "Crear una transaction type empty",
+			"url": "http://localhost:9090/transaction",
+			"time": 161,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate detail to be string": true,
+				"Validate type to be string": true,
+				"Validate accountOriginId to be a number": true,
+				"Validate accountDestinyId to be a number": true,
+				"Validate amount to be a number": true,
+				"Validate date to be a string": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate detail to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountOriginId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountDestinyId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate amount to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate date to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				161
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate detail to be string": true,
+					"Validate type to be string": true,
+					"Validate accountOriginId to be a number": true,
+					"Validate accountDestinyId to be a number": true,
+					"Validate amount to be a number": true,
+					"Validate date to be a string": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "dd8f881d-69bd-4185-ad63-e21b1d19b8d1",
+			"name": "Modificar una transaction",
+			"url": "http://localhost:9090/transaction/4",
+			"time": 170,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate detail to be string": true,
+				"Validate type to be string": true,
+				"Validate accountOriginId to be a number": true,
+				"Validate accountDestinyId to be a number": true,
+				"Validate amount to be a number": true,
+				"Validate date to be a string": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate detail to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountOriginId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountDestinyId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate amount to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate date to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				170
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate detail to be string": true,
+					"Validate type to be string": true,
+					"Validate accountOriginId to be a number": true,
+					"Validate accountDestinyId to be a number": true,
+					"Validate amount to be a number": true,
+					"Validate date to be a string": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "005a0102-d488-4d8b-8a4b-d51679a0f253",
+			"name": "Modificar una transaction - token invalido",
+			"url": "http://localhost:9090/transaction/4",
+			"time": 8,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "ad4a05e7-d7ac-4020-a27a-877e937b30dd",
+			"name": "Modificar una transaction - token vacio",
+			"url": "http://localhost:9090/transaction/4",
+			"time": 4,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "e99feffc-1a0a-4330-98f1-e00b8135084d",
+			"name": "Modificar una transaction - account origin",
+			"url": "http://localhost:9090/transaction/4",
+			"time": 26,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate detail to be string": true,
+				"Validate type to be string": true,
+				"Validate accountOriginId to be a number": true,
+				"Validate accountDestinyId to be a number": true,
+				"Validate amount to be a number": true,
+				"Validate date to be a string": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate detail to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountOriginId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountDestinyId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate amount to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate date to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				26
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate detail to be string": true,
+					"Validate type to be string": true,
+					"Validate accountOriginId to be a number": true,
+					"Validate accountDestinyId to be a number": true,
+					"Validate amount to be a number": true,
+					"Validate date to be a string": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "8beb053a-bf21-4045-986a-ea64d71a8954",
+			"name": "Get transactions por ID",
+			"url": "http://localhost:9090/transaction/4",
+			"time": 24,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate detail to be string": true,
+				"Validate type to be string": true,
+				"Validate accountOriginId to be a number": true,
+				"Validate accountDestinyId to be a number": true,
+				"Validate amount to be a number": true,
+				"Validate date to be a string": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate detail to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountOriginId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountDestinyId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate amount to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate date to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate detail to be string": true,
+					"Validate type to be string": true,
+					"Validate accountOriginId to be a number": true,
+					"Validate accountDestinyId to be a number": true,
+					"Validate amount to be a number": true,
+					"Validate date to be a string": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "d4d1bda0-e3f7-4f75-948e-752d71d9ac79",
+			"name": "Get transactions por ID -token invalido",
+			"url": "http://localhost:9090/transaction/4",
+			"time": 6,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "4cf2d0ec-8481-4137-a078-bebf813bd05f",
+			"name": "Eliminar una transacción por Id -token invalido",
+			"url": "http://localhost:9090/transaction/4",
+			"time": 4,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "be1e70d3-2bd5-4b42-b591-700524523520",
+			"name": "Eliminar una transacción por Id - empty token",
+			"url": "http://localhost:9090/transaction/4",
+			"time": 4,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "14d1f5b7-7fd8-47dd-88a2-73e6ad54c272",
+			"name": "Eliminar una transacción por Id - id invalido",
+			"url": "http://localhost:9090/transaction/9999",
+			"time": 92,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status 200": false
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				92
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status 200": false
+				}
+			]
+		},
+		{
+			"id": "e3c5845d-2e72-4b6b-b075-8dc7d4d69512",
+			"name": "Eliminar una transacción por Id",
+			"url": "http://localhost:9090/transaction/4",
+			"time": 41,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status 200": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				41
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 6160,
+	"collection": {
+		"requests": [
+			{
+				"id": "e68605a2-db0f-463d-a367-4d365e3beeb9",
+				"method": "POST"
+			},
+			{
+				"id": "3b29a698-4892-4019-937b-1fda4624b972",
+				"method": "POST"
+			},
+			{
+				"id": "eae389cb-62a8-48b3-8e9c-c127519f5c9d",
+				"method": "POST"
+			},
+			{
+				"id": "580887aa-bb9b-4d16-a52f-c97a1ee33109",
+				"method": "POST"
+			},
+			{
+				"id": "f014df0d-974f-4933-8b6b-d893c25271cc",
+				"method": "POST"
+			},
+			{
+				"id": "6d0dedd1-b50f-40d2-b864-49e610501c62",
+				"method": "POST"
+			},
+			{
+				"id": "0eae1f28-076b-46c6-b3f9-ef3b09bcaf2c",
+				"method": "POST"
+			},
+			{
+				"id": "ce890c28-9690-41da-8253-ffe74060d4a0",
+				"method": "POST"
+			},
+			{
+				"id": "2fb62e70-ceed-41ca-9f66-e7cfae6630df",
+				"method": "POST"
+			},
+			{
+				"id": "2aa8ed98-8adb-4530-9a4b-3d93bef89ebc",
+				"method": "POST"
+			},
+			{
+				"id": "640d6096-dace-45e9-8d57-58e171eb4408",
+				"method": "POST"
+			},
+			{
+				"id": "833bfb11-06fc-4d97-8ea2-307cacf7d048",
+				"method": "POST"
+			},
+			{
+				"id": "9d97b0aa-3ebf-43c0-b019-33b74c322fc0",
+				"method": "POST"
+			},
+			{
+				"id": "88bc3e6a-50a9-4872-8170-58c239713ce9",
+				"method": "POST"
+			},
+			{
+				"id": "db1a5af8-162c-4995-bf76-dea25ef8fb62",
+				"method": "POST"
+			},
+			{
+				"id": "d56f901c-bf8a-471f-9e9d-a0e6044a2c5a",
+				"method": "POST"
+			},
+			{
+				"id": "d5c2b94a-87cd-4272-85e1-b1321c0de76a",
+				"method": "POST"
+			},
+			{
+				"id": "563d07bd-a63b-4351-bca4-30350cccfc57",
+				"method": "POST"
+			},
+			{
+				"id": "8fc764c7-0071-4eec-bc8b-4e6384b850ad",
+				"method": "POST"
+			},
+			{
+				"id": "db049c6e-3fc7-46fe-9116-9f0e6e7309a4",
+				"method": "POST"
+			},
+			{
+				"id": "15b740b4-fa23-410d-a637-3f26fe181534",
+				"method": "POST"
+			},
+			{
+				"id": "dd8f881d-69bd-4185-ad63-e21b1d19b8d1",
+				"method": "PUT"
+			},
+			{
+				"id": "005a0102-d488-4d8b-8a4b-d51679a0f253",
+				"method": "PUT"
+			},
+			{
+				"id": "ad4a05e7-d7ac-4020-a27a-877e937b30dd",
+				"method": "PUT"
+			},
+			{
+				"id": "e99feffc-1a0a-4330-98f1-e00b8135084d",
+				"method": "PUT"
+			},
+			{
+				"id": "8beb053a-bf21-4045-986a-ea64d71a8954",
+				"method": "GET"
+			},
+			{
+				"id": "d4d1bda0-e3f7-4f75-948e-752d71d9ac79",
+				"method": "GET"
+			},
+			{
+				"id": "4cf2d0ec-8481-4137-a078-bebf813bd05f",
+				"method": "DELETE"
+			},
+			{
+				"id": "be1e70d3-2bd5-4b42-b591-700524523520",
+				"method": "DELETE"
+			},
+			{
+				"id": "14d1f5b7-7fd8-47dd-88a2-73e6ad54c272",
+				"method": "DELETE"
+			},
+			{
+				"id": "e3c5845d-2e72-4b6b-b075-8dc7d4d69512",
+				"method": "DELETE"
+			}
+		]
+	}
+}

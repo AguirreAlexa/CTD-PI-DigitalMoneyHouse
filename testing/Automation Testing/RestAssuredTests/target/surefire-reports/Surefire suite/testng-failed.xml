@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="1" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="Tests.DTransactionsTests.DTransactionsTests">
+        <methods>
+          <include name="deleteTransactionByIdStatusCode"/>
+          <include name="getTransferenceResponseNotNullValues"/>
+          <include name="createTransferenceNullDate"/>
+          <include name="postTransactionWithoutAccountDestinyIdValue"/>
+          <include name="postTransaction"/>
+          <include name="createTransferenceResponse"/>
+          <include name="createTransferenceNullOriginCard"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Tests.DTransactionsTests.DTransactionsTests -->
+      <class name="Tests.BCardsTests.DCardTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="postCardWithTypeNullValue"/>
+        </methods>
+      </class> <!-- Tests.BCardsTests.DCardTests -->
+      <class name="Tests.CAccountTests.EAccountTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="editEmptyAlias"/>
+          <include name="getTransactionByIdAndAccountId"/>
+          <include name="getTransactionByInvalidIdAndAccountId"/>
+        </methods>
+      </class> <!-- Tests.CAccountTests.EAccountTests -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

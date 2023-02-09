@@ -1,0 +1,2582 @@
+{
+	"info": {
+		"_postman_id": "20df2187-1c00-42b3-b146-cc1e26ea998b",
+		"name": "7-Transactions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16623392"
+	},
+	"item": [
+		{
+			"name": "Crear una transaction",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate detail to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].detail).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountOriginId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountOriginId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountDestinyId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountDestinyId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate amount to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].amount).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate date to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].date).to.be.a(\"String\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 2,\r\n    \"accountDestinyId\" : 4,\r\n    \"amount\":1,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction - token invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_fake}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 3,\r\n    \"accountDestinyId\" : 2,\r\n    \"amount\":1000.0,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction - token vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{empty_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 3,\r\n    \"accountDestinyId\" : 2,\r\n    \"amount\":1000.0,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction sin account Origin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"Status 400\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Validate message\", function(){\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No existe la cuenta de origen\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"accountDestinyId\" : 2,\r\n    \"amount\":1000.0,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction account  origin null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"Status 400\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Validate message\", function(){\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No existe la cuenta de origen\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": null,\r\n    \"accountDestinyId\" : 2,\r\n    \"amount\":1000.0,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction account origin empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"Status 400\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Validate message\", function(){\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No existe la cuenta de origen\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"accountOriginId\": \"\",\r\n    \"accountDestinyId\" : 2,\r\n    \"amount\":1000.0,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction sin account Destiny",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"Status 400\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Validate message\", function(){\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No existe la cuenta destino\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 3,\r\n    \r\n    \"amount\":1000.0,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction account Destiny null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"Status 400\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Validate message\", function(){\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No existe la cuenta destino\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 3,\r\n    \"accountDestinyId\":null,\r\n    \"amount\":1000.0,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction account Destiny empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"Status 400\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Validate message\", function(){\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No existe la cuenta destino\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 3,\r\n    \"accountDestinyId\": \"\",\r\n    \"amount\":1000.0,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction sin amount",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"Status 400\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 3,\r\n    \"accountDestinyId\" : 2,\r\n    \r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction amount null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"Status 400\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 3,\r\n    \"accountDestinyId\" : 2,\r\n    \"amount\": null,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction amount empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"Status 400\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 3,\r\n    \"accountDestinyId\" : 2,\r\n    \"amount\": \"\",\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction sin date",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate detail to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].detail).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountOriginId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountOriginId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountDestinyId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountDestinyId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate amount to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].amount).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate date to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].date).to.be.a(\"String\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 4,\r\n    \"accountDestinyId\" : 2,\r\n    \"amount\":1,\r\n   \r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction date null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate detail to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].detail).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountOriginId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountOriginId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountDestinyId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountDestinyId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate amount to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].amount).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate date to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].date).to.be.a(\"String\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 2,\r\n    \"accountDestinyId\" : 3,\r\n    \"amount\":1,\r\n   \"date\": null,\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction date empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate detail to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].detail).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountOriginId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountOriginId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountDestinyId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountDestinyId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate amount to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].amount).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate date to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].date).to.be.a(\"String\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 3,\r\n    \"accountDestinyId\" : 2,\r\n    \"amount\":1,\r\n   \"date\": \"\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction sin detail",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate detail to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].detail).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountOriginId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountOriginId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountDestinyId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountDestinyId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate amount to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].amount).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate date to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].date).to.be.a(\"String\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 2,\r\n    \"accountDestinyId\" : 3,\r\n    \"amount\":1,\r\n    \"date\" : \"2022-11-08\",\r\n   \r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction detail null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate detail to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].detail).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountOriginId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountOriginId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountDestinyId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountDestinyId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate amount to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].amount).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate date to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].date).to.be.a(\"String\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 3,\r\n    \"accountDestinyId\" : 2,\r\n    \"amount\":1,\r\n    \"date\" : \"2022-11-08\",\r\n   \"detail\": null,\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction detail empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate detail to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].detail).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountOriginId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountOriginId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountDestinyId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountDestinyId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate amount to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].amount).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate date to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].date).to.be.a(\"String\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 2,\r\n    \"accountDestinyId\" : 3,\r\n    \"amount\":1,\r\n    \"date\" : \"2022-11-08\",\r\n   \"detail\": \"\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction sin type",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate detail to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].detail).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountOriginId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountOriginId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountDestinyId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountDestinyId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate amount to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].amount).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate date to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].date).to.be.a(\"String\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 3,\r\n    \"accountDestinyId\" : 2,\r\n    \"amount\":1,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\"\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction type null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate detail to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].detail).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountOriginId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountOriginId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountDestinyId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountDestinyId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate amount to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].amount).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate date to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].date).to.be.a(\"String\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 2,\r\n    \"accountDestinyId\" : 3,\r\n    \"amount\":1,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una transaction type empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate detail to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].detail).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountOriginId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountOriginId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountDestinyId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountDestinyId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate amount to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].amount).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate date to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].date).to.be.a(\"String\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 3,\r\n    \"accountDestinyId\" : 2,\r\n    \"amount\":1,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una transaction",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate detail to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].detail).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountOriginId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountOriginId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountDestinyId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountDestinyId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate amount to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].amount).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate date to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].date).to.be.a(\"String\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 1,\r\n    \"accountDestinyId\" : 2,\r\n    \"amount\": 150000.0,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction/{{transaction_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction",
+						"{{transaction_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una transaction - token invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_fake}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 1,\r\n    \"accountDestinyId\" : 2,\r\n    \"amount\": 150.0,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction/{{transaction_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction",
+						"{{transaction_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una transaction - token vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{empty_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 1,\r\n    \"accountDestinyId\" : 2,\r\n    \"amount\": 150.0,\r\n    \"date\" : \"2022-11-08\",\r\n    \"detail\": \"Prestamo\",\r\n    \"type\" : \"debito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction/{{transaction_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction",
+						"{{transaction_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una transaction - account origin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate detail to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].detail).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountOriginId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountOriginId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountDestinyId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountDestinyId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate amount to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].amount).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate date to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].date).to.be.a(\"String\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountOriginId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/transaction/{{transaction_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction",
+						"{{transaction_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get transactions por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate detail to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].detail).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountOriginId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountOriginId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountDestinyId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountDestinyId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate amount to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].amount).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate date to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].date).to.be.a(\"String\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/transaction/{{transaction_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction",
+						"{{transaction_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get transactions por ID -token invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_fake}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/transaction/{{transaction_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction",
+						"{{transaction_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar una transacción por Id -token invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_fake}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/transaction/{{transaction_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction",
+						"{{transaction_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar una transacción por Id - empty token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{empty_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/transaction/{{transaction_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction",
+						"{{transaction_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar una transacción por Id - id invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/transaction/{{transaction_id_fake}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction",
+						"{{transaction_id_fake}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar una transacción por Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/transaction/{{transaction_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"transaction",
+						"{{transaction_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,34 @@
+<div>POST to http://localhost:9090/transaction</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+    {
+    &quot;accountOriginId&quot;: &quot;2&quot;,
+    &quot;accountDestinyId&quot;: &quot;120&quot;,
+    &quot;amount&quot;: &quot;150.0&quot;,
+    &quot;detail&quot;: &quot;Cuota&quot;,
+    &quot;type&quot;: &quot;Débito&quot;
+}
+    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjksImlhdCI6MTY3MDkzMzYyOSwianRpIjoiNjQ2OTZhYzctN2U2Zi00YjFhLWJmYmMtNWY3MGRmY2FiOTJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMjU1YWNjYjYtZGRhNi00NGZjLTk5MjItMDgyMDRmM2U0OGQyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI1NWFjY2I2LWRkYTYtNDRmYy05OTIyLTA4MjA0ZjNlNDhkMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.TC5BaaWvkZ_ZNNNcD4qszDkQzdu4ECkgeEbr8sMDiA30KSk5jEydN_9UAF64PgMSbuyyiaaElo4a4pPHsv2FCwX7IaOlu_fVkVrlGJTytXPR9ceG_FlozCQQwHN7LKgu_7NVvh8ZF9daLqlYguT_OT970QdQLr2c1p77Mw5a5u4Ai0ReOMM-zmgkrqsjv8C0xSQebsPtLPQxpyuclx-wKdQgfcjzi9MdeX8JL9n2KoVdupdcibn0SY04eh2yalh6_Bj-6jb1lMSqs-A0dZDAylwqBlZ7a4ZPm8ODHAJknx0ZcXEuCYB2RteaZVaEEWq7Jt4FlBZ3ConlWRXBpXx4ug</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:9090/transaction&#39; -H &#39;Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjksImlhdCI6MTY3MDkzMzYyOSwianRpIjoiNjQ2OTZhYzctN2U2Zi00YjFhLWJmYmMtNWY3MGRmY2FiOTJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMjU1YWNjYjYtZGRhNi00NGZjLTk5MjItMDgyMDRmM2U0OGQyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI1NWFjY2I2LWRkYTYtNDRmYy05OTIyLTA4MjA0ZjNlNDhkMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.TC5BaaWvkZ_ZNNNcD4qszDkQzdu4ECkgeEbr8sMDiA30KSk5jEydN_9UAF64PgMSbuyyiaaElo4a4pPHsv2FCwX7IaOlu_fVkVrlGJTytXPR9ceG_FlozCQQwHN7LKgu_7NVvh8ZF9daLqlYguT_OT970QdQLr2c1p77Mw5a5u4Ai0ReOMM-zmgkrqsjv8C0xSQebsPtLPQxpyuclx-wKdQgfcjzi9MdeX8JL9n2KoVdupdcibn0SY04eh2yalh6_Bj-6jb1lMSqs-A0dZDAylwqBlZ7a4ZPm8ODHAJknx0ZcXEuCYB2RteaZVaEEWq7Jt4FlBZ3ConlWRXBpXx4ug&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;accountOriginId&quot;: &quot;2&quot;,
+    &quot;accountDestinyId&quot;: &quot;120&quot;,
+    &quot;amount&quot;: &quot;150.0&quot;,
+    &quot;detail&quot;: &quot;Cuota&quot;,
+    &quot;type&quot;: &quot;Débito&quot;
+}&#39;
+</div>

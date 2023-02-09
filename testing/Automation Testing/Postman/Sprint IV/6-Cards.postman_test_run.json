@@ -1,0 +1,2520 @@
+{
+	"id": "e34c2aff-06a8-49bc-9820-8bab39b619cf",
+	"name": "6-Cards",
+	"timestamp": "2022-12-13T00:24:17.099Z",
+	"collection_id": "16623392-a0cf8f64-8ef5-445c-8874-f5ebd0c77d5e",
+	"folder_id": 0,
+	"environment_id": "16623392-f10a9206-ee8f-4872-8445-93e63769eec2",
+	"totalPass": 190,
+	"totalFail": 6,
+	"results": [
+		{
+			"id": "df3def5f-7a5b-431c-8789-4f3d55317483",
+			"name": "Agregar una tarjeta",
+			"url": "http://localhost:9090/cards",
+			"time": 1199,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate type to be string": true,
+				"Validate accountId to be a number": true,
+				"Validate response to be an object": true,
+				"Validate type to be a string": true,
+				"Validate cardNumber to be a string": true,
+				"Validate owner to be a string": true,
+				"Validate securityNumber to be a string": true,
+				"Validate expirationDate to be a string": true,
+				"Validate balance to be a number": true,
+				"Validate lastNumbers to be a string": true,
+				"Save cardId": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cardNumber to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate owner to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate securityNumber to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate expirationDate to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate balance to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastNumbers to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Save cardId": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1199
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate type to be string": true,
+					"Validate accountId to be a number": true,
+					"Validate response to be an object": true,
+					"Validate type to be a string": true,
+					"Validate cardNumber to be a string": true,
+					"Validate owner to be a string": true,
+					"Validate securityNumber to be a string": true,
+					"Validate expirationDate to be a string": true,
+					"Validate balance to be a number": true,
+					"Validate lastNumbers to be a string": true,
+					"Save cardId": true
+				}
+			]
+		},
+		{
+			"id": "67a14562-25a0-413c-9d3c-3212994f5de9",
+			"name": "Agregar una tarjeta - token invalido",
+			"url": "http://localhost:9090/cards",
+			"time": 8,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "2682ddf0-444a-4792-9281-c7daf70045bc",
+			"name": "Agregar una tarjeta - token vacio",
+			"url": "http://localhost:9090/cards",
+			"time": 5,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "3173a83e-8101-4ee6-ae8e-5c06684edbcf",
+			"name": "Agregar una tarjeta sin Account ID",
+			"url": "http://localhost:9090/cards",
+			"time": 174,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				174
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "51511f45-e232-414b-b97a-93d6ec0e9514",
+			"name": "Agregar una tarjeta con Account ID = null",
+			"url": "http://localhost:9090/cards",
+			"time": 46,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "49fa2dad-5b09-43c2-8633-6efaabc9dc6e",
+			"name": "Agregar una tarjeta sin Card Number",
+			"url": "http://localhost:9090/cards",
+			"time": 115,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				115
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "0c61b793-1f4f-46d8-aecd-a5b9f123e289",
+			"name": "Agregar una tarjeta - card number null",
+			"url": "http://localhost:9090/cards",
+			"time": 98,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				98
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "f7bc2c0b-4d88-439e-b377-7ec78dafeaad",
+			"name": "Agregar una tarjeta sin Type",
+			"url": "http://localhost:9090/cards",
+			"time": 80,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				80
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "d45d9b54-a011-4a8f-99d0-33eaa791ffbb",
+			"name": "Agregar una tarjeta con Type = null",
+			"url": "http://localhost:9090/cards",
+			"time": 99,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				99
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "26a3bc88-0ddb-4a77-8d27-46fea6fb42b9",
+			"name": "Agregar una tarjeta sin Onwer",
+			"url": "http://localhost:9090/cards",
+			"time": 104,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				104
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "1fad0e5f-32f7-40cb-91b2-4f71c291b5b3",
+			"name": "Agregar una tarjeta Owner null",
+			"url": "http://localhost:9090/cards",
+			"time": 100,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				100
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "cf71f1a5-4df4-4914-98ec-11916cfc5ffa",
+			"name": "Agregar una tarjeta sin Security Number",
+			"url": "http://localhost:9090/cards",
+			"time": 65,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				65
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "7cadde04-5874-4e57-8f03-feb97f22703d",
+			"name": "Agregar una tarjeta Security Number null",
+			"url": "http://localhost:9090/cards",
+			"time": 67,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				67
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "da74be90-682d-4698-a833-d6a6a5cf783e",
+			"name": "Agregar una tarjeta Balance null",
+			"url": "http://localhost:9090/cards",
+			"time": 66,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				66
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "dfa77e05-4ee4-45bd-8ea4-b65eff5ec8c2",
+			"name": "Agregar una tarjeta sin Balance",
+			"url": "http://localhost:9090/cards",
+			"time": 77,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": false
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				77
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": false
+				}
+			]
+		},
+		{
+			"id": "905db56e-0716-4d64-a494-fdb625a2d3fb",
+			"name": "Agregar una tarjeta sin Expiration Date",
+			"url": "http://localhost:9090/cards",
+			"time": 62,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": false
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				62
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": false
+				}
+			]
+		},
+		{
+			"id": "2c059c9f-ad5f-4868-bc98-2f77098152c3",
+			"name": "Agregar una tarjeta Expiration Date null",
+			"url": "http://localhost:9090/cards",
+			"time": 121,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": false
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				121
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": false
+				}
+			]
+		},
+		{
+			"id": "6b6a52d3-ac23-48d1-922f-d091c9296d87",
+			"name": "Agregar una tarjeta Expiration Date Antigua",
+			"url": "http://localhost:9090/cards",
+			"time": 83,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				83
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "867578f1-325c-497b-ad88-30c042fdf16d",
+			"name": "Agregar una tarjeta con todos los campos NULL",
+			"url": "http://localhost:9090/cards",
+			"time": 34,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": false
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				34
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": false
+				}
+			]
+		},
+		{
+			"id": "c4c9d28e-ae07-47a9-a5ae-f5990ece24ba",
+			"name": "Agregar una tarjeta con todos los campos vacíos",
+			"url": "http://localhost:9090/cards",
+			"time": 33,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": false
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				33
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": false
+				}
+			]
+		},
+		{
+			"id": "f5252b22-f42d-442d-89be-24ec93a4c04c",
+			"name": "Obtener todas las tarjetas",
+			"url": "http://localhost:9090/cards",
+			"time": 40,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate type to be string": true,
+				"Validate accountId to be a number": true,
+				"Validate response to be an object": true,
+				"Validate cardNumber to be a string": true,
+				"Validate owner to be a string": true,
+				"Validate securityNumber to be a string": true,
+				"Validate expirationDate to be a string": true,
+				"Validate balance to be a number": true,
+				"Validate lastNumbers to be a string": false
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cardNumber to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate owner to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate securityNumber to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate expirationDate to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate balance to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastNumbers to be a string": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				40
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate type to be string": true,
+					"Validate accountId to be a number": true,
+					"Validate response to be an object": true,
+					"Validate cardNumber to be a string": true,
+					"Validate owner to be a string": true,
+					"Validate securityNumber to be a string": true,
+					"Validate expirationDate to be a string": true,
+					"Validate balance to be a number": true,
+					"Validate lastNumbers to be a string": false
+				}
+			]
+		},
+		{
+			"id": "dac5e390-01a4-4082-ac28-bd79808fccc3",
+			"name": "Obtener todas las tarjetas - token invalido",
+			"url": "http://localhost:9090/cards",
+			"time": 6,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "8e581e2a-ecd4-473b-9643-6f51f3e2ec37",
+			"name": "Obtener todas las tarjetas - token vacio",
+			"url": "http://localhost:9090/cards",
+			"time": 5,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "6b730fec-3dde-46a2-a493-4e6c40600c5a",
+			"name": "Obtener tarjeta por Id_tarjeta",
+			"url": "http://localhost:9090/cards/1",
+			"time": 22,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate type to be string": true,
+				"Validate accountId to be a number": true,
+				"Validate response to be an object": true,
+				"Validate type to be a string": true,
+				"Validate cardNumber to be a string": true,
+				"Validate owner to be a string": true,
+				"Validate securityNumber to be a string": true,
+				"Validate expirationDate to be a string": true,
+				"Validate balance to be a number": true,
+				"Validate lastNumbers to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cardNumber to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate owner to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate securityNumber to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate expirationDate to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate balance to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastNumbers to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				22
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate type to be string": true,
+					"Validate accountId to be a number": true,
+					"Validate response to be an object": true,
+					"Validate type to be a string": true,
+					"Validate cardNumber to be a string": true,
+					"Validate owner to be a string": true,
+					"Validate securityNumber to be a string": true,
+					"Validate expirationDate to be a string": true,
+					"Validate balance to be a number": true,
+					"Validate lastNumbers to be a string": true
+				}
+			]
+		},
+		{
+			"id": "3c90afc7-f863-44db-9525-916ecdbbcf89",
+			"name": "Obtener tarjeta por Id_tarjeta - id incorrecto",
+			"url": "http://localhost:9090/cards/9999",
+			"time": 20,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 404": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 404": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "4383ef44-da4a-46cc-af19-d7cdfd54107e",
+			"name": "Obtener tarjeta por Id_tarjeta - id incorrecto - token invalido",
+			"url": "http://localhost:9090/cards/9999",
+			"time": 7,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "1c287932-a394-4394-9c0f-ae9fd8ed23eb",
+			"name": "Obtener una tarjeta por Id de Cuenta",
+			"url": "http://localhost:9090/account/cards?id=2",
+			"time": 83,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate type to be string": true,
+				"Validate accountId to be a number": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				83
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate type to be string": true,
+					"Validate accountId to be a number": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "3e106f90-f3f3-4294-bf20-fae8c6d3e230",
+			"name": "Obtener una tarjeta por Id de Cuenta - id incorrecto",
+			"url": "http://localhost:9090/account/cards?id=9999",
+			"time": 26,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 404": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				26
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 404": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "a26bac4f-a65b-47ab-b980-d3ec429dfebe",
+			"name": "Modificar una tarjeta",
+			"url": "http://localhost:9090/cards/6",
+			"time": 40,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate type to be string": true,
+				"Validate accountId to be a number": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				40
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate type to be string": true,
+					"Validate accountId to be a number": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "c39356bf-d739-4ef5-8e73-d182ca930b07",
+			"name": "Modificar una tarjeta - id incorrecto",
+			"url": "http://localhost:9090/cards/9999",
+			"time": 16,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 404": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 404": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "8a0cae3a-1631-4ffa-869c-6af220307992",
+			"name": "Modificar una tarjeta - token invalido",
+			"url": "http://localhost:9090/cards/6",
+			"time": 5,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "2a1c5433-6751-4c8e-990e-c01901e65019",
+			"name": "Modificar una tarjeta - token vacio",
+			"url": "http://localhost:9090/cards/6",
+			"time": 4,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "da044731-f399-48f7-a28b-4c80e0462ad1",
+			"name": "Modificar una tarjeta - Faltante campo accountId",
+			"url": "http://localhost:9090/cards/6",
+			"time": 20,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "3c46cf6f-4994-4c32-b871-7e72125b24e4",
+			"name": "Modificar una tarjeta - accountId null",
+			"url": "http://localhost:9090/cards/6",
+			"time": 23,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				23
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "7995044c-2160-40d3-b454-a3a92715e702",
+			"name": "Modificar una tarjeta - Faltante campo cardNumber",
+			"url": "http://localhost:9090/cards/6",
+			"time": 40,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				40
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "e81c2230-a2ac-4bb2-aa01-93ba3fab4997",
+			"name": "Modificar una tarjeta - cardNumber null",
+			"url": "http://localhost:9090/cards/6",
+			"time": 24,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "a33fa6f9-45cf-4ab1-9aaa-6ad5e7286cb7",
+			"name": "Modificar una tarjeta - Faltante campo owner",
+			"url": "http://localhost:9090/cards/6",
+			"time": 27,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				27
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "f9fe545e-3b92-47ff-94b9-dcfac8a4c5bd",
+			"name": "Modificar una tarjeta - campo owner null",
+			"url": "http://localhost:9090/cards/6",
+			"time": 27,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				27
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "9190ba92-7164-4f11-a3d8-995b2e9ec6a0",
+			"name": "Modificar una tarjeta - Faltante campo balance",
+			"url": "http://localhost:9090/cards/6",
+			"time": 29,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				29
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "587cb3f5-1133-4919-bbe0-baf9d57603ba",
+			"name": "Modificar una tarjeta - campo balance null",
+			"url": "http://localhost:9090/cards/6",
+			"time": 28,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 400": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				28
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 400": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "d6296869-a13d-458f-b958-92310bdf9f0d",
+			"name": "Modificar una tarjeta - Faltante campo tipo",
+			"url": "http://localhost:9090/cards/6",
+			"time": 24,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "24c6ddc4-6ad4-47b8-9e58-54aea6faa29b",
+			"name": "Modificar una tarjeta -tipo null",
+			"url": "http://localhost:9090/cards/6",
+			"time": 21,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				21
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "f35be4df-3777-491a-ae9c-c6e92cf11b85",
+			"name": "Modificar una tarjeta - Faltante campo security Number",
+			"url": "http://localhost:9090/cards/6",
+			"time": 41,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				41
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "0b20892f-f1e5-49c2-a450-62f36fec1c0e",
+			"name": "Modificar una tarjeta - security number null",
+			"url": "http://localhost:9090/cards/6",
+			"time": 30,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				30
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "190fbf36-a281-4a89-895a-36ff7237e46e",
+			"name": "Modificar una tarjeta - Faltante campo Expiration Date",
+			"url": "http://localhost:9090/cards/6",
+			"time": 31,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				31
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "b29d74b7-db93-4cdd-ba51-30f4afcab1fe",
+			"name": "Modificar una tarjeta - Expiration Date null",
+			"url": "http://localhost:9090/cards/6",
+			"time": 25,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				25
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "f6e416c1-2400-4832-85ee-0c99492c17dd",
+			"name": "Modificar una tarjeta - Faltante campo Last Numbers",
+			"url": "http://localhost:9090/cards/6",
+			"time": 28,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				28
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "1582868f-0a2f-4995-9c33-fbb125b2f8d7",
+			"name": "Modificar una tarjeta - Last Numbers null",
+			"url": "http://localhost:9090/cards/6",
+			"time": 27,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				27
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "7d850685-d573-4d7a-b1d8-16590d052479",
+			"name": "Modificar una tarjeta - Todos los campos empty",
+			"url": "http://localhost:9090/cards/6",
+			"time": 19,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "84256460-1806-4c07-a252-9a695bb58e4d",
+			"name": "Modificar una tarjeta - Todos los campos null",
+			"url": "http://localhost:9090/cards/6",
+			"time": 18,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "6756716f-a6d6-4cf1-b021-79a1dea031f9",
+			"name": "Eliminar tarjeta por Id de tarjeta",
+			"url": "http://localhost:9090/cards/6",
+			"time": 167,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				167
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code": true
+				}
+			]
+		},
+		{
+			"id": "d3754c28-d248-467c-8851-4239a737e1cd",
+			"name": "Eliminar tarjeta por Id de tarjeta - id incorrecto",
+			"url": "http://localhost:9090/cards/9999",
+			"time": 22,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				22
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code": true
+				}
+			]
+		},
+		{
+			"id": "046e7288-5ba7-430f-807d-2cdf5767788a",
+			"name": "Eliminar tarjeta por Id de tarjeta - token invalido",
+			"url": "http://localhost:9090/cards/6",
+			"time": 4,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code": true
+				}
+			]
+		},
+		{
+			"id": "496f437e-7761-48da-91b3-edc75e3ae081",
+			"name": "Eliminar tarjeta por Id de tarjeta - token vacio",
+			"url": "http://localhost:9090/cards/6",
+			"time": 4,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3589,
+	"collection": {
+		"requests": [
+			{
+				"id": "df3def5f-7a5b-431c-8789-4f3d55317483",
+				"method": "POST"
+			},
+			{
+				"id": "67a14562-25a0-413c-9d3c-3212994f5de9",
+				"method": "POST"
+			},
+			{
+				"id": "2682ddf0-444a-4792-9281-c7daf70045bc",
+				"method": "POST"
+			},
+			{
+				"id": "3173a83e-8101-4ee6-ae8e-5c06684edbcf",
+				"method": "POST"
+			},
+			{
+				"id": "51511f45-e232-414b-b97a-93d6ec0e9514",
+				"method": "POST"
+			},
+			{
+				"id": "49fa2dad-5b09-43c2-8633-6efaabc9dc6e",
+				"method": "POST"
+			},
+			{
+				"id": "0c61b793-1f4f-46d8-aecd-a5b9f123e289",
+				"method": "POST"
+			},
+			{
+				"id": "f7bc2c0b-4d88-439e-b377-7ec78dafeaad",
+				"method": "POST"
+			},
+			{
+				"id": "d45d9b54-a011-4a8f-99d0-33eaa791ffbb",
+				"method": "POST"
+			},
+			{
+				"id": "26a3bc88-0ddb-4a77-8d27-46fea6fb42b9",
+				"method": "POST"
+			},
+			{
+				"id": "1fad0e5f-32f7-40cb-91b2-4f71c291b5b3",
+				"method": "POST"
+			},
+			{
+				"id": "cf71f1a5-4df4-4914-98ec-11916cfc5ffa",
+				"method": "POST"
+			},
+			{
+				"id": "7cadde04-5874-4e57-8f03-feb97f22703d",
+				"method": "POST"
+			},
+			{
+				"id": "da74be90-682d-4698-a833-d6a6a5cf783e",
+				"method": "POST"
+			},
+			{
+				"id": "dfa77e05-4ee4-45bd-8ea4-b65eff5ec8c2",
+				"method": "POST"
+			},
+			{
+				"id": "905db56e-0716-4d64-a494-fdb625a2d3fb",
+				"method": "POST"
+			},
+			{
+				"id": "2c059c9f-ad5f-4868-bc98-2f77098152c3",
+				"method": "POST"
+			},
+			{
+				"id": "6b6a52d3-ac23-48d1-922f-d091c9296d87",
+				"method": "POST"
+			},
+			{
+				"id": "867578f1-325c-497b-ad88-30c042fdf16d",
+				"method": "POST"
+			},
+			{
+				"id": "c4c9d28e-ae07-47a9-a5ae-f5990ece24ba",
+				"method": "POST"
+			},
+			{
+				"id": "f5252b22-f42d-442d-89be-24ec93a4c04c",
+				"method": "GET"
+			},
+			{
+				"id": "dac5e390-01a4-4082-ac28-bd79808fccc3",
+				"method": "GET"
+			},
+			{
+				"id": "8e581e2a-ecd4-473b-9643-6f51f3e2ec37",
+				"method": "GET"
+			},
+			{
+				"id": "6b730fec-3dde-46a2-a493-4e6c40600c5a",
+				"method": "GET"
+			},
+			{
+				"id": "3c90afc7-f863-44db-9525-916ecdbbcf89",
+				"method": "GET"
+			},
+			{
+				"id": "4383ef44-da4a-46cc-af19-d7cdfd54107e",
+				"method": "GET"
+			},
+			{
+				"id": "1c287932-a394-4394-9c0f-ae9fd8ed23eb",
+				"method": "GET"
+			},
+			{
+				"id": "3e106f90-f3f3-4294-bf20-fae8c6d3e230",
+				"method": "GET"
+			},
+			{
+				"id": "a26bac4f-a65b-47ab-b980-d3ec429dfebe",
+				"method": "PUT"
+			},
+			{
+				"id": "c39356bf-d739-4ef5-8e73-d182ca930b07",
+				"method": "PUT"
+			},
+			{
+				"id": "8a0cae3a-1631-4ffa-869c-6af220307992",
+				"method": "PUT"
+			},
+			{
+				"id": "2a1c5433-6751-4c8e-990e-c01901e65019",
+				"method": "PUT"
+			},
+			{
+				"id": "da044731-f399-48f7-a28b-4c80e0462ad1",
+				"method": "PUT"
+			},
+			{
+				"id": "3c46cf6f-4994-4c32-b871-7e72125b24e4",
+				"method": "PUT"
+			},
+			{
+				"id": "7995044c-2160-40d3-b454-a3a92715e702",
+				"method": "PUT"
+			},
+			{
+				"id": "e81c2230-a2ac-4bb2-aa01-93ba3fab4997",
+				"method": "PUT"
+			},
+			{
+				"id": "a33fa6f9-45cf-4ab1-9aaa-6ad5e7286cb7",
+				"method": "PUT"
+			},
+			{
+				"id": "f9fe545e-3b92-47ff-94b9-dcfac8a4c5bd",
+				"method": "PUT"
+			},
+			{
+				"id": "9190ba92-7164-4f11-a3d8-995b2e9ec6a0",
+				"method": "PUT"
+			},
+			{
+				"id": "587cb3f5-1133-4919-bbe0-baf9d57603ba",
+				"method": "PUT"
+			},
+			{
+				"id": "d6296869-a13d-458f-b958-92310bdf9f0d",
+				"method": "PUT"
+			},
+			{
+				"id": "24c6ddc4-6ad4-47b8-9e58-54aea6faa29b",
+				"method": "PUT"
+			},
+			{
+				"id": "f35be4df-3777-491a-ae9c-c6e92cf11b85",
+				"method": "PUT"
+			},
+			{
+				"id": "0b20892f-f1e5-49c2-a450-62f36fec1c0e",
+				"method": "PUT"
+			},
+			{
+				"id": "190fbf36-a281-4a89-895a-36ff7237e46e",
+				"method": "PUT"
+			},
+			{
+				"id": "b29d74b7-db93-4cdd-ba51-30f4afcab1fe",
+				"method": "PUT"
+			},
+			{
+				"id": "f6e416c1-2400-4832-85ee-0c99492c17dd",
+				"method": "PUT"
+			},
+			{
+				"id": "1582868f-0a2f-4995-9c33-fbb125b2f8d7",
+				"method": "PUT"
+			},
+			{
+				"id": "7d850685-d573-4d7a-b1d8-16590d052479",
+				"method": "PUT"
+			},
+			{
+				"id": "84256460-1806-4c07-a252-9a695bb58e4d",
+				"method": "PUT"
+			},
+			{
+				"id": "6756716f-a6d6-4cf1-b021-79a1dea031f9",
+				"method": "DELETE"
+			},
+			{
+				"id": "d3754c28-d248-467c-8851-4239a737e1cd",
+				"method": "DELETE"
+			},
+			{
+				"id": "046e7288-5ba7-430f-807d-2cdf5767788a",
+				"method": "DELETE"
+			},
+			{
+				"id": "496f437e-7761-48da-91b3-edc75e3ae081",
+				"method": "DELETE"
+			}
+		]
+	}
+}

@@ -1,0 +1,367 @@
+{
+	"info": {
+		"_postman_id": "53adbbbb-8a4f-4bcd-a8cd-3906b03cc138",
+		"name": "4-Login usuario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16623392"
+	},
+	"item": [
+		{
+			"name": "Login exitoso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Save user token\", ()=>{\r",
+							"    let response = pm.response.text();\r",
+							"   postman.setEnvironmentVariable(\"Token\", response)\r",
+							"})\r",
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('text/plain;charset=UTF-8');\r",
+							"});\r",
+							"pm.test(\"Password not to be present\",()=>{\r",
+							"     let response =pm.response.text().toLowerCase()\r",
+							"    pm.expect(pm.response.text()).not.to.include(\"password\")\r",
+							"})\r",
+							"pm.test(\"Username not to be present\",()=>{\r",
+							"    let response =pm.response.text().toLowerCase()\r",
+							"    pm.expect(response).not.to.include(\"username\") \r",
+							"})\r",
+							"pm.test(\"Alias not to be present\",()=>{\r",
+							"    let response =pm.response.text().toLowerCase()\r",
+							"    pm.expect(response).not.to.include(\"alias\") \r",
+							"})\r",
+							"pm.test(\"Firstname not to be present\",()=>{\r",
+							"    let response =pm.response.text().toLowerCase()\r",
+							"    pm.expect(response).not.to.include(\"firstname\") \r",
+							"})\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"email\" : \"marcelito@mail.com\",\r\n    \"password\": \"marcelo15555\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login fallido - Usuario inexistente",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No existe usuario con este email\");\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" :\"cualquiermail@mail.com\",\r\n    \"password\": \"marcelo15555\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login fallido - Usuario null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No existe usuario con este email\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" :null,\r\n    \"password\": \"{{password}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login fallido - Usuario vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No existe usuario con este email\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" :\"\",\r\n    \"password\": \"{{password}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login fallido - Contraseña incorrecta",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"Contraseña incorrecta\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" :\"marcelito@mail.com\",\r\n    \"password\": \"cualquierpassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login fallido - Contraseña null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No existe usuario con este email\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" :\"marcelito99@mail.com\",\r\n    \"password\": null\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login fallido - Contraseña vacío",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No existe usuario con este email\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" :\"marcelito99@mail.com\",\r\n    \"password\": \"\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

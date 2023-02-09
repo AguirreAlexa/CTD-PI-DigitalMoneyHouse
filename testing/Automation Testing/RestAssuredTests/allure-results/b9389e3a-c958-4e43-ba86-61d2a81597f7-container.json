@@ -1,0 +1,1 @@
+{"uuid":"b9389e3a-c958-4e43-ba86-61d2a81597f7","name":"BUserTests","children":["3b976a46-1631-48b6-bfde-2333e21aaffc"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1668108883535,"stop":1668108884295}],"afters":[],"start":1668108883487,"stop":1668108886151}

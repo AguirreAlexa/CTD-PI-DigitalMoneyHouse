@@ -1,0 +1,349 @@
+{
+	"id": "1201566d-c56a-4654-bd41-5c3a6fca65bb",
+	"name": "4-Login usuario",
+	"timestamp": "2022-12-12T23:15:26.095Z",
+	"collection_id": "16623392-53adbbbb-8a4f-4bcd-a8cd-3906b03cc138",
+	"folder_id": 0,
+	"environment_id": "16623392-f10a9206-ee8f-4872-8445-93e63769eec2",
+	"totalPass": 26,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "036ff028-92f7-4d6e-8392-9b494150f500",
+			"name": "Login exitoso",
+			"url": "http://localhost:9090/user/login",
+			"time": 654,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Save user token": true,
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Password not to be present": true,
+				"Username not to be present": true,
+				"Alias not to be present": true,
+				"Firstname not to be present": true
+			},
+			"testPassFailCounts": {
+				"Save user token": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Password not to be present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Username not to be present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Alias not to be present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Firstname not to be present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				654
+			],
+			"allTests": [
+				{
+					"Save user token": true,
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Password not to be present": true,
+					"Username not to be present": true,
+					"Alias not to be present": true,
+					"Firstname not to be present": true
+				}
+			]
+		},
+		{
+			"id": "364591cb-56d3-4b90-a8b9-94f0ba358b7d",
+			"name": "Login fallido - Usuario inexistente",
+			"url": "http://localhost:9090/user/login",
+			"time": 14,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "88cae105-8e9d-456b-93cc-76f415a5eafe",
+			"name": "Login fallido - Usuario null",
+			"url": "http://localhost:9090/user/login",
+			"time": 21,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				21
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "402a13b8-b942-424c-8067-825d8b1d42c8",
+			"name": "Login fallido - Usuario vacio",
+			"url": "http://localhost:9090/user/login",
+			"time": 15,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "adfc98f7-c0d4-4d24-9e7d-3803bd23781e",
+			"name": "Login fallido - Contraseña incorrecta",
+			"url": "http://localhost:9090/user/login",
+			"time": 493,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				493
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "7c87c4bf-ab44-41eb-a63c-f0ca0b7ae0a4",
+			"name": "Login fallido - Contraseña null",
+			"url": "http://localhost:9090/user/login",
+			"time": 11,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "88c1d129-f551-46b4-8d62-e48a65760949",
+			"name": "Login fallido - Contraseña vacío",
+			"url": "http://localhost:9090/user/login",
+			"time": 13,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1221,
+	"collection": {
+		"requests": [
+			{
+				"id": "036ff028-92f7-4d6e-8392-9b494150f500",
+				"method": "POST"
+			},
+			{
+				"id": "364591cb-56d3-4b90-a8b9-94f0ba358b7d",
+				"method": "POST"
+			},
+			{
+				"id": "88cae105-8e9d-456b-93cc-76f415a5eafe",
+				"method": "POST"
+			},
+			{
+				"id": "402a13b8-b942-424c-8067-825d8b1d42c8",
+				"method": "POST"
+			},
+			{
+				"id": "adfc98f7-c0d4-4d24-9e7d-3803bd23781e",
+				"method": "POST"
+			},
+			{
+				"id": "7c87c4bf-ab44-41eb-a63c-f0ca0b7ae0a4",
+				"method": "POST"
+			},
+			{
+				"id": "88c1d129-f551-46b4-8d62-e48a65760949",
+				"method": "POST"
+			}
+		]
+	}
+}

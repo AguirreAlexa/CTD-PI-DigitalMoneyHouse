@@ -1,0 +1,2562 @@
+{
+	"id": "9a38253c-94d4-4eec-86b9-ec8383ef1c57",
+	"name": "3-Editar usuarios",
+	"timestamp": "2022-12-12T23:15:21.531Z",
+	"collection_id": "16623392-9f68635c-9fe9-411e-979c-950846f405df",
+	"folder_id": 0,
+	"environment_id": "16623392-f10a9206-ee8f-4872-8445-93e63769eec2",
+	"totalPass": 323,
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "2a2f8ab9-3941-4e69-b38c-6cab7a837478",
+			"name": "Editar Firstname",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 699,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				699
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "34f528d1-ba7e-4c0a-b6c5-612f73707736",
+			"name": "Editar LastName",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 900,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				900
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "97b16f4d-5664-42dd-ade4-3e1af71297ec",
+			"name": "Editar Dni",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 810,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				810
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "6a88a195-50c2-44a6-8c27-c4dce1b7db4f",
+			"name": "Editar Telefono",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 129,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				129
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "e0f9be6d-f171-46fc-87b6-9ce0075960a0",
+			"name": "Editar Username",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 157,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				157
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "d4008940-0a38-43ee-a1f2-30c88e562c60",
+			"name": "Editar Password",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 870,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				870
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "75e765ff-d8ac-450b-bffb-30f6985ee5f1",
+			"name": "Editar Alias",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 133,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				133
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "f0c29b3e-fb52-446f-af24-26295a887728",
+			"name": "Editar FirstName & LastName",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 158,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				158
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "8580a532-2366-46d7-8ac6-b483cc1a74ff",
+			"name": "Editar FirstName && Dni",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 1063,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1063
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "391bb826-81da-44ae-8703-264ee8f5efa3",
+			"name": "Editar FirstName & Telefono",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 103,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				103
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "c414ec8b-f30b-4d7a-abbf-a44ad59717f0",
+			"name": "Editar FirstName & Username",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 149,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				149
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "2ae2e308-70b6-4662-8bf0-ccd9e9b127ff",
+			"name": "Editar FirstName & Password",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 429,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				429
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "2e1fcef5-602b-4378-93f0-6fc8d88e43c0",
+			"name": "Editar LastName && Dni",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 348,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				348
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "c45cb156-773c-47c9-b696-0ec989198a69",
+			"name": "Editar LastName & Telefono",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 1501,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1501
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "6bd53676-ea57-4d87-8dc1-8b54cb025512",
+			"name": "Editar LastName & Username",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 387,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				387
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "ee13c891-50ab-43c0-85d1-9bbbf97f2c54",
+			"name": "Editar LastName & Password",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 958,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				958
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "82e33a01-2034-4445-b2a6-f32516868eb2",
+			"name": "Editar Dni & Telefono",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 547,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				547
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "f8fc1187-3bdd-47e0-8f50-fb5d71a1bc34",
+			"name": "Editar Dni & Username",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 970,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				970
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "cab16e9e-8f46-4d69-b865-e8442c933c38",
+			"name": "Editar Dni & Password",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 463,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				463
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "2c5c4460-6a91-4a76-a331-96ce14ccfd40",
+			"name": "Editar Telefono & Username",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 96,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				96
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "c18f4b58-fc0c-4f89-b688-f5ec05e3166d",
+			"name": "Editar Telefono & Password",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 253,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				253
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "04fe3d2f-5ec1-4850-9467-6b13c6253f4b",
+			"name": "Editar Username & Password",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 783,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				783
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "cb680bd6-0c62-455a-a31b-221000702f2f",
+			"name": "Editar User complete",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 213,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				213
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "1a3685cf-e604-4a2c-844f-c08e11a7eba7",
+			"name": "Editar User complete empty",
+			"url": "http://localhost:9090/user/update/114",
+			"time": 54,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 400": false
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				54
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 400": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 12173,
+	"collection": {
+		"requests": [
+			{
+				"id": "2a2f8ab9-3941-4e69-b38c-6cab7a837478",
+				"method": "PATCH"
+			},
+			{
+				"id": "34f528d1-ba7e-4c0a-b6c5-612f73707736",
+				"method": "PATCH"
+			},
+			{
+				"id": "97b16f4d-5664-42dd-ade4-3e1af71297ec",
+				"method": "PATCH"
+			},
+			{
+				"id": "6a88a195-50c2-44a6-8c27-c4dce1b7db4f",
+				"method": "PATCH"
+			},
+			{
+				"id": "e0f9be6d-f171-46fc-87b6-9ce0075960a0",
+				"method": "PATCH"
+			},
+			{
+				"id": "d4008940-0a38-43ee-a1f2-30c88e562c60",
+				"method": "PATCH"
+			},
+			{
+				"id": "75e765ff-d8ac-450b-bffb-30f6985ee5f1",
+				"method": "PATCH"
+			},
+			{
+				"id": "f0c29b3e-fb52-446f-af24-26295a887728",
+				"method": "PATCH"
+			},
+			{
+				"id": "8580a532-2366-46d7-8ac6-b483cc1a74ff",
+				"method": "PATCH"
+			},
+			{
+				"id": "391bb826-81da-44ae-8703-264ee8f5efa3",
+				"method": "PATCH"
+			},
+			{
+				"id": "c414ec8b-f30b-4d7a-abbf-a44ad59717f0",
+				"method": "PATCH"
+			},
+			{
+				"id": "2ae2e308-70b6-4662-8bf0-ccd9e9b127ff",
+				"method": "PATCH"
+			},
+			{
+				"id": "2e1fcef5-602b-4378-93f0-6fc8d88e43c0",
+				"method": "PATCH"
+			},
+			{
+				"id": "c45cb156-773c-47c9-b696-0ec989198a69",
+				"method": "PATCH"
+			},
+			{
+				"id": "6bd53676-ea57-4d87-8dc1-8b54cb025512",
+				"method": "PATCH"
+			},
+			{
+				"id": "ee13c891-50ab-43c0-85d1-9bbbf97f2c54",
+				"method": "PATCH"
+			},
+			{
+				"id": "82e33a01-2034-4445-b2a6-f32516868eb2",
+				"method": "PATCH"
+			},
+			{
+				"id": "f8fc1187-3bdd-47e0-8f50-fb5d71a1bc34",
+				"method": "PATCH"
+			},
+			{
+				"id": "cab16e9e-8f46-4d69-b865-e8442c933c38",
+				"method": "PATCH"
+			},
+			{
+				"id": "2c5c4460-6a91-4a76-a331-96ce14ccfd40",
+				"method": "PATCH"
+			},
+			{
+				"id": "c18f4b58-fc0c-4f89-b688-f5ec05e3166d",
+				"method": "PATCH"
+			},
+			{
+				"id": "04fe3d2f-5ec1-4850-9467-6b13c6253f4b",
+				"method": "PATCH"
+			},
+			{
+				"id": "cb680bd6-0c62-455a-a31b-221000702f2f",
+				"method": "PATCH"
+			},
+			{
+				"id": "1a3685cf-e604-4a2c-844f-c08e11a7eba7",
+				"method": "PATCH"
+			}
+		]
+	}
+}

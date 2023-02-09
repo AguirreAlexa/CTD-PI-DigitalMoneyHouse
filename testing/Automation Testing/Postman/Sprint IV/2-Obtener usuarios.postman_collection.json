@@ -1,0 +1,464 @@
+{
+	"info": {
+		"_postman_id": "436cd633-df1b-4c4b-aec2-f83d872978af",
+		"name": "2-Obtener usuarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16623392"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users con Token Inválido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_fake}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users con Token Vacío",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{empty_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "10",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{host}}/user/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By ID - User inexistente",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No existe usuario con este id\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "10",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{host}}/user/{{user_id_fake}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"{{user_id_fake}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id_user",
+			"value": "0",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,3215 @@
+{
+	"info": {
+		"_postman_id": "9f68635c-9fe9-411e-979c-950846f405df",
+		"name": "3-Editar usuarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16623392"
+	},
+	"item": [
+		{
+			"name": "Editar Firstname",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environments = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Roberto",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9090/user/update/{{user_id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar LastName",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "lastName",
+							"value": "Cardozo Salinas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Dni",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "dni",
+							"value": "44444444",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Telefono",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phoneNumber",
+							"value": "45425852",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Username",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "miusername",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "password",
+							"value": "salinas1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Alias",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "alias",
+							"value": "whisky.romeo.zulu",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar FirstName & LastName",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Mario R",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Lopez N",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar FirstName && Dni",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Carlos",
+							"type": "text"
+						},
+						{
+							"key": "dni",
+							"value": "123456456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar FirstName & Telefono",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Fernando",
+							"type": "text"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "44444444",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar FirstName & Username",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Marcos",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "marcos.nuevo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar FirstName & Password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Martin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar LastName && Dni",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "lastName",
+							"value": "Rodriguez",
+							"type": "text"
+						},
+						{
+							"key": "dni",
+							"value": "456789789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar LastName & Telefono",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "lastName",
+							"value": "Martinez",
+							"type": "text"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "555555555",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar LastName & Username",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "lastName",
+							"value": "Perez",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "otro.username",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar LastName & Password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "lastName",
+							"value": "Salinas",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "tercer.pass",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Dni & Telefono",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "dni",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Dni & Username",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "dni",
+							"value": "11111111111",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "cuarto.username",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Dni & Password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "dni",
+							"value": "2222222222",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "cuarta.password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Telefono & Username",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phoneNumber",
+							"value": "456789785",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "quinto.user",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Telefono & Password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phoneNumber",
+							"value": "999999999",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "sexta.pass",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Username & Password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "otro.user.mas",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "otra.password.mas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar User complete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Luca",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Modric",
+							"type": "text"
+						},
+						{
+							"key": "dni",
+							"value": "94789654",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "modric@mail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phoneNumber",
+							"value": "8888888888",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "10decroacia",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "luca10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar User complete empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fistName\":\"\",\r\n    \"lastName\":\"\",\r\n    \"dni\":\"\",\r\n    \"email\":\"\",\r\n    \"username\":\"\",\r\n    \"password\":\"\",\r\n    \"phoneNumber\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/update/{{user_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"update",
+						"{{user_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id_usuario",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

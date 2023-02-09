@@ -1,0 +1,404 @@
+{
+	"id": "7bebe1c3-9ae7-443a-a2e5-a0282fff82ea",
+	"name": "9-Transferences",
+	"timestamp": "2022-12-13T00:59:44.408Z",
+	"collection_id": "16623392-8f502f41-5b84-44bb-981d-662d0db601a7",
+	"folder_id": 0,
+	"environment_id": "16623392-f10a9206-ee8f-4872-8445-93e63769eec2",
+	"totalPass": 30,
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "46038b9e-9f1a-4c1f-87dd-de07741b87a3",
+			"name": "Realizar una transferencia - saldo insuficiente",
+			"url": "http://localhost:9090/account/2/transferences",
+			"time": 34,
+			"responseCode": {
+				"code": 410,
+				"name": "Gone"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				34
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": true
+				}
+			]
+		},
+		{
+			"id": "bc91dcea-e188-4ca9-97d9-1c2bc68b7cc5",
+			"name": "Realizar una transferencia exitosa",
+			"url": "http://localhost:9090/account/2/transferences",
+			"time": 895,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Status 200": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate detail to be string": true,
+				"Validate type to be string": true,
+				"Validate accountOriginId to be a number": true,
+				"Validate accountDestinyId to be a number": true,
+				"Validate amount to be a number": true,
+				"Validate date to be a string": true,
+				"Validate response to be an object": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate detail to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate type to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountOriginId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate accountDestinyId to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate amount to be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate date to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				895
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Status 200": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate detail to be string": true,
+					"Validate type to be string": true,
+					"Validate accountOriginId to be a number": true,
+					"Validate accountDestinyId to be a number": true,
+					"Validate amount to be a number": true,
+					"Validate date to be a string": true,
+					"Validate response to be an object": true
+				}
+			]
+		},
+		{
+			"id": "8835a4c1-2b00-4225-822c-5650f6a1058e",
+			"name": "Realizar una transferencia - amount null",
+			"url": "http://localhost:9090/account/2/transferences",
+			"time": 25,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				25
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "0c25231c-845d-461e-965b-539257805aba",
+			"name": "Realizar una transferencia - account destiny null",
+			"url": "http://localhost:9090/account/2/transferences",
+			"time": 31,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true,
+				"Check response message": false
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response message": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				31
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true,
+					"Check response message": false
+				}
+			]
+		},
+		{
+			"id": "00ca32a0-cbed-4f54-9cb1-34f98a6dfbf8",
+			"name": "Realizar una transferencia - account origin null",
+			"url": "http://localhost:9090/account/2/transferences",
+			"time": 15,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "6f1841bd-3360-48d4-bd42-10ada88816ee",
+			"name": "Realizar una transferencia - cargar  saldo desde tarjeta",
+			"url": "http://localhost:9090/account/2/transferenceAccount",
+			"time": 118,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				118
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": true
+				}
+			]
+		},
+		{
+			"id": "33fb751f-6cd6-4f7f-aad4-f65a7210e2a3",
+			"name": "Realizar una transferencia sin Token",
+			"url": "http://localhost:9090/account/2/transferences",
+			"time": 4,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "9bf092cf-051d-45a8-8ec3-41c74ccdd4d3",
+			"name": "Realizar una transferencia con Token inválido",
+			"url": "http://localhost:9090/account/2/transferences",
+			"time": 6,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1128,
+	"collection": {
+		"requests": [
+			{
+				"id": "46038b9e-9f1a-4c1f-87dd-de07741b87a3",
+				"method": "POST"
+			},
+			{
+				"id": "bc91dcea-e188-4ca9-97d9-1c2bc68b7cc5",
+				"method": "POST"
+			},
+			{
+				"id": "8835a4c1-2b00-4225-822c-5650f6a1058e",
+				"method": "POST"
+			},
+			{
+				"id": "0c25231c-845d-461e-965b-539257805aba",
+				"method": "POST"
+			},
+			{
+				"id": "00ca32a0-cbed-4f54-9cb1-34f98a6dfbf8",
+				"method": "POST"
+			},
+			{
+				"id": "6f1841bd-3360-48d4-bd42-10ada88816ee",
+				"method": "POST"
+			},
+			{
+				"id": "33fb751f-6cd6-4f7f-aad4-f65a7210e2a3",
+				"method": "POST"
+			},
+			{
+				"id": "9bf092cf-051d-45a8-8ec3-41c74ccdd4d3",
+				"method": "POST"
+			}
+		]
+	}
+}

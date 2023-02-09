@@ -1,0 +1,1610 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>133/11/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Dec 13 09:12:56 ART 2022</td>
+</tr>
+<tr><td>Total time:</td><td>59 seconds (59639 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.createTransferenceResponse()'><b>createTransferenceResponse</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;400&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.DTransactionsTests.DTransactionsTests.createTransferenceResponse(DTransactionsTests.java:466)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace914230030", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace914230030'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;400&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.DTransactionsTests.DTransactionsTests.createTransferenceResponse(DTransactionsTests.java:466)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</pre></div></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.deleteTransactionByIdStatusCode()'><b>deleteTransactionByIdStatusCode</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;204&gt; but was &lt;500&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.DTransactionsTests.DTransactionsTests.deleteTransactionByIdStatusCode(DTransactionsTests.java:325)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace862394631", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace862394631'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;204&gt; but was &lt;500&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.DTransactionsTests.DTransactionsTests.deleteTransactionByIdStatusCode(DTransactionsTests.java:325)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</pre></div></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.editEmptyAlias()'><b>editEmptyAlias</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;200&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.CAccountTests.EAccountTests.editEmptyAlias(EAccountTests.java:295)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace123366619", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace123366619'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;200&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.CAccountTests.EAccountTests.editEmptyAlias(EAccountTests.java:295)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</pre></div></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.createTransferenceNullDate()'><b>createTransferenceNullDate</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;302&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.DTransactionsTests.DTransactionsTests.createTransferenceNullDate(DTransactionsTests.java:444)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1151836977", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1151836977'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;302&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.DTransactionsTests.DTransactionsTests.createTransferenceNullDate(DTransactionsTests.java:444)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</pre></div></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.postTransactionWithoutAccountDestinyIdValue()'><b>postTransactionWithoutAccountDestinyIdValue</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td><div><pre>com.fasterxml.jackson.databind.JsonMappingException: Cannot invoke &quot;java.lang.Integer.intValue()&quot; because &quot;this.accountDestinyId&quot; is null (through reference chain: Data.Model.Transaction.TransactionRequest[&quot;accountDestinyId&quot;])
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:392)
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:351)
+	at com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:316)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:782)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319)
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:3160)
+	at com.fasterxml.jackson.databind.ObjectMapper$writeValue.call(Unknown Source)
+	at io.restassured.internal.mapping.Jackson2Mapper.serialize(Jackson2Mapper.groovy:53)
+	at io.restassured.internal.mapping.Jackson2Mapper.serialize(Jackson2Mapper.groovy)
+	at io.restassured.mapper.ObjectMapper$serialize.call(Unknown Source)
+	at io.restassured.internal.mapping.ObjectMapping.serializeWithJackson2(ObjectMapping.groovy:217)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite$StaticMetaMethodSiteNoUnwrapNoCoerce.invoke(StaticMetaMethodSite.java:153)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.callStatic(StaticMetaMethodSite.java:102)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)
+	at io.restassured.internal.mapping.ObjectMapping.serialize(ObjectMapping.groovy:154)
+	at io.restassured.internal.mapping.ObjectMapping$serialize.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.body(RequestSpecificationImpl.groovy:756)
+	at Tests.DTransactionsTests.DTransactionsTests.postTransactionWithoutAccountDestinyIdValue(DTransactionsTests.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;java.lang.Integer.intValue()&quot; because &quot;this.accountDestinyId&quot; is null
+	at Data.Model.Transaction.TransactionRequest.getAccountDestinyId(TransactionRequest.java:56)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:689)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:774)
+	... 49 more
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace581959799", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace581959799'><pre>com.fasterxml.jackson.databind.JsonMappingException: Cannot invoke &quot;java.lang.Integer.intValue()&quot; because &quot;this.accountDestinyId&quot; is null (through reference chain: Data.Model.Transaction.TransactionRequest[&quot;accountDestinyId&quot;])
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:392)
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:351)
+	at com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:316)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:782)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319)
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:3160)
+	at com.fasterxml.jackson.databind.ObjectMapper$writeValue.call(Unknown Source)
+	at io.restassured.internal.mapping.Jackson2Mapper.serialize(Jackson2Mapper.groovy:53)
+	at io.restassured.internal.mapping.Jackson2Mapper.serialize(Jackson2Mapper.groovy)
+	at io.restassured.mapper.ObjectMapper$serialize.call(Unknown Source)
+	at io.restassured.internal.mapping.ObjectMapping.serializeWithJackson2(ObjectMapping.groovy:217)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite$StaticMetaMethodSiteNoUnwrapNoCoerce.invoke(StaticMetaMethodSite.java:153)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.callStatic(StaticMetaMethodSite.java:102)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)
+	at io.restassured.internal.mapping.ObjectMapping.serialize(ObjectMapping.groovy:154)
+	at io.restassured.internal.mapping.ObjectMapping$serialize.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.body(RequestSpecificationImpl.groovy:756)
+	at Tests.DTransactionsTests.DTransactionsTests.postTransactionWithoutAccountDestinyIdValue(DTransactionsTests.java:80)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: java.lang.NullPointerException: Cannot invoke &quot;java.lang.Integer.intValue()&quot; because &quot;this.accountDestinyId&quot; is null
+	at Data.Model.Transaction.TransactionRequest.getAccountDestinyId(TransactionRequest.java:56)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:689)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:774)
+	... 49 more
+</pre></div></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.getTransactionByIdAndAccountId()'><b>getTransactionByIdAndAccountId</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;400&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.CAccountTests.EAccountTests.getTransactionByIdAndAccountId(EAccountTests.java:227)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace153107896", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace153107896'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;400&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.CAccountTests.EAccountTests.getTransactionByIdAndAccountId(EAccountTests.java:227)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</pre></div></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.getTransactionByInvalidIdAndAccountId()'><b>getTransactionByInvalidIdAndAccountId</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;500&gt; but was &lt;400&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.CAccountTests.EAccountTests.getTransactionByInvalidIdAndAccountId(EAccountTests.java:241)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1389994320", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1389994320'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;500&gt; but was &lt;400&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.CAccountTests.EAccountTests.getTransactionByInvalidIdAndAccountId(EAccountTests.java:241)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</pre></div></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.postTransaction()'><b>postTransaction</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;400&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.DTransactionsTests.DTransactionsTests.postTransaction(DTransactionsTests.java:69)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1774875059", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1774875059'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;400&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.DTransactionsTests.DTransactionsTests.postTransaction(DTransactionsTests.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</pre></div></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.createTransferenceNullOriginCard()'><b>createTransferenceNullOriginCard</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td><div><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;302&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.DTransactionsTests.DTransactionsTests.createTransferenceNullOriginCard(DTransactionsTests.java:382)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1166501724", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1166501724'><pre>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;400&gt; but was &lt;302&gt;.
+
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at Tests.DTransactionsTests.DTransactionsTests.createTransferenceNullOriginCard(DTransactionsTests.java:382)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</pre></div></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.postCardWithTypeNullValue()'><b>postCardWithTypeNullValue</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at Tests.BCardsTests.DCardTests.postCardWithTypeNullValue(DCardTests.java:437)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1827583378", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1827583378'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at Tests.BCardsTests.DCardTests.postCardWithTypeNullValue(DCardTests.java:437)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</pre></div></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.getTransferenceResponseNotNullValues()'><b>getTransferenceResponseNotNullValues</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td><div><pre>java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `Data.Factory.Transactions` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (String)&quot;[{&quot;id&quot;:162,&quot;accountOriginId&quot;:2,&quot;accountDestinyId&quot;:120,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;2022-11-10T00:00:00.000+00:00&quot;,&quot;detail&quot;:null,&quot;type&quot;:&quot;D\u00e9bito&quot;},{&quot;id&quot;:163,&quot;accountOriginId&quot;:2,&quot;accountDestinyId&quot;:120,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;2022-11-10T00:00:00.000+00:00&quot;,&quot;detail&quot;:null,&quot;type&quot;:&quot;D\u00e9bito&quot;},{&quot;id&quot;:164,&quot;accountOriginId&quot;:120,&quot;accountDestinyId&quot;:2,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;2022-11-10T00:00:00.000+00:00&quot;,&quot;detail&quot;:&quot;Cuota&quot;,&quot;type&quot;:null},{&quot;id&quot;:165,&quot;accountOriginId&quot;:120,&quot;accountDestinyId&quot;:2,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;&quot;[truncated 733 chars]; line: 1, column: 1]
+	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)
+	at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.java:93)
+	at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.java:53)
+	at io.restassured.path.json.JsonPath.jsonStringToObject(JsonPath.java:1093)
+	at io.restassured.path.json.JsonPath.getObject(JsonPath.java:560)
+	at Tests.DTransactionsTests.DTransactionsTests.getTransferenceResponseNotNullValues(DTransactionsTests.java:487)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `Data.Factory.Transactions` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (String)&quot;[{&quot;id&quot;:162,&quot;accountOriginId&quot;:2,&quot;accountDestinyId&quot;:120,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;2022-11-10T00:00:00.000+00:00&quot;,&quot;detail&quot;:null,&quot;type&quot;:&quot;D\u00e9bito&quot;},{&quot;id&quot;:163,&quot;accountOriginId&quot;:2,&quot;accountDestinyId&quot;:120,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;2022-11-10T00:00:00.000+00:00&quot;,&quot;detail&quot;:null,&quot;type&quot;:&quot;D\u00e9bito&quot;},{&quot;id&quot;:164,&quot;accountOriginId&quot;:120,&quot;accountDestinyId&quot;:2,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;2022-11-10T00:00:00.000+00:00&quot;,&quot;detail&quot;:&quot;Cuota&quot;,&quot;type&quot;:null},{&quot;id&quot;:165,&quot;accountOriginId&quot;:120,&quot;accountDestinyId&quot;:2,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;&quot;[truncated 733 chars]; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1741)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1515)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1462)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeFromArray(BeanDeserializer.java:648)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:211)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:187)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629)
+	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:28)
+	... 35 more
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1720030825", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1720030825'><pre>java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `Data.Factory.Transactions` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (String)&quot;[{&quot;id&quot;:162,&quot;accountOriginId&quot;:2,&quot;accountDestinyId&quot;:120,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;2022-11-10T00:00:00.000+00:00&quot;,&quot;detail&quot;:null,&quot;type&quot;:&quot;D\u00e9bito&quot;},{&quot;id&quot;:163,&quot;accountOriginId&quot;:2,&quot;accountDestinyId&quot;:120,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;2022-11-10T00:00:00.000+00:00&quot;,&quot;detail&quot;:null,&quot;type&quot;:&quot;D\u00e9bito&quot;},{&quot;id&quot;:164,&quot;accountOriginId&quot;:120,&quot;accountDestinyId&quot;:2,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;2022-11-10T00:00:00.000+00:00&quot;,&quot;detail&quot;:&quot;Cuota&quot;,&quot;type&quot;:null},{&quot;id&quot;:165,&quot;accountOriginId&quot;:120,&quot;accountDestinyId&quot;:2,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;&quot;[truncated 733 chars]; line: 1, column: 1]
+	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)
+	at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.java:93)
+	at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.java:53)
+	at io.restassured.path.json.JsonPath.jsonStringToObject(JsonPath.java:1093)
+	at io.restassured.path.json.JsonPath.getObject(JsonPath.java:560)
+	at Tests.DTransactionsTests.DTransactionsTests.getTransferenceResponseNotNullValues(DTransactionsTests.java:487)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:806)
+	at org.testng.TestRunner.run(TestRunner.java:601)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `Data.Factory.Transactions` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (String)&quot;[{&quot;id&quot;:162,&quot;accountOriginId&quot;:2,&quot;accountDestinyId&quot;:120,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;2022-11-10T00:00:00.000+00:00&quot;,&quot;detail&quot;:null,&quot;type&quot;:&quot;D\u00e9bito&quot;},{&quot;id&quot;:163,&quot;accountOriginId&quot;:2,&quot;accountDestinyId&quot;:120,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;2022-11-10T00:00:00.000+00:00&quot;,&quot;detail&quot;:null,&quot;type&quot;:&quot;D\u00e9bito&quot;},{&quot;id&quot;:164,&quot;accountOriginId&quot;:120,&quot;accountDestinyId&quot;:2,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;2022-11-10T00:00:00.000+00:00&quot;,&quot;detail&quot;:&quot;Cuota&quot;,&quot;type&quot;:null},{&quot;id&quot;:165,&quot;accountOriginId&quot;:120,&quot;accountDestinyId&quot;:2,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;&quot;[truncated 733 chars]; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1741)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1515)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1462)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeFromArray(BeanDeserializer.java:648)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:211)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:187)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629)
+	at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:28)
+	... 35 more
+</pre></div></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.postTransactionWithoutTypeValue()'><b>postTransactionWithoutTypeValue</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.getTransactionByIdAndAccountIdEmptyToken()'><b>getTransactionByIdAndAccountIdEmptyToken</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.statusCodeGetAccountByIdEmptyToken()'><b>statusCodeGetAccountByIdEmptyToken</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithEmptyFirstName()'><b>registerWithEmptyFirstName</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.postCardWithEmptyToken()'><b>postCardWithEmptyToken</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.getActivityByInvalidAccountId()'><b>getActivityByInvalidAccountId</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.fieldsNotNullGetAllUsersResponse()'><b>fieldsNotNullGetAllUsersResponse</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.fieldsNotEmptyGetUserByIDResponse()'><b>fieldsNotEmptyGetUserByIDResponse</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.postTransactionWithoutAccountOriginIdValue()'><b>postTransactionWithoutAccountOriginIdValue</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.getTransactionResponseNotEmpty()'><b>getTransactionResponseNotEmpty</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.AUserTests.BLoginTests.loginOkContentType()'><b>loginOkContentType</b><br>Test class: Tests.AUserTests.BLoginTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BLoginTests@5a9800f8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.fieldsNotNullGetAllUsersResponse()'><b>fieldsNotNullGetAllUsersResponse</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.contentTypeOnGetAllUsersResponse()'><b>contentTypeOnGetAllUsersResponse</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.AUserTests.CLogoutTests.logoutEmptyToken()'><b>logoutEmptyToken</b><br>Test class: Tests.AUserTests.CLogoutTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.CLogoutTests@40226788</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.patchCvuById()'><b>patchCvuById</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.AUserTests.BLoginTests.failLoginEmptyPassword()'><b>failLoginEmptyPassword</b><br>Test class: Tests.AUserTests.BLoginTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BLoginTests@5a9800f8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.httpStatus200OnGetAllUsers()'><b>httpStatus200OnGetAllUsers</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.postCardWithoutTypeValue()'><b>postCardWithoutTypeValue</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.getActivityByAccountIdEmptyToken()'><b>getActivityByAccountIdEmptyToken</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerOk()'><b>registerOk</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>6</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.createTransferenceNullAmount()'><b>createTransferenceNullAmount</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.getCardsByAccountIdInvalidToken()'><b>getCardsByAccountIdInvalidToken</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.getActivityByAccountIdInvalidToken()'><b>getActivityByAccountIdInvalidToken</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithEmptyUser()'><b>registerWithEmptyUser</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.getTransferenceOk()'><b>getTransferenceOk</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.AUserTests.BLoginTests.failLoginNullPassword()'><b>failLoginNullPassword</b><br>Test class: Tests.AUserTests.BLoginTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BLoginTests@5a9800f8</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.putCardWithEmptyValuesId()'><b>putCardWithEmptyValuesId</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.postCardWithAccountIdNullValue()'><b>postCardWithAccountIdNullValue</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>3</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithNullEmail()'><b>registerWithNullEmail</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.postTransactionResponseNotEmpty()'><b>postTransactionResponseNotEmpty</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithNullLastName()'><b>registerWithNullLastName</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.getTransactionStatusCode()'><b>getTransactionStatusCode</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerOkStatusCode()'><b>registerOkStatusCode</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.postTransactionWithoutDateValue()'><b>postTransactionWithoutDateValue</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithNullPassword()'><b>registerWithNullPassword</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BLoginTests.failLoginUnregisteredUser()'><b>failLoginUnregisteredUser</b><br>Test class: Tests.AUserTests.BLoginTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BLoginTests@5a9800f8</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.GetAccountById()'><b>GetAccountById</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerRandomUser()'><b>registerRandomUser</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.putCardWithoutTypeById()'><b>putCardWithoutTypeById</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithoutLastName()'><b>registerWithoutLastName</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithoutEmail()'><b>registerWithoutEmail</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.statusCodeGetAccountByIdInvalidToken()'><b>statusCodeGetAccountByIdInvalidToken</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithNullUser()'><b>registerWithNullUser</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.headersOnGetAllCardsResponse()'><b>headersOnGetAllCardsResponse</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.patchPasswordById()'><b>patchPasswordById</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.contentTypeOnGetUserByIDResponse()'><b>contentTypeOnGetUserByIDResponse</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithoutUsername()'><b>registerWithoutUsername</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.editEmptyAliasEmptyToken()'><b>editEmptyAliasEmptyToken</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.deleteCardByID()'><b>deleteCardByID</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.putCardWithoutAccountIdById()'><b>putCardWithoutAccountIdById</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.patchUsernameById()'><b>patchUsernameById</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.contentTypeOnGetAllCardsResponse()'><b>contentTypeOnGetAllCardsResponse</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.postCardNullOwner()'><b>postCardNullOwner</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>1</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.headersOnGetAllUsersResponse()'><b>headersOnGetAllUsersResponse</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithEmptyPassword()'><b>registerWithEmptyPassword</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.postTransactionStatusCode()'><b>postTransactionStatusCode</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithNullFirstName()'><b>registerWithNullFirstName</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.patchPasswordInvalidToken()'><b>patchPasswordInvalidToken</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.postTransactionWithoutAmountValue()'><b>postTransactionWithoutAmountValue</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.httpStatus200OnGetCardById()'><b>httpStatus200OnGetCardById</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.BLoginTests.loginOkGetToken()'><b>loginOkGetToken</b><br>Test class: Tests.AUserTests.BLoginTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BLoginTests@5a9800f8</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.createTransferenceNullDestinyAccount()'><b>createTransferenceNullDestinyAccount</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.AUserTests.BLoginTests.failLoginUnregisteredPassword()'><b>failLoginUnregisteredPassword</b><br>Test class: Tests.AUserTests.BLoginTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BLoginTests@5a9800f8</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithoutFirstName()'><b>registerWithoutFirstName</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BLoginTests.loginOkHeaderToken()'><b>loginOkHeaderToken</b><br>Test class: Tests.AUserTests.BLoginTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BLoginTests@5a9800f8</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.postTransactionWithoutDetailValue()'><b>postTransactionWithoutDetailValue</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.fieldsNotEmptyGetAllUsersResponse()'><b>fieldsNotEmptyGetAllUsersResponse</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.statusCodeGetAccountById()'><b>statusCodeGetAccountById</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.GetUserById()'><b>GetUserById</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.getTransactionResponseNotNull()'><b>getTransactionResponseNotNull</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithEmptyPhoneNumber()'><b>registerWithEmptyPhoneNumber</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.deleteCardByEmptyToken()'><b>deleteCardByEmptyToken</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithEmptyLastName()'><b>registerWithEmptyLastName</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithNullUsername()'><b>registerWithNullUsername</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.httpStatusWithEmptyToken()'><b>httpStatusWithEmptyToken</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerHeaders()'><b>registerHeaders</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BLoginTests.failLoginEmptyUser()'><b>failLoginEmptyUser</b><br>Test class: Tests.AUserTests.BLoginTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BLoginTests@5a9800f8</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.getCardsByAccountIdEmptyToken()'><b>getCardsByAccountIdEmptyToken</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.AUserTests.CLogoutTests.fieldsNotEmptyGetAllUsersResponse()'><b>fieldsNotEmptyGetAllUsersResponse</b><br>Test class: Tests.AUserTests.CLogoutTests</td>
+<td></td>
+<td>3</td>
+<td>Tests.AUserTests.CLogoutTests@40226788</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithNullPhoneNumber()'><b>registerWithNullPhoneNumber</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.fieldsNotNullGetCardByIDResponse()'><b>fieldsNotNullGetCardByIDResponse</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.BLoginTests.loginOkStatusCode()'><b>loginOkStatusCode</b><br>Test class: Tests.AUserTests.BLoginTests</td>
+<td></td>
+<td>1</td>
+<td>Tests.AUserTests.BLoginTests@5a9800f8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.patchLastNameAndPasswordById()'><b>patchLastNameAndPasswordById</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.ContentTypeGetAccountById()'><b>ContentTypeGetAccountById</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.httpStatus200OnGetUserById()'><b>httpStatus200OnGetUserById</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.getActivityByAccountId()'><b>getActivityByAccountId</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>1</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.postCardWithoutAccountIdValue()'><b>postCardWithoutAccountIdValue</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.GetAllUsers()'><b>GetAllUsers</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.postCardNullExpirationDate()'><b>postCardNullExpirationDate</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.fieldsNotEmptyGetCardByIDResponse()'><b>fieldsNotEmptyGetCardByIDResponse</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.postCard()'><b>postCard</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>4</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithoutPassword()'><b>registerWithoutPassword</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BLoginTests.failLoginUnregisteredEmail()'><b>failLoginUnregisteredEmail</b><br>Test class: Tests.AUserTests.BLoginTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BLoginTests@5a9800f8</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerRandomUser2()'><b>registerRandomUser2</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.AUserTests.CLogoutTests.statusCodeLogout()'><b>statusCodeLogout</b><br>Test class: Tests.AUserTests.CLogoutTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.CLogoutTests@40226788</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.GetByAccountIdInvalid()'><b>GetByAccountIdInvalid</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.getTransactionByIdAndAccountIdInvalidToken()'><b>getTransactionByIdAndAccountIdInvalidToken</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithEmptyEmail()'><b>registerWithEmptyEmail</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerOkContentType()'><b>registerOkContentType</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.patchFirstNameById()'><b>patchFirstNameById</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>1</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.contentTypeOnGetCardByIDResponse()'><b>contentTypeOnGetCardByIDResponse</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.editAliasInvalidAccount()'><b>editAliasInvalidAccount</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithEmptyUsername()'><b>registerWithEmptyUsername</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BLoginTests.failLoginNullEmail()'><b>failLoginNullEmail</b><br>Test class: Tests.AUserTests.BLoginTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BLoginTests@5a9800f8</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.postCardWithInvalidToken()'><b>postCardWithInvalidToken</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.httpStatusWithInvalidToken()'><b>httpStatusWithInvalidToken</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.OnGetUserByIdWithWrongId()'><b>OnGetUserByIdWithWrongId</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.postTransactionResponseNotNull()'><b>postTransactionResponseNotNull</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.postCardWithEmptyCardNumber()'><b>postCardWithEmptyCardNumber</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithNullDni()'><b>registerWithNullDni</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.putCardById()'><b>putCardById</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.postCardNullSecurityNumber()'><b>postCardNullSecurityNumber</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.getCardsByAccountId()'><b>getCardsByAccountId</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.CAccountTests.EAccountTests.editEmptyAliasInvalidToken()'><b>editEmptyAliasInvalidToken</b><br>Test class: Tests.CAccountTests.EAccountTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.CAccountTests.EAccountTests@5b5caf08</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.postCardWithNullValues()'><b>postCardWithNullValues</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithoutPhoneNumber()'><b>registerWithoutPhoneNumber</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BLoginTests.loginHeaders()'><b>loginHeaders</b><br>Test class: Tests.AUserTests.BLoginTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BLoginTests@5a9800f8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BLoginTests.failLoginEmptyEmail()'><b>failLoginEmptyEmail</b><br>Test class: Tests.AUserTests.BLoginTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BLoginTests@5a9800f8</td></tr>
+<tr>
+<td title='Tests.AUserTests.CLogoutTests.logoutInvalidToken()'><b>logoutInvalidToken</b><br>Test class: Tests.AUserTests.CLogoutTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.CLogoutTests@40226788</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.deleteCardByInvalidToken()'><b>deleteCardByInvalidToken</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.BLoginTests.failLoginNullUser()'><b>failLoginNullUser</b><br>Test class: Tests.AUserTests.BLoginTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BLoginTests@5a9800f8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.patchLastNameById()'><b>patchLastNameById</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.httpStatus200OnGetAllCards()'><b>httpStatus200OnGetAllCards</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.deleteCardByInvalidID()'><b>deleteCardByInvalidID</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithoutDni()'><b>registerWithoutDni</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BLoginTests.loginOkPayloadToken()'><b>loginOkPayloadToken</b><br>Test class: Tests.AUserTests.BLoginTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BLoginTests@5a9800f8</td></tr>
+<tr>
+<td title='Tests.BCardsTests.DCardTests.fieldsNotEmptyGetAllCardsResponse()'><b>fieldsNotEmptyGetAllCardsResponse</b><br>Test class: Tests.BCardsTests.DCardTests</td>
+<td></td>
+<td>1</td>
+<td>Tests.BCardsTests.DCardTests@4159e81b</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.patchPasswordEmptyToken()'><b>patchPasswordEmptyToken</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerWithEmptyDni()'><b>registerWithEmptyDni</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.patchDniAndPhoneById()'><b>patchDniAndPhoneById</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>1</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.AUserTests.BUserTests.fieldsNotNullGetUserByIDResponse()'><b>fieldsNotNullGetUserByIDResponse</b><br>Test class: Tests.AUserTests.BUserTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.BUserTests@143d9a93</td></tr>
+<tr>
+<td title='Tests.AUserTests.ARegisterTests.registerRandomUser3()'><b>registerRandomUser3</b><br>Test class: Tests.AUserTests.ARegisterTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.AUserTests.ARegisterTests@6b7d1df8</td></tr>
+<tr>
+<td title='Tests.DTransactionsTests.DTransactionsTests.createTransferenceNullValues()'><b>createTransferenceNullValues</b><br>Test class: Tests.DTransactionsTests.DTransactionsTests</td>
+<td></td>
+<td>0</td>
+<td>Tests.DTransactionsTests.DTransactionsTests@23cd4ff2</td></tr>
+</table><p>
+</body>
+</html>

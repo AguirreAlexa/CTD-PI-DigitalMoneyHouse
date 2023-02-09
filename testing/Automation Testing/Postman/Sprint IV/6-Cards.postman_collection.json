@@ -1,0 +1,3324 @@
+{
+	"info": {
+		"_postman_id": "a0cf8f64-8ef5-445c-8874-f5ebd0c77d5e",
+		"name": "6-Cards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16623392"
+	},
+	"item": [
+		{
+			"name": "Agregar una tarjeta",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cardNumber to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cardNumber).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate owner to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].owner).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate securityNumber to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].securityNumber).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate expirationDate to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].expirationDate).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate balance to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].balance).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastNumbers to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastNumbers).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Save cardId\", ()=>{\r",
+							"    let response = pm.response.id;\r",
+							"   postman.setEnvironmentVariable(\"cardId\", response)\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4ODBlMGM0Yy1kYTQzLTQ2ZTktOWMwMy0wZGQ0MDQ5ODg5ZDgifQ.eyJleHAiOjE2Njk4MTUwNTYsImlhdCI6MTY2OTgxMzI1NiwianRpIjoiZTc1OTQ5MWUtNzY1ZS00YjQ1LWI0NzQtOTFhZmExZWVjNWViIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2RtaCIsInN1YiI6IjE0OWUwN2E5LTJiNTMtNDIwNS05NmUxLTFiYzhmNWU0Mzk1ZSIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMDcwYmQ5OTUtOTdjYi00ODRiLTlkNzAtNWQwNmYwZWNlMDEzIiwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiMDcwYmQ5OTUtOTdjYi00ODRiLTlkNzAtNWQwNmYwZWNlMDEzIn0.ZtUflAxgZP-NxdAsi-_GVHPIfMNv5XxjjU6XA2aKdr8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": 3,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Marcelito\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000,\r\n    \"expirationDate\" : \"2023-12-02\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta - token invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_fake}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4ODBlMGM0Yy1kYTQzLTQ2ZTktOWMwMy0wZGQ0MDQ5ODg5ZDgifQ.eyJleHAiOjE2Njk4MTUwNTYsImlhdCI6MTY2OTgxMzI1NiwianRpIjoiZTc1OTQ5MWUtNzY1ZS00YjQ1LWI0NzQtOTFhZmExZWVjNWViIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2RtaCIsInN1YiI6IjE0OWUwN2E5LTJiNTMtNDIwNS05NmUxLTFiYzhmNWU0Mzk1ZSIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMDcwYmQ5OTUtOTdjYi00ODRiLTlkNzAtNWQwNmYwZWNlMDEzIiwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiMDcwYmQ5OTUtOTdjYi00ODRiLTlkNzAtNWQwNmYwZWNlMDEzIn0.ZtUflAxgZP-NxdAsi-_GVHPIfMNv5XxjjU6XA2aKdr8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Marcelito\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2022-12-12\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta - token vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{empty_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI4ODBlMGM0Yy1kYTQzLTQ2ZTktOWMwMy0wZGQ0MDQ5ODg5ZDgifQ.eyJleHAiOjE2Njk4MTUwNTYsImlhdCI6MTY2OTgxMzI1NiwianRpIjoiZTc1OTQ5MWUtNzY1ZS00YjQ1LWI0NzQtOTFhZmExZWVjNWViIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2RtaCIsInN1YiI6IjE0OWUwN2E5LTJiNTMtNDIwNS05NmUxLTFiYzhmNWU0Mzk1ZSIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMDcwYmQ5OTUtOTdjYi00ODRiLTlkNzAtNWQwNmYwZWNlMDEzIiwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiMDcwYmQ5OTUtOTdjYi00ODRiLTlkNzAtNWQwNmYwZWNlMDEzIn0.ZtUflAxgZP-NxdAsi-_GVHPIfMNv5XxjjU6XA2aKdr8",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Marcelito\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2022-12-12\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta sin Account ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No se encuentra la cuenta asociada\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Marcelito\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2022-12-12\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta con Account ID = null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No se encuentra la cuenta asociada\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": null,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Marcelito\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2022-12-12\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta sin Card Number",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": 68,\r\n    \r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Marcelito\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2023-12-12\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta - card number null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": 68,\r\n    \"cardNumber\": null,\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Marcelito\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2023-12-12\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta sin Type",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": 68,\r\n    \"cardNumber\": \"4542589687451254\",\r\n    \r\n    \"owner\" : \"Marcelito\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2023-12-12\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta con Type = null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": 68,\r\n    \"cardNumber\": \"4542587569857452\",\r\n    \"type\": null,\r\n    \"owner\" : \"Marcelito\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2023-12-12\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta sin Onwer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2023-12-12\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta Owner null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : null,\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2023-12-12\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta sin Security Number",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Felipe Marcos\",\r\n   \r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2023-12-12\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta Security Number null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : null,\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2023-12-12\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta Balance null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": null,\r\n    \"expirationDate\" : \"2023-12-12\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta sin Balance",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"Falta completar el campo Balance\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \r\n    \"expirationDate\" : \"2022-12-12\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta sin Expiration Date",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"Falta completar el campo ExpirationDate\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n   \r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta Expiration Date null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"Falta completar el campo ExpirationDate\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : null,\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta Expiration Date Antigua",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"La fecha de expiración debe ser posterior a la fecha actual\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta con todos los campos NULL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"Debe completar todos los campos\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : null,\r\n    \"cardNumber\": null,\r\n    \"type\": null,\r\n    \"owner\" : null,\r\n    \"securityNumber\" : null,\r\n    \"balance\": null,\r\n    \"expirationDate\" : null,\r\n    \"lastNumbers\" : null\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar una tarjeta con todos los campos vacíos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"Debe completar todos los campos\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : \"\",\r\n    \"cardNumber\": \"\",\r\n    \"type\": \"\",\r\n    \"owner\" : \"\",\r\n    \"securityNumber\" : \"\",\r\n    \"balance\": \"\",\r\n    \"expirationDate\" : \"\",\r\n    \"lastNumbers\" : \"\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todas las tarjetas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cardNumber to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cardNumber).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate owner to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].owner).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate securityNumber to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].securityNumber).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate expirationDate to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].expirationDate).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate balance to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].balance).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastNumbers to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastNumbers).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todas las tarjetas - token invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_fake}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todas las tarjetas - token vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{empty_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/cards",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener tarjeta por Id_tarjeta",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cardNumber to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cardNumber).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate owner to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].owner).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate securityNumber to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].securityNumber).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate expirationDate to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].expirationDate).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate balance to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].balance).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastNumbers to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastNumbers).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/cards/{{id_tarjeta}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{id_tarjeta}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener tarjeta por Id_tarjeta - id incorrecto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No se encontro card con ese id\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/cards/{{card_id_fake}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id_fake}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener tarjeta por Id_tarjeta - id incorrecto - token invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_fake}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/cards/{{card_id_fake}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id_fake}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener una tarjeta por Id de Cuenta",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/account/cards?id={{idAccount}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{idAccount}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener una tarjeta por Id de Cuenta - id incorrecto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No se encontro cuenta con este id\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/account/cards?id={{account_id_fake}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{account_id_fake}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 2,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"debito\",\r\n    \"owner\" : \"Marcelito\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 2050.0,\r\n    \"expirationDate\" : \"2030-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - id incorrecto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No se encontro tarjeta con este id\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"debito\",\r\n    \"owner\" : \"Marcelito\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 2050.0,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id_fake}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id_fake}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - token invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_fake}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"debito\",\r\n    \"owner\" : \"Marcelito\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 2050.0,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - token vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{empty_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"debito\",\r\n    \"owner\" : \"Marcelito\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 2050.0,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - Faltante campo accountId",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"Falta completar el campo account id\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - accountId null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"Falta completar el campo account id\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": null,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - Faltante campo cardNumber",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": 2,\r\n  \r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - cardNumber null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": 2,\r\n    \"cardNumber\": null,\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - Faltante campo owner",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\":2,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n   \r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - campo owner null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\":2,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : null,\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - Faltante campo balance",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\": 2,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n   \r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - campo balance null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"Falta completar el campo account id\")\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": null,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - Faltante campo tipo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"Falta completar el campo tipo\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n  \r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta -tipo null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"Falta completar el campo tipo\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": null,\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - Faltante campo security Number",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 2,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n   \r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - security number null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : null,\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - Faltante campo Expiration Date",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 2,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n  \r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - Expiration Date null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : null,\r\n    \"lastNumbers\" : \"5678\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - Faltante campo Last Numbers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2010-12-23\"\r\n   \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - Last Numbers null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : 68,\r\n    \"cardNumber\": \"12345678912345678\",\r\n    \"type\": \"credit\",\r\n    \"owner\" : \"Ricardo Costa\",\r\n    \"securityNumber\" : \"234\",\r\n    \"balance\": 20000.0,\r\n    \"expirationDate\" : \"2010-12-23\",\r\n    \"lastNumbers\" : null\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - Todos los campos empty",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"Falta completar el campo account id\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : \"\",\r\n    \"cardNumber\": \"\",\r\n    \"type\": \"\",\r\n    \"owner\" : \"\",\r\n    \"securityNumber\" : \"\",\r\n    \"balance\": \"\",\r\n    \"expirationDate\" : \"\",\r\n    \"lastNumbers\" : \"\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar una tarjeta - Todos los campos null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"Falta completar el campo tipo\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountId\" : null,\r\n    \"cardNumber\": null,\r\n    \"type\": null,\r\n    \"owner\" : null,\r\n    \"securityNumber\" : null,\r\n    \"balance\": null,\r\n    \"expirationDate\" : null,\r\n    \"lastNumbers\" : null\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar tarjeta por Id de tarjeta",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"Status code\", function(){\r",
+							"    pm.response.to.have.status(204);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar tarjeta por Id de tarjeta - id incorrecto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"Status code\", function(){\r",
+							"    pm.response.to.have.status(204);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/cards/{{card_id_fake}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id_fake}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar tarjeta por Id de tarjeta - token invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"Status code\", function(){\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_fake}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar tarjeta por Id de tarjeta - token vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{empty_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/cards/{{card_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"cards",
+						"{{card_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id_tarjeta",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "id_cuenta",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

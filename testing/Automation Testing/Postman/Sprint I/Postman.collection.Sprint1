@@ -1,0 +1,677 @@
+{
+	"info": {
+		"_postman_id": "9c2d9710-e801-4167-b348-65c84d53036d",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16623392"
+	},
+	"item": [
+		{
+			"name": "Registro exitoso Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.cvu).to.be.a('string')\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.alias).to.be.a('string')\r",
+							"})\r",
+							"pm.test(\"Save user username and password\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"   postman.setEnvironmentVariable(\"username\", response.username)\r",
+							"   postman.setEnvironmentVariable(\"password\", response.password)\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Marcelo\",\r\n    \"lastName\": \"Lopez\",\r\n    \"dni\" : \"45985745\",\r\n    \"email\" : \"marcelito@mail.com\",\r\n    \"username\" : \"marcelito\",\r\n    \"phoneNumber\" : \"47786998\",\r\n    \"password\": \"marcelo15555\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/register",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registro fallido - Faltante Nombre Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lastName\": \"Lopez\",\r\n    \"dni\" : \"45985745\",\r\n    \"email\" : \"marcelito@mail.com\",\r\n    \"username\" : \"marcelito1\",\r\n    \"phoneNumber\" : \"47786998\",\r\n    \"password\": \"marcelo15555\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/register",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registro fallido - Faltante Apellido Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Marcelo\",\r\n    \"dni\" : \"45985745\",\r\n    \"email\" : \"marcelito@mail.com\",\r\n    \"username\" : \"marcelito2\",\r\n    \"phoneNumber\" : \"47786998\",\r\n    \"password\": \"marcelo15555\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/users",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registro fallido - Faltante Dni Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Marcelo\",\r\n    \"lastName\": \"Lopez\",\r\n    \"email\" : \"marcelito@mail.com\",\r\n    \"username\" : \"marcelito3\",\r\n    \"phoneNumber\" : \"47786998\",\r\n    \"password\": \"marcelo15555\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/users",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registro fallido - Faltante email Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Marcelo\",\r\n    \"lastName\": \"Lopez\",\r\n    \"dni\" : \"45985745\",\r\n    \"username\" : \"marcelito4\",\r\n    \"phoneNumber\" : \"47786998\",\r\n    \"password\": \"marcelo15555\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/users",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registro fallido - Faltante Username Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Marcelo\",\r\n    \"lastName\": \"Lopez\",\r\n    \"dni\" : \"45985745\",\r\n    \"email\" : \"marcelito@mail.com\",\r\n    \"phoneNumber\" : \"47786998\",\r\n    \"password\": \"marcelo15555\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/users",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registro fallido - Faltante telefono Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Marcelo\",\r\n    \"lastName\": \"Lopez\",\r\n    \"dni\" : \"45985745\",\r\n    \"email\" : \"marcelito@mail.com\",\r\n    \"username\" : \"marcelito5\",\r\n    \"password\": \"marcelo15555\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/users",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registro fallido - Faltante contrasenia Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Marcelo\",\r\n    \"lastName\": \"Lopez\",\r\n    \"dni\" : \"45985745\",\r\n    \"email\" : \"marcelito@mail.com\",\r\n    \"username\" : \"marcelito6\",\r\n    \"phoneNumber\" : \"47786998\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/users",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login exitoso Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Save user token\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"   postman.setEnvironmentVariable(\"Token\", response.token)\r",
+							"})\r",
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.cvu).to.be.a('string')\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.alias).to.be.a('string')\r",
+							"})\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" :\"{{username}}\",\r\n    \"password\": \"{{password}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login fallido - Usuario inexistente Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" :\"miguelito\",\r\n    \"password\": \"{{password}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login fallido - Contraseña incorrecta Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" :\"{{username}}\",\r\n    \"password\": \"miguel123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout exitoso Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/user/logout",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

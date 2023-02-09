@@ -1,0 +1,1502 @@
+{
+	"info": {
+		"_postman_id": "fb556afc-b840-4619-9c8e-b74dde1fa6e8",
+		"name": "8-Accounts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16623392"
+	},
+	"item": [
+		{
+			"name": "Get Account por Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.firstName!==null ||\r",
+							"        response.lastName !== null ||\r",
+							"        response.email !== null ||\r",
+							"        response.cvu !== null ||\r",
+							"        response.alias !== null ||\r",
+							"        response.username !== null ||\r",
+							"        response.dni !== null ||\r",
+							"        response.phoneNumber !== null).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate email to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].email).to.be.a(\"string\")\r",
+							"    pm.expect(response[i].email).contains(\"@\")\r",
+							"    pm.expect(response[i].email).contains(\".com\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastName to be a String\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastName).to.be.a(\"String\")\r",
+							"    pm.expect(response[i].lastName).not.contains.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate firstName to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].firstName).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cvu to be a string\", ()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cvu).to.be.a('string')}\r",
+							"})\r",
+							"pm.test(\"Validate alias to be a string\",()=>{\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].alias).to.be.a('string')}\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/account/{{idAccount}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{idAccount}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account por Id - token incorrecto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_fake}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/account/{{idAccount}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{idAccount}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account por Id - token vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{empty_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/account/{{idAccount}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{idAccount}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account por Id - id incorrecto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No se encontro cuenta con este id\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/account/{{account_id_fake}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{account_id_fake}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get account activities by idAccount",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountDestinyId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountDestinyId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/account/{{idAccount}}/activity",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{idAccount}}",
+						"activity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get account activities - wrong account_id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test (\"Status 400\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{host}}/account/{{account_id_fake}}/activity",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{account_id_fake}}",
+						"activity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get account activities by Id con token invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_fake}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{host}}/accounts/{{idAccount}}/activity",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"accounts",
+						"{{idAccount}}",
+						"activity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get account activities by account id con token vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{empty_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token_fake}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/accounts/{{idAccount}}/activity",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"accounts",
+						"{{idAccount}}",
+						"activity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get account activities by activity Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test (\"Status 400\", function(){\r",
+							"    pm.response.to.have.status(403);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"Sesión inválida\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token_fake}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/account/{{idAccount}}/activity/{{transaction_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{idAccount}}",
+						"activity",
+						"{{transaction_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get account activities by ID - token invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_fake}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{host}}/account/{{idAccount}}/activity/{{transaction_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{idAccount}}",
+						"activity",
+						"{{transaction_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all account activities por Id con token vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{empty_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{host}}/accounts/{{idAccount}}/activity/{{transaction_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"accounts",
+						"{{idAccount}}",
+						"activity",
+						"{{transaction_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all account activities por Id - Account Id incorrecto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test (\"Status 404\", function(){\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/accounts/{{account_id_fake}}/activity/{{transaction_id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"accounts",
+						"{{account_id_fake}}",
+						"activity",
+						"{{transaction_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all account activities por Id - Transaction Id incorrecto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test (\"Status 404\", function(){\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"Transaccion inexistente\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/account/{{idAccount}}/activity/{{transaction_id_fake}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{idAccount}}",
+						"activity",
+						"{{transaction_id_fake}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar alias por Id de Account incorrecto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No se encontro cuenta con este id\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"alias\": \"pulso.proa.gusto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/account/{{account_id_fake}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{account_id_fake}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar alias vacío por Id de Account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No se puede actualizar por el alias vacio\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"alias\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/account/{{idAccount}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{idAccount}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar alias null por Id de Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"alias\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/account/{{idAccount}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{idAccount}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar alias por Id de Account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"alias\": \"sudo.apt.get\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/account/{{idAccount}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{idAccount}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar alias por Id de Account - token invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_fake}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"alias\": \"sudo.apt.get\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/account/{{idAccount}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{idAccount}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar alias por Id de Account - token vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{empty_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"alias\": \"sudo.apt.get\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/account/{{idAccount}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{idAccount}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar alias y balance por Id de Account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No se puede actualizar por el alias vacio\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"alias\": \"sudo.apt.get\",\r\n    \"balance\": 2500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/account/{{idAccount}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"{{idAccount}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get cards by id account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"  pm.expect(pm.environment.name).to.eql(\"Local\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is present\", () => {\r",
+							"  pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Content-Type header is application/json\", () => {\r",
+							"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"});\r",
+							"pm.test (\"Status 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Not null values\", function () {\r",
+							"    let response = pm.response.json();\r",
+							"    pm.expect(response.id!==null ||\r",
+							"        response.accountId !== null ||\r",
+							"        response.type !== null ).to.be.true\r",
+							"});\r",
+							"pm.test(\"Not empty response\", function() {\r",
+							"    response = pm.response.json()\r",
+							"    \r",
+							"    pm.expect(response.length)>0\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Validate not to be undefined\", function () {\r",
+							"   \r",
+							"    let response = pm.response.json();\r",
+							"    for(let i=0; i < response.length; i++){\r",
+							"        pm.expect(response[i]).not.to.be.undefined   \r",
+							"    }\r",
+							"   });\r",
+							"\r",
+							"pm.test(\"Validate ID is a number\",function(){\r",
+							"    let response = pm.response.json();\r",
+							"   for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].id).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate type to be string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].type).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate response to be an object\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i]).to.be.an(\"object\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate cardNumber to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].cardNumber).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate owner to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].owner).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate securityNumber to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].securityNumber).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate expirationDate to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].expirationDate).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate balance to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].balance).to.be.a(\"number\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate lastNumbers to be a string\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].lastNumbers).to.be.a(\"string\")\r",
+							"   }\r",
+							"})\r",
+							"pm.test(\"Validate accountId to be a number\", function(){\r",
+							"    let response = pm.response.json();\r",
+							"    for (let i=0; i<response.length;i++){\r",
+							"    pm.expect(response[i].accountId).to.be.a(\"number\")\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/account/cards?id={{idAccount}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{idAccount}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get cards by id account - id incorrecto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test (\"New User\", function(){\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"pm.test(\"Check response message\", () =>{\r",
+							"    let response = pm.response.text();\r",
+							"    pm.expect(response).to.be.equals(\"No se encontro cuenta con este id\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{Token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/account/cards?id={{account_id_fake}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{account_id_fake}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get cards by id account - token invalido",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token_fake}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/account/cards?id={{idAccount}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{idAccount}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get cards by id account - token vacio",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check the active environment\", () => {\r",
+							"let environment = pm.collectionVariables.get(\"environment\");\r",
+							"  pm.expect(pm.environment.name).to.eql(pm.environment.name);\r",
+							"});\r",
+							"pm.test(\"Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{empty_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/account/cards?id={{idAccount}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"account",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{idAccount}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

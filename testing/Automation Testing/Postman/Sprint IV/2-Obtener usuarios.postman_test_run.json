@@ -1,0 +1,353 @@
+{
+	"id": "dc8e6674-dafa-4ad1-a802-912c8ccb629f",
+	"name": "2-Obtener usuarios",
+	"timestamp": "2022-12-12T23:15:03.050Z",
+	"collection_id": "16623392-436cd633-df1b-4c4b-aec2-f83d872978af",
+	"folder_id": 0,
+	"environment_id": "16623392-f10a9206-ee8f-4872-8445-93e63769eec2",
+	"totalPass": 33,
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "2240a072-de8f-430e-92f7-306d06b270db",
+			"name": "Get All Users",
+			"url": "http://localhost:9090/user",
+			"time": 2463,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2463
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "7e5182ab-26ec-45d1-9200-d16bab2884b3",
+			"name": "Get All Users con Token Inválido",
+			"url": "http://localhost:9090/user",
+			"time": 28,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				28
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "7dfa01d5-946d-425e-a7fd-3aa61306597a",
+			"name": "Get All Users con Token Vacío",
+			"url": "http://localhost:9090/user",
+			"time": 5,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Status code is 401": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Status code is 401": true
+				}
+			]
+		},
+		{
+			"id": "6b542393-ac4c-48eb-994d-a5bb201f825d",
+			"name": "Get User By ID",
+			"url": "http://localhost:9090/user/114",
+			"time": 558,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"New User": true,
+				"Not null values": true,
+				"Not empty response": true,
+				"Validate not to be undefined": true,
+				"Validate ID is a number": true,
+				"Validate email to be string": true,
+				"Validate lastName to be a String": true,
+				"Validate firstName to be a string": true,
+				"Validate response to be an object": true,
+				"Validate cvu to be a string": true,
+				"Validate alias to be a string": true
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not null values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Not empty response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate not to be undefined": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID is a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate email to be string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate lastName to be a String": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate firstName to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate response to be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate cvu to be a string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate alias to be a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				558
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"New User": true,
+					"Not null values": true,
+					"Not empty response": true,
+					"Validate not to be undefined": true,
+					"Validate ID is a number": true,
+					"Validate email to be string": true,
+					"Validate lastName to be a String": true,
+					"Validate firstName to be a string": true,
+					"Validate response to be an object": true,
+					"Validate cvu to be a string": true,
+					"Validate alias to be a string": true
+				}
+			]
+		},
+		{
+			"id": "eb712f89-9ea5-474f-bf0c-b9ea5edf6400",
+			"name": "Get User By ID - User inexistente",
+			"url": "http://localhost:9090/user/9999",
+			"time": 167,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Check the active environment": true,
+				"New User": false,
+				"Check response message": false
+			},
+			"testPassFailCounts": {
+				"Check the active environment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"New User": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Check response message": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				167
+			],
+			"allTests": [
+				{
+					"Check the active environment": true,
+					"New User": false,
+					"Check response message": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3221,
+	"collection": {
+		"requests": [
+			{
+				"id": "2240a072-de8f-430e-92f7-306d06b270db",
+				"method": "GET"
+			},
+			{
+				"id": "7e5182ab-26ec-45d1-9200-d16bab2884b3",
+				"method": "GET"
+			},
+			{
+				"id": "7dfa01d5-946d-425e-a7fd-3aa61306597a",
+				"method": "GET"
+			},
+			{
+				"id": "6b542393-ac4c-48eb-994d-a5bb201f825d",
+				"method": "GET"
+			},
+			{
+				"id": "eb712f89-9ea5-474f-bf0c-b9ea5edf6400",
+				"method": "GET"
+			}
+		]
+	}
+}

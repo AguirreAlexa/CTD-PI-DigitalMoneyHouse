@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="144" passed="133" failed="11" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-13T09:12:56 ART" name="Surefire suite" finished-at="2022-12-13T09:13:55 ART" duration-ms="59639">
+    <groups>
+    </groups>
+    <test started-at="2022-12-13T09:12:56 ART" name="Surefire test" finished-at="2022-12-13T09:13:55 ART" duration-ms="59639">
+      <class name="Tests.AUserTests.BLoginTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:08 ART" name="setUp" finished-at="2022-12-13T09:13:08 ART" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginOkGetToken()[pri:1, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:08 ART" name="loginOkGetToken" finished-at="2022-12-13T09:13:09 ART" duration-ms="493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginOkGetToken -->
+        <test-method signature="loginOkHeaderToken()[pri:2, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:09 ART" name="loginOkHeaderToken" finished-at="2022-12-13T09:13:09 ART" duration-ms="243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginOkHeaderToken -->
+        <test-method signature="loginOkPayloadToken()[pri:3, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:09 ART" name="loginOkPayloadToken" finished-at="2022-12-13T09:13:09 ART" duration-ms="193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginOkPayloadToken -->
+        <test-method signature="loginHeaders()[pri:4, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:09 ART" name="loginHeaders" finished-at="2022-12-13T09:13:09 ART" duration-ms="147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginHeaders -->
+        <test-method signature="loginOkStatusCode()[pri:5, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:09 ART" name="loginOkStatusCode" finished-at="2022-12-13T09:13:11 ART" duration-ms="1432" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginOkStatusCode -->
+        <test-method signature="loginOkContentType()[pri:6, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:11 ART" name="loginOkContentType" finished-at="2022-12-13T09:13:11 ART" duration-ms="349" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginOkContentType -->
+        <test-method signature="failLoginUnregisteredEmail()[pri:7, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:11 ART" name="failLoginUnregisteredEmail" finished-at="2022-12-13T09:13:11 ART" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failLoginUnregisteredEmail -->
+        <test-method signature="failLoginUnregisteredPassword()[pri:8, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:11 ART" name="failLoginUnregisteredPassword" finished-at="2022-12-13T09:13:12 ART" duration-ms="308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failLoginUnregisteredPassword -->
+        <test-method signature="failLoginUnregisteredUser()[pri:9, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:12 ART" name="failLoginUnregisteredUser" finished-at="2022-12-13T09:13:12 ART" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failLoginUnregisteredUser -->
+        <test-method signature="failLoginEmptyEmail()[pri:10, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:12 ART" name="failLoginEmptyEmail" finished-at="2022-12-13T09:13:12 ART" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failLoginEmptyEmail -->
+        <test-method signature="failLoginNullEmail()[pri:11, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:12 ART" name="failLoginNullEmail" finished-at="2022-12-13T09:13:12 ART" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failLoginNullEmail -->
+        <test-method signature="failLoginNullUser()[pri:12, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:12 ART" name="failLoginNullUser" finished-at="2022-12-13T09:13:12 ART" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failLoginNullUser -->
+        <test-method signature="failLoginNullPassword()[pri:13, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:12 ART" name="failLoginNullPassword" finished-at="2022-12-13T09:13:12 ART" duration-ms="57" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failLoginNullPassword -->
+        <test-method signature="failLoginEmptyPassword()[pri:14, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:12 ART" name="failLoginEmptyPassword" finished-at="2022-12-13T09:13:12 ART" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failLoginEmptyPassword -->
+        <test-method signature="failLoginEmptyUser()[pri:15, instance:Tests.AUserTests.BLoginTests@5a9800f8]" started-at="2022-12-13T09:13:12 ART" name="failLoginEmptyUser" finished-at="2022-12-13T09:13:12 ART" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failLoginEmptyUser -->
+      </class> <!-- Tests.AUserTests.BLoginTests -->
+      <class name="Tests.DTransactionsTests.DTransactionsTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:49 ART" name="setUp" finished-at="2022-12-13T09:13:50 ART" duration-ms="891" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="createTransferenceNullAmount()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:50 ART" name="createTransferenceNullAmount" finished-at="2022-12-13T09:13:50 ART" duration-ms="83" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTransferenceNullAmount -->
+        <test-method signature="createTransferenceNullDate()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:50 ART" name="createTransferenceNullDate" finished-at="2022-12-13T09:13:50 ART" duration-ms="85" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <400> but was <302>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <400> but was <302>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at Tests.DTransactionsTests.DTransactionsTests.createTransferenceNullDate(DTransactionsTests.java:444)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTransferenceNullDate -->
+        <test-method signature="createTransferenceNullDestinyAccount()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:50 ART" name="createTransferenceNullDestinyAccount" finished-at="2022-12-13T09:13:50 ART" duration-ms="54" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTransferenceNullDestinyAccount -->
+        <test-method signature="createTransferenceNullOriginCard()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:50 ART" name="createTransferenceNullOriginCard" finished-at="2022-12-13T09:13:50 ART" duration-ms="107" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <400> but was <302>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <400> but was <302>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at Tests.DTransactionsTests.DTransactionsTests.createTransferenceNullOriginCard(DTransactionsTests.java:382)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTransferenceNullOriginCard -->
+        <test-method signature="createTransferenceNullValues()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:50 ART" name="createTransferenceNullValues" finished-at="2022-12-13T09:13:50 ART" duration-ms="65" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTransferenceNullValues -->
+        <test-method signature="createTransferenceResponse()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:50 ART" name="createTransferenceResponse" finished-at="2022-12-13T09:13:50 ART" duration-ms="59" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <200> but was <400>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <400>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at Tests.DTransactionsTests.DTransactionsTests.createTransferenceResponse(DTransactionsTests.java:466)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTransferenceResponse -->
+        <test-method signature="deleteTransactionByIdStatusCode()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:50 ART" name="deleteTransactionByIdStatusCode" finished-at="2022-12-13T09:13:50 ART" duration-ms="453" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <204> but was <500>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <204> but was <500>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at Tests.DTransactionsTests.DTransactionsTests.deleteTransactionByIdStatusCode(DTransactionsTests.java:325)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteTransactionByIdStatusCode -->
+        <test-method signature="getTransactionResponseNotEmpty()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:50 ART" name="getTransactionResponseNotEmpty" finished-at="2022-12-13T09:13:51 ART" duration-ms="655" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTransactionResponseNotEmpty -->
+        <test-method signature="getTransactionResponseNotNull()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:51 ART" name="getTransactionResponseNotNull" finished-at="2022-12-13T09:13:52 ART" duration-ms="748" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTransactionResponseNotNull -->
+        <test-method signature="getTransactionStatusCode()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:52 ART" name="getTransactionStatusCode" finished-at="2022-12-13T09:13:52 ART" duration-ms="276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTransactionStatusCode -->
+        <test-method signature="getTransferenceOk()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:52 ART" name="getTransferenceOk" finished-at="2022-12-13T09:13:52 ART" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTransferenceOk -->
+        <test-method signature="getTransferenceResponseNotNullValues()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:52 ART" name="getTransferenceResponseNotNullValues" finished-at="2022-12-13T09:13:52 ART" duration-ms="121" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `Data.Factory.Transactions` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (String)"[{"id":162,"accountOriginId":2,"accountDestinyId":120,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":null,"type":"D\u00e9bito"},{"id":163,"accountOriginId":2,"accountDestinyId":120,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":null,"type":"D\u00e9bito"},{"id":164,"accountOriginId":120,"accountDestinyId":2,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":"Cuota","type":null},{"id":165,"accountOriginId":120,"accountDestinyId":2,"amount":150.0,"date":""[truncated 733 chars]; line: 1, column: 1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `Data.Factory.Transactions` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (String)"[{"id":162,"accountOriginId":2,"accountDestinyId":120,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":null,"type":"D\u00e9bito"},{"id":163,"accountOriginId":2,"accountDestinyId":120,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":null,"type":"D\u00e9bito"},{"id":164,"accountOriginId":120,"accountDestinyId":2,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":"Cuota","type":null},{"id":165,"accountOriginId":120,"accountDestinyId":2,"amount":150.0,"date":""[truncated 733 chars]; line: 1, column: 1]
+at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:30)
+at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserializeWithJackson2(JsonObjectDeserializer.java:93)
+at io.restassured.internal.path.json.mapping.JsonObjectDeserializer.deserialize(JsonObjectDeserializer.java:53)
+at io.restassured.path.json.JsonPath.jsonStringToObject(JsonPath.java:1093)
+at io.restassured.path.json.JsonPath.getObject(JsonPath.java:560)
+at Tests.DTransactionsTests.DTransactionsTests.getTransferenceResponseNotNullValues(DTransactionsTests.java:487)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `Data.Factory.Transactions` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (String)"[{"id":162,"accountOriginId":2,"accountDestinyId":120,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":null,"type":"D\u00e9bito"},{"id":163,"accountOriginId":2,"accountDestinyId":120,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":null,"type":"D\u00e9bito"},{"id":164,"accountOriginId":120,"accountDestinyId":2,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":"Cuota","type":null},{"id":165,"accountOriginId":120,"accountDestinyId":2,"amount":150.0,"date":""[truncated 733 chars]; line: 1, column: 1]
+at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)
+at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1741)
+at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1515)
+at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1462)
+at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeFromArray(BeanDeserializer.java:648)
+at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:211)
+at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:187)
+at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)
+at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629)
+at io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.java:28)
+... 35 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTransferenceResponseNotNullValues -->
+        <test-method signature="postTransactionResponseNotEmpty()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:52 ART" name="postTransactionResponseNotEmpty" finished-at="2022-12-13T09:13:53 ART" duration-ms="490" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTransactionResponseNotEmpty -->
+        <test-method signature="postTransactionResponseNotNull()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:53 ART" name="postTransactionResponseNotNull" finished-at="2022-12-13T09:13:53 ART" duration-ms="172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTransactionResponseNotNull -->
+        <test-method signature="postTransactionStatusCode()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:53 ART" name="postTransactionStatusCode" finished-at="2022-12-13T09:13:53 ART" duration-ms="215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTransactionStatusCode -->
+        <test-method signature="postTransactionWithoutAccountOriginIdValue()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:53 ART" name="postTransactionWithoutAccountOriginIdValue" finished-at="2022-12-13T09:13:53 ART" duration-ms="78" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTransactionWithoutAccountOriginIdValue -->
+        <test-method signature="postTransactionWithoutAmountValue()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:53 ART" name="postTransactionWithoutAmountValue" finished-at="2022-12-13T09:13:54 ART" duration-ms="134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTransactionWithoutAmountValue -->
+        <test-method signature="postTransactionWithoutDateValue()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:54 ART" name="postTransactionWithoutDateValue" finished-at="2022-12-13T09:13:54 ART" duration-ms="236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTransactionWithoutDateValue -->
+        <test-method signature="postTransactionWithoutDetailValue()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:54 ART" name="postTransactionWithoutDetailValue" finished-at="2022-12-13T09:13:54 ART" duration-ms="292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTransactionWithoutDetailValue -->
+        <test-method signature="postTransactionWithoutTypeValue()[pri:0, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:54 ART" name="postTransactionWithoutTypeValue" finished-at="2022-12-13T09:13:54 ART" duration-ms="171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTransactionWithoutTypeValue -->
+        <test-method signature="postTransaction()[pri:1, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:54 ART" name="postTransaction" finished-at="2022-12-13T09:13:55 ART" duration-ms="958" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <200> but was <400>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <400>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at Tests.DTransactionsTests.DTransactionsTests.postTransaction(DTransactionsTests.java:69)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTransaction -->
+        <test-method signature="postTransactionWithoutAccountDestinyIdValue()[pri:2, instance:Tests.DTransactionsTests.DTransactionsTests@23cd4ff2]" started-at="2022-12-13T09:13:55 ART" name="postTransactionWithoutAccountDestinyIdValue" finished-at="2022-12-13T09:13:55 ART" duration-ms="9" status="FAIL">
+          <exception class="com.fasterxml.jackson.databind.JsonMappingException">
+            <message>
+              <![CDATA[Cannot invoke "java.lang.Integer.intValue()" because "this.accountDestinyId" is null (through reference chain: Data.Model.Transaction.TransactionRequest["accountDestinyId"])]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[com.fasterxml.jackson.databind.JsonMappingException: Cannot invoke "java.lang.Integer.intValue()" because "this.accountDestinyId" is null (through reference chain: Data.Model.Transaction.TransactionRequest["accountDestinyId"])
+at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:392)
+at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:351)
+at com.fasterxml.jackson.databind.ser.std.StdSerializer.wrapAndThrow(StdSerializer.java:316)
+at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:782)
+at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480)
+at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319)
+at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:3160)
+at com.fasterxml.jackson.databind.ObjectMapper$writeValue.call(Unknown Source)
+at io.restassured.internal.mapping.Jackson2Mapper.serialize(Jackson2Mapper.groovy:53)
+at io.restassured.internal.mapping.Jackson2Mapper.serialize(Jackson2Mapper.groovy)
+at io.restassured.mapper.ObjectMapper$serialize.call(Unknown Source)
+at io.restassured.internal.mapping.ObjectMapping.serializeWithJackson2(ObjectMapping.groovy:217)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite$StaticMetaMethodSiteNoUnwrapNoCoerce.invoke(StaticMetaMethodSite.java:153)
+at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.callStatic(StaticMetaMethodSite.java:102)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:240)
+at io.restassured.internal.mapping.ObjectMapping.serialize(ObjectMapping.groovy:154)
+at io.restassured.internal.mapping.ObjectMapping$serialize.call(Unknown Source)
+at io.restassured.internal.RequestSpecificationImpl.body(RequestSpecificationImpl.groovy:756)
+at Tests.DTransactionsTests.DTransactionsTests.postTransactionWithoutAccountDestinyIdValue(DTransactionsTests.java:80)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because "this.accountDestinyId" is null
+at Data.Model.Transaction.TransactionRequest.getAccountDestinyId(TransactionRequest.java:56)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:689)
+at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:774)
+... 49 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- com.fasterxml.jackson.databind.JsonMappingException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postTransactionWithoutAccountDestinyIdValue -->
+      </class> <!-- Tests.DTransactionsTests.DTransactionsTests -->
+      <class name="Tests.BCardsTests.DCardTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:24 ART" name="setUp" finished-at="2022-12-13T09:13:27 ART" duration-ms="2901" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="postCard()[pri:1, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:27 ART" name="postCard" finished-at="2022-12-13T09:13:31 ART" duration-ms="4895" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCard -->
+        <test-method signature="postCardWithEmptyToken()[pri:2, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:31 ART" name="postCardWithEmptyToken" finished-at="2022-12-13T09:13:32 ART" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCardWithEmptyToken -->
+        <test-method signature="postCardWithInvalidToken()[pri:3, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:32 ART" name="postCardWithInvalidToken" finished-at="2022-12-13T09:13:32 ART" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCardWithInvalidToken -->
+        <test-method signature="postCardWithEmptyCardNumber()[pri:4, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:32 ART" name="postCardWithEmptyCardNumber" finished-at="2022-12-13T09:13:32 ART" duration-ms="317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCardWithEmptyCardNumber -->
+        <test-method signature="postCardNullOwner()[pri:5, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:32 ART" name="postCardNullOwner" finished-at="2022-12-13T09:13:34 ART" duration-ms="1731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCardNullOwner -->
+        <test-method signature="postCardNullExpirationDate()[pri:6, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:34 ART" name="postCardNullExpirationDate" finished-at="2022-12-13T09:13:34 ART" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCardNullExpirationDate -->
+        <test-method signature="postCardNullSecurityNumber()[pri:7, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:34 ART" name="postCardNullSecurityNumber" finished-at="2022-12-13T09:13:34 ART" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCardNullSecurityNumber -->
+        <test-method signature="headersOnGetAllCardsResponse()[pri:8, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:34 ART" name="headersOnGetAllCardsResponse" finished-at="2022-12-13T09:13:34 ART" duration-ms="146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- headersOnGetAllCardsResponse -->
+        <test-method signature="httpStatus200OnGetAllCards()[pri:9, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:34 ART" name="httpStatus200OnGetAllCards" finished-at="2022-12-13T09:13:34 ART" duration-ms="191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- httpStatus200OnGetAllCards -->
+        <test-method signature="contentTypeOnGetAllCardsResponse()[pri:10, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:34 ART" name="contentTypeOnGetAllCardsResponse" finished-at="2022-12-13T09:13:35 ART" duration-ms="228" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contentTypeOnGetAllCardsResponse -->
+        <test-method signature="fieldsNotEmptyGetAllCardsResponse()[pri:11, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:35 ART" name="fieldsNotEmptyGetAllCardsResponse" finished-at="2022-12-13T09:13:36 ART" duration-ms="1041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fieldsNotEmptyGetAllCardsResponse -->
+        <test-method signature="fieldsNotNullGetAllUsersResponse()[pri:12, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:36 ART" name="fieldsNotNullGetAllUsersResponse" finished-at="2022-12-13T09:13:36 ART" duration-ms="776" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fieldsNotNullGetAllUsersResponse -->
+        <test-method signature="httpStatus200OnGetCardById()[pri:13, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:36 ART" name="httpStatus200OnGetCardById" finished-at="2022-12-13T09:13:36 ART" duration-ms="105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- httpStatus200OnGetCardById -->
+        <test-method signature="contentTypeOnGetCardByIDResponse()[pri:14, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:37 ART" name="contentTypeOnGetCardByIDResponse" finished-at="2022-12-13T09:13:37 ART" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contentTypeOnGetCardByIDResponse -->
+        <test-method signature="fieldsNotEmptyGetCardByIDResponse()[pri:15, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:37 ART" name="fieldsNotEmptyGetCardByIDResponse" finished-at="2022-12-13T09:13:37 ART" duration-ms="49" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fieldsNotEmptyGetCardByIDResponse -->
+        <test-method signature="fieldsNotNullGetCardByIDResponse()[pri:16, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:37 ART" name="fieldsNotNullGetCardByIDResponse" finished-at="2022-12-13T09:13:37 ART" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fieldsNotNullGetCardByIDResponse -->
+        <test-method signature="putCardById()[pri:17, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:37 ART" name="putCardById" finished-at="2022-12-13T09:13:37 ART" duration-ms="115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- putCardById -->
+        <test-method signature="putCardWithoutAccountIdById()[pri:18, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:37 ART" name="putCardWithoutAccountIdById" finished-at="2022-12-13T09:13:37 ART" duration-ms="63" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- putCardWithoutAccountIdById -->
+        <test-method signature="putCardWithoutTypeById()[pri:19, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:37 ART" name="putCardWithoutTypeById" finished-at="2022-12-13T09:13:37 ART" duration-ms="49" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- putCardWithoutTypeById -->
+        <test-method signature="putCardWithEmptyValuesId()[pri:20, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:37 ART" name="putCardWithEmptyValuesId" finished-at="2022-12-13T09:13:37 ART" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- putCardWithEmptyValuesId -->
+        <test-method signature="postCardWithNullValues()[pri:21, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:37 ART" name="postCardWithNullValues" finished-at="2022-12-13T09:13:37 ART" duration-ms="247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCardWithNullValues -->
+        <test-method signature="postCardWithoutTypeValue()[pri:22, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:37 ART" name="postCardWithoutTypeValue" finished-at="2022-12-13T09:13:37 ART" duration-ms="85" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCardWithoutTypeValue -->
+        <test-method signature="postCardWithoutAccountIdValue()[pri:23, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:37 ART" name="postCardWithoutAccountIdValue" finished-at="2022-12-13T09:13:37 ART" duration-ms="143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCardWithoutAccountIdValue -->
+        <test-method signature="postCardWithTypeNullValue()[pri:24, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:37 ART" name="postCardWithTypeNullValue" finished-at="2022-12-13T09:13:38 ART" duration-ms="207" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at Tests.BCardsTests.DCardTests.postCardWithTypeNullValue(DCardTests.java:437)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCardWithTypeNullValue -->
+        <test-method signature="deleteCardByID()[pri:25, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:38 ART" name="deleteCardByID" finished-at="2022-12-13T09:13:39 ART" duration-ms="902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCardByID -->
+        <test-method signature="postCardWithAccountIdNullValue()[pri:25, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:39 ART" name="postCardWithAccountIdNullValue" finished-at="2022-12-13T09:13:42 ART" duration-ms="3676" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCardWithAccountIdNullValue -->
+        <test-method signature="deleteCardByInvalidID()[pri:26, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:42 ART" name="deleteCardByInvalidID" finished-at="2022-12-13T09:13:42 ART" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCardByInvalidID -->
+        <test-method signature="deleteCardByInvalidToken()[pri:27, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:42 ART" name="deleteCardByInvalidToken" finished-at="2022-12-13T09:13:42 ART" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCardByInvalidToken -->
+        <test-method signature="deleteCardByEmptyToken()[pri:28, instance:Tests.BCardsTests.DCardTests@4159e81b]" started-at="2022-12-13T09:13:42 ART" name="deleteCardByEmptyToken" finished-at="2022-12-13T09:13:42 ART" duration-ms="25" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCardByEmptyToken -->
+      </class> <!-- Tests.BCardsTests.DCardTests -->
+      <class name="Tests.CAccountTests.EAccountTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:42 ART" name="setUp" finished-at="2022-12-13T09:13:45 ART" duration-ms="2271" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="statusCodeGetAccountById()[pri:1, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:45 ART" name="statusCodeGetAccountById" finished-at="2022-12-13T09:13:45 ART" duration-ms="90" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- statusCodeGetAccountById -->
+        <test-method signature="ContentTypeGetAccountById()[pri:2, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:45 ART" name="ContentTypeGetAccountById" finished-at="2022-12-13T09:13:45 ART" duration-ms="136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ContentTypeGetAccountById -->
+        <test-method signature="GetAccountById()[pri:3, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:45 ART" name="GetAccountById" finished-at="2022-12-13T09:13:45 ART" duration-ms="222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetAccountById -->
+        <test-method signature="statusCodeGetAccountByIdInvalidToken()[pri:4, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:45 ART" name="statusCodeGetAccountByIdInvalidToken" finished-at="2022-12-13T09:13:45 ART" duration-ms="266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- statusCodeGetAccountByIdInvalidToken -->
+        <test-method signature="statusCodeGetAccountByIdEmptyToken()[pri:5, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:45 ART" name="statusCodeGetAccountByIdEmptyToken" finished-at="2022-12-13T09:13:46 ART" duration-ms="102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- statusCodeGetAccountByIdEmptyToken -->
+        <test-method signature="GetByAccountIdInvalid()[pri:6, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:46 ART" name="GetByAccountIdInvalid" finished-at="2022-12-13T09:13:46 ART" duration-ms="207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetByAccountIdInvalid -->
+        <test-method signature="getCardsByAccountId()[pri:7, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:46 ART" name="getCardsByAccountId" finished-at="2022-12-13T09:13:46 ART" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCardsByAccountId -->
+        <test-method signature="getCardsByAccountIdInvalidToken()[pri:8, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:46 ART" name="getCardsByAccountIdInvalidToken" finished-at="2022-12-13T09:13:46 ART" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCardsByAccountIdInvalidToken -->
+        <test-method signature="getCardsByAccountIdEmptyToken()[pri:9, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:46 ART" name="getCardsByAccountIdEmptyToken" finished-at="2022-12-13T09:13:46 ART" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCardsByAccountIdEmptyToken -->
+        <test-method signature="getActivityByAccountId()[pri:10, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:46 ART" name="getActivityByAccountId" finished-at="2022-12-13T09:13:47 ART" duration-ms="1193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getActivityByAccountId -->
+        <test-method signature="getActivityByInvalidAccountId()[pri:11, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:47 ART" name="getActivityByInvalidAccountId" finished-at="2022-12-13T09:13:47 ART" duration-ms="52" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getActivityByInvalidAccountId -->
+        <test-method signature="getActivityByAccountIdInvalidToken()[pri:12, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:47 ART" name="getActivityByAccountIdInvalidToken" finished-at="2022-12-13T09:13:47 ART" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getActivityByAccountIdInvalidToken -->
+        <test-method signature="getActivityByAccountIdEmptyToken()[pri:13, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:47 ART" name="getActivityByAccountIdEmptyToken" finished-at="2022-12-13T09:13:47 ART" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getActivityByAccountIdEmptyToken -->
+        <test-method signature="getTransactionByIdAndAccountId()[pri:14, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:47 ART" name="getTransactionByIdAndAccountId" finished-at="2022-12-13T09:13:48 ART" duration-ms="460" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <200> but was <400>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <400>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:58)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at Tests.CAccountTests.EAccountTests.getTransactionByIdAndAccountId(EAccountTests.java:227)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTransactionByIdAndAccountId -->
+        <test-method signature="getTransactionByInvalidIdAndAccountId()[pri:15, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:48 ART" name="getTransactionByInvalidIdAndAccountId" finished-at="2022-12-13T09:13:48 ART" duration-ms="103" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <500> but was <400>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <500> but was <400>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at Tests.CAccountTests.EAccountTests.getTransactionByInvalidIdAndAccountId(EAccountTests.java:241)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTransactionByInvalidIdAndAccountId -->
+        <test-method signature="getTransactionByIdAndAccountIdInvalidToken()[pri:16, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:48 ART" name="getTransactionByIdAndAccountIdInvalidToken" finished-at="2022-12-13T09:13:48 ART" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTransactionByIdAndAccountIdInvalidToken -->
+        <test-method signature="getTransactionByIdAndAccountIdEmptyToken()[pri:17, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:48 ART" name="getTransactionByIdAndAccountIdEmptyToken" finished-at="2022-12-13T09:13:48 ART" duration-ms="45" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTransactionByIdAndAccountIdEmptyToken -->
+        <test-method signature="editAliasInvalidAccount()[pri:18, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:48 ART" name="editAliasInvalidAccount" finished-at="2022-12-13T09:13:48 ART" duration-ms="211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editAliasInvalidAccount -->
+        <test-method signature="editEmptyAlias()[pri:19, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:48 ART" name="editEmptyAlias" finished-at="2022-12-13T09:13:48 ART" duration-ms="160" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[1 expectation failed.
+Expected status code <400> but was <200>.
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 1 expectation failed.
+Expected status code <400> but was <200>.
+
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)
+at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)
+at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)
+at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)
+at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+at Tests.CAccountTests.EAccountTests.editEmptyAlias(EAccountTests.java:295)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editEmptyAlias -->
+        <test-method signature="editEmptyAliasInvalidToken()[pri:19, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:48 ART" name="editEmptyAliasInvalidToken" finished-at="2022-12-13T09:13:48 ART" duration-ms="40" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editEmptyAliasInvalidToken -->
+        <test-method signature="editEmptyAliasEmptyToken()[pri:20, instance:Tests.CAccountTests.EAccountTests@5b5caf08]" started-at="2022-12-13T09:13:48 ART" name="editEmptyAliasEmptyToken" finished-at="2022-12-13T09:13:49 ART" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editEmptyAliasEmptyToken -->
+      </class> <!-- Tests.CAccountTests.EAccountTests -->
+      <class name="Tests.AUserTests.ARegisterTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:12:56 ART" name="setUp" finished-at="2022-12-13T09:12:58 ART" duration-ms="2630" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="registerOk()[pri:1, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:12:58 ART" name="registerOk" finished-at="2022-12-13T09:13:04 ART" duration-ms="6039" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerOk -->
+        <test-method signature="registerHeaders()[pri:2, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:05 ART" name="registerHeaders" finished-at="2022-12-13T09:13:05 ART" duration-ms="275" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerHeaders -->
+        <test-method signature="registerOkStatusCode()[pri:3, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:05 ART" name="registerOkStatusCode" finished-at="2022-12-13T09:13:05 ART" duration-ms="442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerOkStatusCode -->
+        <test-method signature="registerOkContentType()[pri:4, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:05 ART" name="registerOkContentType" finished-at="2022-12-13T09:13:06 ART" duration-ms="280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerOkContentType -->
+        <test-method signature="registerRandomUser()[pri:5, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:06 ART" name="registerRandomUser" finished-at="2022-12-13T09:13:06 ART" duration-ms="867" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerRandomUser -->
+        <test-method signature="registerRandomUser2()[pri:6, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:06 ART" name="registerRandomUser2" finished-at="2022-12-13T09:13:07 ART" depends-on-methods="Tests.AUserTests.ARegisterTests.registerRandomUser" duration-ms="391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerRandomUser2 -->
+        <test-method signature="registerRandomUser3()[pri:7, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:07 ART" name="registerRandomUser3" finished-at="2022-12-13T09:13:07 ART" depends-on-methods="Tests.AUserTests.ARegisterTests.registerRandomUser2, Tests.AUserTests.ARegisterTests.registerRandomUser" duration-ms="392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerRandomUser3 -->
+        <test-method signature="registerWithEmptyFirstName()[pri:8, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:07 ART" name="registerWithEmptyFirstName" finished-at="2022-12-13T09:13:07 ART" duration-ms="52" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithEmptyFirstName -->
+        <test-method signature="registerWithEmptyLastName()[pri:9, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:07 ART" name="registerWithEmptyLastName" finished-at="2022-12-13T09:13:07 ART" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithEmptyLastName -->
+        <test-method signature="registerWithEmptyDni()[pri:10, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:07 ART" name="registerWithEmptyDni" finished-at="2022-12-13T09:13:07 ART" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithEmptyDni -->
+        <test-method signature="registerWithEmptyEmail()[pri:11, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:07 ART" name="registerWithEmptyEmail" finished-at="2022-12-13T09:13:07 ART" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithEmptyEmail -->
+        <test-method signature="registerWithEmptyUsername()[pri:12, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:07 ART" name="registerWithEmptyUsername" finished-at="2022-12-13T09:13:07 ART" duration-ms="68" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithEmptyUsername -->
+        <test-method signature="registerWithEmptyPassword()[pri:13, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:07 ART" name="registerWithEmptyPassword" finished-at="2022-12-13T09:13:08 ART" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithEmptyPassword -->
+        <test-method signature="registerWithEmptyPhoneNumber()[pri:13, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithEmptyPhoneNumber" finished-at="2022-12-13T09:13:08 ART" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithEmptyPhoneNumber -->
+        <test-method signature="registerWithEmptyUser()[pri:14, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithEmptyUser" finished-at="2022-12-13T09:13:08 ART" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithEmptyUser -->
+        <test-method signature="registerWithoutFirstName()[pri:15, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithoutFirstName" finished-at="2022-12-13T09:13:08 ART" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithoutFirstName -->
+        <test-method signature="registerWithoutLastName()[pri:16, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithoutLastName" finished-at="2022-12-13T09:13:08 ART" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithoutLastName -->
+        <test-method signature="registerWithoutDni()[pri:17, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithoutDni" finished-at="2022-12-13T09:13:08 ART" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithoutDni -->
+        <test-method signature="registerWithoutEmail()[pri:18, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithoutEmail" finished-at="2022-12-13T09:13:08 ART" duration-ms="84" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithoutEmail -->
+        <test-method signature="registerWithoutUsername()[pri:19, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithoutUsername" finished-at="2022-12-13T09:13:08 ART" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithoutUsername -->
+        <test-method signature="registerWithoutPhoneNumber()[pri:20, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithoutPhoneNumber" finished-at="2022-12-13T09:13:08 ART" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithoutPhoneNumber -->
+        <test-method signature="registerWithoutPassword()[pri:21, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithoutPassword" finished-at="2022-12-13T09:13:08 ART" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithoutPassword -->
+        <test-method signature="registerWithNullFirstName()[pri:22, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithNullFirstName" finished-at="2022-12-13T09:13:08 ART" duration-ms="68" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithNullFirstName -->
+        <test-method signature="registerWithNullLastName()[pri:23, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithNullLastName" finished-at="2022-12-13T09:13:08 ART" duration-ms="48" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithNullLastName -->
+        <test-method signature="registerWithNullDni()[pri:24, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithNullDni" finished-at="2022-12-13T09:13:08 ART" duration-ms="64" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithNullDni -->
+        <test-method signature="registerWithNullEmail()[pri:25, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithNullEmail" finished-at="2022-12-13T09:13:08 ART" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithNullEmail -->
+        <test-method signature="registerWithNullUsername()[pri:26, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithNullUsername" finished-at="2022-12-13T09:13:08 ART" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithNullUsername -->
+        <test-method signature="registerWithNullPhoneNumber()[pri:27, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithNullPhoneNumber" finished-at="2022-12-13T09:13:08 ART" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithNullPhoneNumber -->
+        <test-method signature="registerWithNullPassword()[pri:28, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithNullPassword" finished-at="2022-12-13T09:13:08 ART" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithNullPassword -->
+        <test-method signature="registerWithNullUser()[pri:29, instance:Tests.AUserTests.ARegisterTests@6b7d1df8]" started-at="2022-12-13T09:13:08 ART" name="registerWithNullUser" finished-at="2022-12-13T09:13:08 ART" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithNullUser -->
+      </class> <!-- Tests.AUserTests.ARegisterTests -->
+      <class name="Tests.AUserTests.BUserTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:12 ART" name="setUp" finished-at="2022-12-13T09:13:12 ART" duration-ms="201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="headersOnGetAllUsersResponse()[pri:1, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:12 ART" name="headersOnGetAllUsersResponse" finished-at="2022-12-13T09:13:12 ART" duration-ms="339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- headersOnGetAllUsersResponse -->
+        <test-method signature="httpStatus200OnGetAllUsers()[pri:2, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:12 ART" name="httpStatus200OnGetAllUsers" finished-at="2022-12-13T09:13:12 ART" duration-ms="64" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- httpStatus200OnGetAllUsers -->
+        <test-method signature="contentTypeOnGetAllUsersResponse()[pri:3, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:12 ART" name="contentTypeOnGetAllUsersResponse" finished-at="2022-12-13T09:13:13 ART" duration-ms="63" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contentTypeOnGetAllUsersResponse -->
+        <test-method signature="fieldsNotEmptyGetAllUsersResponse()[pri:4, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:13 ART" name="fieldsNotEmptyGetAllUsersResponse" finished-at="2022-12-13T09:13:13 ART" duration-ms="573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fieldsNotEmptyGetAllUsersResponse -->
+        <test-method signature="fieldsNotNullGetAllUsersResponse()[pri:5, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:13 ART" name="fieldsNotNullGetAllUsersResponse" finished-at="2022-12-13T09:13:14 ART" duration-ms="540" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fieldsNotNullGetAllUsersResponse -->
+        <test-method signature="httpStatus200OnGetUserById()[pri:6, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:14 ART" name="httpStatus200OnGetUserById" finished-at="2022-12-13T09:13:14 ART" duration-ms="153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- httpStatus200OnGetUserById -->
+        <test-method signature="OnGetUserByIdWithWrongId()[pri:7, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:14 ART" name="OnGetUserByIdWithWrongId" finished-at="2022-12-13T09:13:14 ART" duration-ms="99" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OnGetUserByIdWithWrongId -->
+        <test-method signature="GetUserById()[pri:8, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:14 ART" name="GetUserById" finished-at="2022-12-13T09:13:14 ART" duration-ms="37" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetUserById -->
+        <test-method signature="GetAllUsers()[pri:9, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:14 ART" name="GetAllUsers" finished-at="2022-12-13T09:13:14 ART" duration-ms="552" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetAllUsers -->
+        <test-method signature="contentTypeOnGetUserByIDResponse()[pri:10, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:15 ART" name="contentTypeOnGetUserByIDResponse" finished-at="2022-12-13T09:13:15 ART" duration-ms="42" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contentTypeOnGetUserByIDResponse -->
+        <test-method signature="fieldsNotEmptyGetUserByIDResponse()[pri:11, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:15 ART" name="fieldsNotEmptyGetUserByIDResponse" finished-at="2022-12-13T09:13:15 ART" duration-ms="54" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fieldsNotEmptyGetUserByIDResponse -->
+        <test-method signature="fieldsNotNullGetUserByIDResponse()[pri:12, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:15 ART" name="fieldsNotNullGetUserByIDResponse" finished-at="2022-12-13T09:13:15 ART" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fieldsNotNullGetUserByIDResponse -->
+        <test-method signature="httpStatusWithInvalidToken()[pri:13, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:15 ART" name="httpStatusWithInvalidToken" finished-at="2022-12-13T09:13:15 ART" duration-ms="36" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- httpStatusWithInvalidToken -->
+        <test-method signature="httpStatusWithEmptyToken()[pri:14, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:15 ART" name="httpStatusWithEmptyToken" finished-at="2022-12-13T09:13:15 ART" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- httpStatusWithEmptyToken -->
+        <test-method signature="patchFirstNameById()[pri:15, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:15 ART" name="patchFirstNameById" finished-at="2022-12-13T09:13:16 ART" duration-ms="1091" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patchFirstNameById -->
+        <test-method signature="patchLastNameById()[pri:16, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:16 ART" name="patchLastNameById" finished-at="2022-12-13T09:13:16 ART" duration-ms="151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patchLastNameById -->
+        <test-method signature="patchUsernameById()[pri:17, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:16 ART" name="patchUsernameById" finished-at="2022-12-13T09:13:17 ART" duration-ms="779" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patchUsernameById -->
+        <test-method signature="patchPasswordById()[pri:18, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:17 ART" name="patchPasswordById" finished-at="2022-12-13T09:13:17 ART" duration-ms="677" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patchPasswordById -->
+        <test-method signature="patchPasswordInvalidToken()[pri:19, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:17 ART" name="patchPasswordInvalidToken" finished-at="2022-12-13T09:13:17 ART" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patchPasswordInvalidToken -->
+        <test-method signature="patchPasswordEmptyToken()[pri:20, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:17 ART" name="patchPasswordEmptyToken" finished-at="2022-12-13T09:13:17 ART" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patchPasswordEmptyToken -->
+        <test-method signature="patchCvuById()[pri:21, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:17 ART" name="patchCvuById" finished-at="2022-12-13T09:13:17 ART" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patchCvuById -->
+        <test-method signature="patchDniAndPhoneById()[pri:22, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:17 ART" name="patchDniAndPhoneById" finished-at="2022-12-13T09:13:19 ART" duration-ms="1959" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patchDniAndPhoneById -->
+        <test-method signature="patchLastNameAndPasswordById()[pri:23, instance:Tests.AUserTests.BUserTests@143d9a93]" started-at="2022-12-13T09:13:19 ART" name="patchLastNameAndPasswordById" finished-at="2022-12-13T09:13:20 ART" duration-ms="307" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patchLastNameAndPasswordById -->
+      </class> <!-- Tests.AUserTests.BUserTests -->
+      <class name="Tests.AUserTests.CLogoutTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.AUserTests.CLogoutTests@40226788]" started-at="2022-12-13T09:13:20 ART" name="setUp" finished-at="2022-12-13T09:13:20 ART" duration-ms="435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="logoutInvalidToken()[pri:1, instance:Tests.AUserTests.CLogoutTests@40226788]" started-at="2022-12-13T09:13:20 ART" name="logoutInvalidToken" finished-at="2022-12-13T09:13:20 ART" duration-ms="39" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutInvalidToken -->
+        <test-method signature="logoutEmptyToken()[pri:2, instance:Tests.AUserTests.CLogoutTests@40226788]" started-at="2022-12-13T09:13:20 ART" name="logoutEmptyToken" finished-at="2022-12-13T09:13:20 ART" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutEmptyToken -->
+        <test-method signature="statusCodeLogout()[pri:3, instance:Tests.AUserTests.CLogoutTests@40226788]" started-at="2022-12-13T09:13:20 ART" name="statusCodeLogout" finished-at="2022-12-13T09:13:21 ART" duration-ms="405" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- statusCodeLogout -->
+        <test-method signature="fieldsNotEmptyGetAllUsersResponse()[pri:4, instance:Tests.AUserTests.CLogoutTests@40226788]" started-at="2022-12-13T09:13:21 ART" name="fieldsNotEmptyGetAllUsersResponse" finished-at="2022-12-13T09:13:24 ART" duration-ms="3003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fieldsNotEmptyGetAllUsersResponse -->
+      </class> <!-- Tests.AUserTests.CLogoutTests -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

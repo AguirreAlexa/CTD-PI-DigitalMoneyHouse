@@ -1,0 +1,39 @@
+<div>PUT to http://localhost:8080/cards/9</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+    {
+    &quot;accountId&quot;: &quot;2&quot;,
+    &quot;cardNumbers&quot;: &quot;1234567891234567&quot;,
+    &quot;owner&quot;: &quot;Marcelo Lopez&quot;,
+    &quot;securityNumber&quot;: &quot;552&quot;,
+    &quot;expirationDate&quot;: &quot;2022-12-31&quot;,
+    &quot;lastNumbers&quot;: &quot;4567&quot;,
+    &quot;balance&quot;: &quot;200.0&quot;,
+    &quot;type&quot;: &quot;Débito&quot;
+}
+    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X PUT &#39;http://localhost:8080/cards/9&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;accountId&quot;: &quot;2&quot;,
+    &quot;cardNumbers&quot;: &quot;1234567891234567&quot;,
+    &quot;owner&quot;: &quot;Marcelo Lopez&quot;,
+    &quot;securityNumber&quot;: &quot;552&quot;,
+    &quot;expirationDate&quot;: &quot;2022-12-31&quot;,
+    &quot;lastNumbers&quot;: &quot;4567&quot;,
+    &quot;balance&quot;: &quot;200.0&quot;,
+    &quot;type&quot;: &quot;Débito&quot;
+}&#39;
+</div>

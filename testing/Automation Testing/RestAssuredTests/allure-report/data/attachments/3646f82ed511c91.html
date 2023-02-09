@@ -1,0 +1,29 @@
+<div>POST to http://localhost:9090/user/login</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+    {
+    &quot;password&quot;: &quot;scaloneta86&quot;,
+    &quot;email&quot;: &quot;scaloneta@mail.com&quot;,
+    &quot;accessToken&quot;: null
+}
+    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:9090/user/login&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;password&quot;: &quot;scaloneta86&quot;,
+    &quot;email&quot;: &quot;scaloneta@mail.com&quot;,
+    &quot;accessToken&quot;: null
+}&#39;
+</div>

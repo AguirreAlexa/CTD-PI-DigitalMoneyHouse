@@ -1,0 +1,8 @@
+.idea
+backend/.idea
+.DS_Store
+infraestructura/terraform/.terraform
+infraestructura/terraform/grupo-9-key.pem
+infraestructura/terraform/.terraform.lock.hcl
+infraestructura/terraform/terraform.tfstate
+infraestructura/terraform/terraform.tfstate.backup

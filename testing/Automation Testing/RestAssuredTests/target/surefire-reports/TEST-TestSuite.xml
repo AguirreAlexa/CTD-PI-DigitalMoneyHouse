@@ -1,0 +1,3879 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="66.503" tests="144" errors="0" skipped="0" failures="11">
+  <properties>
+    <property name="java.specification.version" value="18"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.3\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Buenos_Aires"/>
+    <property name="maven.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.3\plugins\maven\lib\maven3/conf"/>
+    <property name="java.vm.specification.version" value="18"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="AR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-18.0.1.1\bin"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.2.3 test"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.3\plugins\maven\lib\maven3"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\maria"/>
+    <property name="user.language" value="es"/>
+    <property name="sun.stderr.encoding" value="UTF-8"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-04-22"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-18.0.1.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="sun.stdout.encoding" value="UTF-8"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="18.0.1.1+2-6"/>
+    <property name="user.name" value="maria"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.3\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\maria\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2022.2.3"/>
+    <property name="java.version" value="18.0.1.1"/>
+    <property name="user.dir" value="C:\Users\maria\Documents\PROYECTO 2\Local\Testing\Automation Testing\RestAssuredTests"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\maria\Documents\PROYECTO 2\Local\Testing\Automation Testing\RestAssuredTests"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-18.0.1.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-18.0.1.1\bin;C:\Users\maria\Downloads\apache-maven-3.8.6-src\apache-maven-3.8.6\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Go\bin;C:\Program Files\Kubernetes\Minikube;C:\minikube;C:\Program Files\OpenSSH-Win64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\maria\.jbang\bin;C:\Users\maria\AppData\Local\Microsoft\WindowsApps;;C:\Users\maria\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\maria\AppData\Roaming\npm;C:\Users\maria\go\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="18.0.1.1+2-6"/>
+    <property name="classworlds.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.3\plugins\maven\lib\maven3\bin\m2.conf"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="62.0"/>
+  </properties>
+  <testcase name="registerOk" classname="Tests.AUserTests.ARegisterTests" time="6.194"/>
+  <testcase name="registerHeaders" classname="Tests.AUserTests.ARegisterTests" time="0.276"/>
+  <testcase name="registerOkStatusCode" classname="Tests.AUserTests.ARegisterTests" time="0.445"/>
+  <testcase name="registerOkContentType" classname="Tests.AUserTests.ARegisterTests" time="0.282"/>
+  <testcase name="registerRandomUser" classname="Tests.AUserTests.ARegisterTests" time="0.87"/>
+  <testcase name="registerRandomUser2" classname="Tests.AUserTests.ARegisterTests" time="0.403"/>
+  <testcase name="registerRandomUser3" classname="Tests.AUserTests.ARegisterTests" time="0.387"/>
+  <testcase name="registerWithEmptyFirstName" classname="Tests.AUserTests.ARegisterTests" time="0.053"/>
+  <testcase name="registerWithEmptyLastName" classname="Tests.AUserTests.ARegisterTests" time="0.033"/>
+  <testcase name="registerWithEmptyDni" classname="Tests.AUserTests.ARegisterTests" time="0.046"/>
+  <testcase name="registerWithEmptyEmail" classname="Tests.AUserTests.ARegisterTests" time="0.049"/>
+  <testcase name="registerWithEmptyUsername" classname="Tests.AUserTests.ARegisterTests" time="0.07"/>
+  <testcase name="registerWithEmptyPassword" classname="Tests.AUserTests.ARegisterTests" time="0.031"/>
+  <testcase name="registerWithEmptyPhoneNumber" classname="Tests.AUserTests.ARegisterTests" time="0.046"/>
+  <testcase name="registerWithEmptyUser" classname="Tests.AUserTests.ARegisterTests" time="0.048"/>
+  <testcase name="registerWithoutFirstName" classname="Tests.AUserTests.ARegisterTests" time="0.048"/>
+  <testcase name="registerWithoutLastName" classname="Tests.AUserTests.ARegisterTests" time="0.037"/>
+  <testcase name="registerWithoutDni" classname="Tests.AUserTests.ARegisterTests" time="0.027"/>
+  <testcase name="registerWithoutEmail" classname="Tests.AUserTests.ARegisterTests" time="0.063"/>
+  <testcase name="registerWithoutUsername" classname="Tests.AUserTests.ARegisterTests" time="0.056"/>
+  <testcase name="registerWithoutPhoneNumber" classname="Tests.AUserTests.ARegisterTests" time="0.018"/>
+  <testcase name="registerWithoutPassword" classname="Tests.AUserTests.ARegisterTests" time="0.086"/>
+  <testcase name="registerWithNullFirstName" classname="Tests.AUserTests.ARegisterTests" time="0.041"/>
+  <testcase name="registerWithNullLastName" classname="Tests.AUserTests.ARegisterTests" time="0.075"/>
+  <testcase name="registerWithNullDni" classname="Tests.AUserTests.ARegisterTests" time="0.036"/>
+  <testcase name="registerWithNullEmail" classname="Tests.AUserTests.ARegisterTests" time="0.031"/>
+  <testcase name="registerWithNullUsername" classname="Tests.AUserTests.ARegisterTests" time="0.042"/>
+  <testcase name="registerWithNullPhoneNumber" classname="Tests.AUserTests.ARegisterTests" time="0.035"/>
+  <testcase name="registerWithNullPassword" classname="Tests.AUserTests.ARegisterTests" time="0.036"/>
+  <testcase name="registerWithNullUser" classname="Tests.AUserTests.ARegisterTests" time="0.031"/>
+  <testcase name="loginOkGetToken" classname="Tests.AUserTests.BLoginTests" time="0.494"/>
+  <testcase name="loginOkHeaderToken" classname="Tests.AUserTests.BLoginTests" time="0.243"/>
+  <testcase name="loginOkPayloadToken" classname="Tests.AUserTests.BLoginTests" time="0.195"/>
+  <testcase name="loginHeaders" classname="Tests.AUserTests.BLoginTests" time="0.149"/>
+  <testcase name="loginOkStatusCode" classname="Tests.AUserTests.BLoginTests" time="1.437"/>
+  <testcase name="loginOkContentType" classname="Tests.AUserTests.BLoginTests" time="0.341"/>
+  <testcase name="failLoginUnregisteredEmail" classname="Tests.AUserTests.BLoginTests" time="0.041"/>
+  <testcase name="failLoginUnregisteredPassword" classname="Tests.AUserTests.BLoginTests" time="0.3"/>
+  <testcase name="failLoginUnregisteredUser" classname="Tests.AUserTests.BLoginTests" time="0.023"/>
+  <testcase name="failLoginEmptyEmail" classname="Tests.AUserTests.BLoginTests" time="0.022"/>
+  <testcase name="failLoginNullEmail" classname="Tests.AUserTests.BLoginTests" time="0.025"/>
+  <testcase name="failLoginNullUser" classname="Tests.AUserTests.BLoginTests" time="0.025"/>
+  <testcase name="failLoginNullPassword" classname="Tests.AUserTests.BLoginTests" time="0.057"/>
+  <testcase name="failLoginEmptyPassword" classname="Tests.AUserTests.BLoginTests" time="0.141"/>
+  <testcase name="failLoginEmptyUser" classname="Tests.AUserTests.BLoginTests" time="0.026"/>
+  <testcase name="headersOnGetAllUsersResponse" classname="Tests.AUserTests.BUserTests" time="0.34"/>
+  <testcase name="httpStatus200OnGetAllUsers" classname="Tests.AUserTests.BUserTests" time="0.067"/>
+  <testcase name="contentTypeOnGetAllUsersResponse" classname="Tests.AUserTests.BUserTests" time="0.062"/>
+  <testcase name="fieldsNotEmptyGetAllUsersResponse" classname="Tests.AUserTests.BUserTests" time="0.58"/>
+  <testcase name="fieldsNotNullGetAllUsersResponse" classname="Tests.AUserTests.BUserTests" time="0.542"/>
+  <testcase name="httpStatus200OnGetUserById" classname="Tests.AUserTests.BUserTests" time="0.154"/>
+  <testcase name="OnGetUserByIdWithWrongId" classname="Tests.AUserTests.BUserTests" time="0.099"/>
+  <testcase name="GetUserById" classname="Tests.AUserTests.BUserTests" time="0.043"/>
+  <testcase name="GetAllUsers" classname="Tests.AUserTests.BUserTests" time="0.561"/>
+  <testcase name="contentTypeOnGetUserByIDResponse" classname="Tests.AUserTests.BUserTests" time="0.045"/>
+  <testcase name="fieldsNotEmptyGetUserByIDResponse" classname="Tests.AUserTests.BUserTests" time="0.057"/>
+  <testcase name="fieldsNotNullGetUserByIDResponse" classname="Tests.AUserTests.BUserTests" time="0.037"/>
+  <testcase name="httpStatusWithInvalidToken" classname="Tests.AUserTests.BUserTests" time="0.037"/>
+  <testcase name="httpStatusWithEmptyToken" classname="Tests.AUserTests.BUserTests" time="0.033"/>
+  <testcase name="patchFirstNameById" classname="Tests.AUserTests.BUserTests" time="1.101"/>
+  <testcase name="patchLastNameById" classname="Tests.AUserTests.BUserTests" time="0.165"/>
+  <testcase name="patchUsernameById" classname="Tests.AUserTests.BUserTests" time="0.767"/>
+  <testcase name="patchPasswordById" classname="Tests.AUserTests.BUserTests" time="0.668"/>
+  <testcase name="patchPasswordInvalidToken" classname="Tests.AUserTests.BUserTests" time="0.02"/>
+  <testcase name="patchPasswordEmptyToken" classname="Tests.AUserTests.BUserTests" time="0.015"/>
+  <testcase name="patchCvuById" classname="Tests.AUserTests.BUserTests" time="0.064"/>
+  <testcase name="patchDniAndPhoneById" classname="Tests.AUserTests.BUserTests" time="1.933"/>
+  <testcase name="patchLastNameAndPasswordById" classname="Tests.AUserTests.BUserTests" time="0.307"/>
+  <testcase name="logoutInvalidToken" classname="Tests.AUserTests.CLogoutTests" time="0.069"/>
+  <testcase name="logoutEmptyToken" classname="Tests.AUserTests.CLogoutTests" time="0"/>
+  <testcase name="statusCodeLogout" classname="Tests.AUserTests.CLogoutTests" time="0.4"/>
+  <testcase name="fieldsNotEmptyGetAllUsersResponse" classname="Tests.AUserTests.CLogoutTests" time="3.007"/>
+  <testcase name="postCard" classname="Tests.BCardsTests.DCardTests" time="4.993"/>
+  <testcase name="postCardWithEmptyToken" classname="Tests.BCardsTests.DCardTests" time="0.497"/>
+  <testcase name="postCardWithInvalidToken" classname="Tests.BCardsTests.DCardTests" time="0.304"/>
+  <testcase name="postCardWithEmptyCardNumber" classname="Tests.BCardsTests.DCardTests" time="0.181"/>
+  <testcase name="postCardNullOwner" classname="Tests.BCardsTests.DCardTests" time="1.169"/>
+  <testcase name="postCardNullExpirationDate" classname="Tests.BCardsTests.DCardTests" time="0.108"/>
+  <testcase name="postCardNullSecurityNumber" classname="Tests.BCardsTests.DCardTests" time="0.403"/>
+  <testcase name="headersOnGetAllCardsResponse" classname="Tests.BCardsTests.DCardTests" time="0.933"/>
+  <testcase name="httpStatus200OnGetAllCards" classname="Tests.BCardsTests.DCardTests" time="0.736"/>
+  <testcase name="contentTypeOnGetAllCardsResponse" classname="Tests.BCardsTests.DCardTests" time="5.508"/>
+  <testcase name="fieldsNotEmptyGetAllCardsResponse" classname="Tests.BCardsTests.DCardTests" time="0.309"/>
+  <testcase name="fieldsNotNullGetAllUsersResponse" classname="Tests.BCardsTests.DCardTests" time="0.413"/>
+  <testcase name="httpStatus200OnGetCardById" classname="Tests.BCardsTests.DCardTests" time="0.049"/>
+  <testcase name="contentTypeOnGetCardByIDResponse" classname="Tests.BCardsTests.DCardTests" time="0.004"/>
+  <testcase name="fieldsNotEmptyGetCardByIDResponse" classname="Tests.BCardsTests.DCardTests" time="0.019"/>
+  <testcase name="fieldsNotNullGetCardByIDResponse" classname="Tests.BCardsTests.DCardTests" time="0.004"/>
+  <testcase name="putCardById" classname="Tests.BCardsTests.DCardTests" time="0.313"/>
+  <testcase name="putCardWithoutAccountIdById" classname="Tests.BCardsTests.DCardTests" time="0.004"/>
+  <testcase name="putCardWithoutTypeById" classname="Tests.BCardsTests.DCardTests" time="0.195"/>
+  <testcase name="putCardWithEmptyValuesId" classname="Tests.BCardsTests.DCardTests" time="0.008"/>
+  <testcase name="postCardWithNullValues" classname="Tests.BCardsTests.DCardTests" time="0.417"/>
+  <testcase name="postCardWithoutTypeValue" classname="Tests.BCardsTests.DCardTests" time="0.025"/>
+  <testcase name="postCardWithoutAccountIdValue" classname="Tests.BCardsTests.DCardTests" time="0.017"/>
+  <testcase name="postCardWithTypeNullValue" classname="Tests.BCardsTests.DCardTests" time="0.016">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at Tests.BCardsTests.DCardTests.postCardWithTypeNullValue(DCardTests.java:437)
+</failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:9090/cards
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MDYsImlhdCI6MTY3MDkzMzYwNiwianRpIjoiZmYwNmMzZjktYzYxNy00OTBlLWFjNWYtMDc1ODM2NDhkOTE5IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiNDU3YzE0MzYtYzMyZi00YTA4LTk2ZWEtODhkMjA4NzFmOTg4IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjQ1N2MxNDM2LWMzMmYtNGEwOC05NmVhLTg4ZDIwODcxZjk4OCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.IGhkR6dWYgJXzy2pe6INe_j57i0-rrngf2uqJ5gtKbAr0zrQZqIWMiD9ayWkeiuo60cWckFCrBvJv29bSU_MsQSlS5esXCtsxF6QnkJJ344psgGwg9bhr9KWfAwamdZ55ulyQ8lUH9YfEK6ze9bbCOqyjT8s6bvGOqHV1S6devfXYuMBkzB-LumwuyeHOJ-v7JM4GdYO_OjjoFgdw14uOTmxAuPgdA8FnZFcgFPK_rrBay08Ovv_T2gkHXoKDZo5PpjVApK-QxY7FsgHOET9IQ6Tvf6F2FgjpDShMrAJj4cKNL8eGmIMt2J6U5SVUs3DWfF8MnjV6AY8yXeS6t5YuA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "accountId": "8"
+}
+HTTP/1.1 400 Bad Request
+Content-Type: text/plain;charset=UTF-8
+Date: Tue, 13 Dec 2022 12:13:37 GMT
+content-length: 149
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+Cannot invoke "java.sql.Timestamp.before(java.sql.Timestamp)" because the return value of "dh.pi.cardservice.entity.Card.getExpirationDate()" is null
+]]></system-out>
+  </testcase>
+  <testcase name="deleteCardByID" classname="Tests.BCardsTests.DCardTests" time="0.005"/>
+  <testcase name="postCardWithAccountIdNullValue" classname="Tests.BCardsTests.DCardTests" time="0.386"/>
+  <testcase name="deleteCardByInvalidID" classname="Tests.BCardsTests.DCardTests" time="0.005"/>
+  <testcase name="deleteCardByInvalidToken" classname="Tests.BCardsTests.DCardTests" time="0.006"/>
+  <testcase name="deleteCardByEmptyToken" classname="Tests.BCardsTests.DCardTests" time="0.001"/>
+  <testcase name="statusCodeGetAccountById" classname="Tests.CAccountTests.EAccountTests" time="2.412"/>
+  <testcase name="ContentTypeGetAccountById" classname="Tests.CAccountTests.EAccountTests" time="0.215"/>
+  <testcase name="GetAccountById" classname="Tests.CAccountTests.EAccountTests" time="0.075"/>
+  <testcase name="statusCodeGetAccountByIdInvalidToken" classname="Tests.CAccountTests.EAccountTests" time="0.007"/>
+  <testcase name="statusCodeGetAccountByIdEmptyToken" classname="Tests.CAccountTests.EAccountTests" time="0.007"/>
+  <testcase name="GetByAccountIdInvalid" classname="Tests.CAccountTests.EAccountTests" time="0.007"/>
+  <testcase name="getCardsByAccountId" classname="Tests.CAccountTests.EAccountTests" time="0.057"/>
+  <testcase name="getCardsByAccountIdInvalidToken" classname="Tests.CAccountTests.EAccountTests" time="0.007"/>
+  <testcase name="getCardsByAccountIdEmptyToken" classname="Tests.CAccountTests.EAccountTests" time="0.003"/>
+  <testcase name="getActivityByAccountId" classname="Tests.CAccountTests.EAccountTests" time="1.713"/>
+  <testcase name="getActivityByInvalidAccountId" classname="Tests.CAccountTests.EAccountTests" time="0.123"/>
+  <testcase name="getActivityByAccountIdInvalidToken" classname="Tests.CAccountTests.EAccountTests" time="0.007"/>
+  <testcase name="getActivityByAccountIdEmptyToken" classname="Tests.CAccountTests.EAccountTests" time="0.01"/>
+  <testcase name="getTransactionByIdAndAccountId" classname="Tests.CAccountTests.EAccountTests" time="4.174">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;400&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Tests.CAccountTests.EAccountTests.getTransactionByIdAndAccountId(EAccountTests.java:227)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:9090/account/2/activity/6
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id_account=2
+				id_transaction=6
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjQsImlhdCI6MTY3MDkzMzYyNCwianRpIjoiM2E1ZGEyYjAtNGFkZi00OWU3LWEzYTAtOWNmOTA0NzQ4MDRkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiOGM3OWJlOWEtZjk2ZC00NzBmLWJhMWQtZDJjNDRhNDIzYTY4IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjhjNzliZTlhLWY5NmQtNDcwZi1iYTFkLWQyYzQ0YTQyM2E2OCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.Goy2k-1gCugEiiLFnEFHPI0_j6NosAjFnRNKrrZS6oxNsqMWgU5McHpQuWjVMq8bMA8tjKMR1ggP_P5ph1aC1xGM53BiQIlK3qRwYmIm35XTIYgV7uT9gr2bHwu2swqYGRVqg61n_satast_IHFhSfIbtWFvwjeeesVWZBIV_S1-MAqWJgluKuPfHbEzFgm7Dy1pUUF5Wwanq0IvG-a7EeJer2MGtmJ6CRNWZx0FhM5y6SUKz_ccSzh594lrQWFPFU4dpJBMs1qjS4AkybOF731jC9iU8dvZcQWvq2yUGuDXESS-JwGwolK1xyaOpg0LDQMsYRb2pAFziKSCnPtF0g
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	GET
+Request URI:	http://localhost:9090/account/2/activity/6
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id_account=2
+				id_transaction=6
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjQsImlhdCI6MTY3MDkzMzYyNCwianRpIjoiM2E1ZGEyYjAtNGFkZi00OWU3LWEzYTAtOWNmOTA0NzQ4MDRkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiOGM3OWJlOWEtZjk2ZC00NzBmLWJhMWQtZDJjNDRhNDIzYTY4IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjhjNzliZTlhLWY5NmQtNDcwZi1iYTFkLWQyYzQ0YTQyM2E2OCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.Goy2k-1gCugEiiLFnEFHPI0_j6NosAjFnRNKrrZS6oxNsqMWgU5McHpQuWjVMq8bMA8tjKMR1ggP_P5ph1aC1xGM53BiQIlK3qRwYmIm35XTIYgV7uT9gr2bHwu2swqYGRVqg61n_satast_IHFhSfIbtWFvwjeeesVWZBIV_S1-MAqWJgluKuPfHbEzFgm7Dy1pUUF5Wwanq0IvG-a7EeJer2MGtmJ6CRNWZx0FhM5y6SUKz_ccSzh594lrQWFPFU4dpJBMs1qjS4AkybOF731jC9iU8dvZcQWvq2yUGuDXESS-JwGwolK1xyaOpg0LDQMsYRb2pAFziKSCnPtF0g
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 400 Bad Request
+transfer-encoding: chunked
+Content-Type: application/json
+Date: Tue, 13 Dec 2022 12:13:47 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+{
+    "cause": null,
+    "stackTrace": [
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "clientErrorStatus",
+            "fileName": "FeignException.java",
+            "lineNumber": 219,
+            "nativeMethod": false,
+            "className": "feign.FeignException"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "errorStatus",
+            "fileName": "FeignException.java",
+            "lineNumber": 194,
+            "nativeMethod": false,
+            "className": "feign.FeignException"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "errorStatus",
+            "fileName": "FeignException.java",
+            "lineNumber": 185,
+            "nativeMethod": false,
+            "className": "feign.FeignException"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "decode",
+            "fileName": "ErrorDecoder.java",
+            "lineNumber": 92,
+            "nativeMethod": false,
+            "className": "feign.codec.ErrorDecoder$Default"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "handleResponse",
+            "fileName": "AsyncResponseHandler.java",
+            "lineNumber": 96,
+            "nativeMethod": false,
+            "className": "feign.AsyncResponseHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "executeAndDecode",
+            "fileName": "SynchronousMethodHandler.java",
+            "lineNumber": 138,
+            "nativeMethod": false,
+            "className": "feign.SynchronousMethodHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "SynchronousMethodHandler.java",
+            "lineNumber": 89,
+            "nativeMethod": false,
+            "className": "feign.SynchronousMethodHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "ReflectiveFeign.java",
+            "lineNumber": 100,
+            "nativeMethod": false,
+            "className": "feign.ReflectiveFeign$FeignInvocationHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": "jdk.proxy2",
+            "moduleVersion": null,
+            "methodName": "getByAccountAndTransactionId",
+            "fileName": null,
+            "lineNumber": -1,
+            "nativeMethod": false,
+            "className": "jdk.proxy2.$Proxy158"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "getByAccountAndTransactionId",
+            "fileName": "AccountService.java",
+            "lineNumber": 86,
+            "nativeMethod": false,
+            "className": "dh.pi.accountservice.service.AccountService"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "getByAccountAndTransactionId",
+            "fileName": "AccountController.java",
+            "lineNumber": 49,
+            "nativeMethod": false,
+            "className": "dh.pi.accountservice.controller.AccountController"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": null,
+            "lineNumber": -1,
+            "nativeMethod": false,
+            "className": "jdk.internal.reflect.GeneratedMethodAccessor161"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": "java.base",
+            "moduleVersion": "17.0.3.1",
+            "methodName": "invoke",
+            "fileName": "DelegatingMethodAccessorImpl.java",
+            "lineNumber": 43,
+            "nativeMethod": false,
+            "className": "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": "java.base",
+            "moduleVersion": "17.0.3.1",
+            "methodName": "invoke",
+            "fileName": "Method.java",
+            "lineNumber": 568,
+            "nativeMethod": false,
+            "className": "java.lang.reflect.Method"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doInvoke",
+            "fileName": "InvocableHandlerMethod.java",
+            "lineNumber": 205,
+            "nativeMethod": false,
+            "className": "org.springframework.web.method.support.InvocableHandlerMethod"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invokeForRequest",
+            "fileName": "InvocableHandlerMethod.java",
+            "lineNumber": 150,
+            "nativeMethod": false,
+            "className": "org.springframework.web.method.support.InvocableHandlerMethod"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invokeAndHandle",
+            "fileName": "ServletInvocableHandlerMethod.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invokeHandlerMethod",
+            "fileName": "RequestMappingHandlerAdapter.java",
+            "lineNumber": 895,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "handleInternal",
+            "fileName": "RequestMappingHandlerAdapter.java",
+            "lineNumber": 808,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "handle",
+            "fileName": "AbstractHandlerMethodAdapter.java",
+            "lineNumber": 87,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doDispatch",
+            "fileName": "DispatcherServlet.java",
+            "lineNumber": 1071,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.DispatcherServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doService",
+            "fileName": "DispatcherServlet.java",
+            "lineNumber": 964,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.DispatcherServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "processRequest",
+            "fileName": "FrameworkServlet.java",
+            "lineNumber": 1006,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.FrameworkServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doGet",
+            "fileName": "FrameworkServlet.java",
+            "lineNumber": 898,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.FrameworkServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "HttpServlet.java",
+            "lineNumber": 670,
+            "nativeMethod": false,
+            "className": "javax.servlet.http.HttpServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "FrameworkServlet.java",
+            "lineNumber": 883,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.FrameworkServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "HttpServlet.java",
+            "lineNumber": 779,
+            "nativeMethod": false,
+            "className": "javax.servlet.http.HttpServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 227,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "WsFilter.java",
+            "lineNumber": 53,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.websocket.server.WsFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "RequestContextFilter.java",
+            "lineNumber": 100,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.RequestContextFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "FormContentFilter.java",
+            "lineNumber": 93,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.FormContentFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "WebMvcMetricsFilter.java",
+            "lineNumber": 96,
+            "nativeMethod": false,
+            "className": "org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "CharacterEncodingFilter.java",
+            "lineNumber": 201,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.CharacterEncodingFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardWrapperValve.java",
+            "lineNumber": 197,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardWrapperValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardContextValve.java",
+            "lineNumber": 97,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardContextValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "AuthenticatorBase.java",
+            "lineNumber": 541,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.authenticator.AuthenticatorBase"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardHostValve.java",
+            "lineNumber": 135,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardHostValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "ErrorReportValve.java",
+            "lineNumber": 92,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.valves.ErrorReportValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardEngineValve.java",
+            "lineNumber": 78,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardEngineValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "CoyoteAdapter.java",
+            "lineNumber": 360,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.connector.CoyoteAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "Http11Processor.java",
+            "lineNumber": 399,
+            "nativeMethod": false,
+            "className": "org.apache.coyote.http11.Http11Processor"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "process",
+            "fileName": "AbstractProcessorLight.java",
+            "lineNumber": 65,
+            "nativeMethod": false,
+            "className": "org.apache.coyote.AbstractProcessorLight"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "process",
+            "fileName": "AbstractProtocol.java",
+            "lineNumber": 893,
+            "nativeMethod": false,
+            "className": "org.apache.coyote.AbstractProtocol$ConnectionHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doRun",
+            "fileName": "NioEndpoint.java",
+            "lineNumber": 1789,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.net.NioEndpoint$SocketProcessor"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "run",
+            "fileName": "SocketProcessorBase.java",
+            "lineNumber": 49,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.net.SocketProcessorBase"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "runWorker",
+            "fileName": "ThreadPoolExecutor.java",
+            "lineNumber": 1191,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.threads.ThreadPoolExecutor"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "run",
+            "fileName": "ThreadPoolExecutor.java",
+            "lineNumber": 659,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "run",
+            "fileName": "TaskThread.java",
+            "lineNumber": 61,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.threads.TaskThread$WrappingRunnable"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": "java.base",
+            "moduleVersion": "17.0.3.1",
+            "methodName": "run",
+            "fileName": "Thread.java",
+            "lineNumber": 833,
+            "nativeMethod": false,
+            "className": "java.lang.Thread"
+        }
+    ],
+    "message": "[404] during [GET] to [http://transaction-service/transaction/6/2] [ITransactionFeignRepository#getByAccountAndTransactionId(Integer,Integer)]: [No se encontro transferencia con este id]",
+    "suppressed": [
+        
+    ],
+    "localizedMessage": "[404] during [GET] to [http://transaction-service/transaction/6/2] [ITransactionFeignRepository#getByAccountAndTransactionId(Integer,Integer)]: [No se encontro transferencia con este id]"
+}
+HTTP/1.1 400 Bad Request
+transfer-encoding: chunked
+Content-Type: application/json
+Date: Tue, 13 Dec 2022 12:13:47 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+{
+    "cause": null,
+    "stackTrace": [
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "clientErrorStatus",
+            "fileName": "FeignException.java",
+            "lineNumber": 219,
+            "nativeMethod": false,
+            "className": "feign.FeignException"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "errorStatus",
+            "fileName": "FeignException.java",
+            "lineNumber": 194,
+            "nativeMethod": false,
+            "className": "feign.FeignException"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "errorStatus",
+            "fileName": "FeignException.java",
+            "lineNumber": 185,
+            "nativeMethod": false,
+            "className": "feign.FeignException"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "decode",
+            "fileName": "ErrorDecoder.java",
+            "lineNumber": 92,
+            "nativeMethod": false,
+            "className": "feign.codec.ErrorDecoder$Default"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "handleResponse",
+            "fileName": "AsyncResponseHandler.java",
+            "lineNumber": 96,
+            "nativeMethod": false,
+            "className": "feign.AsyncResponseHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "executeAndDecode",
+            "fileName": "SynchronousMethodHandler.java",
+            "lineNumber": 138,
+            "nativeMethod": false,
+            "className": "feign.SynchronousMethodHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "SynchronousMethodHandler.java",
+            "lineNumber": 89,
+            "nativeMethod": false,
+            "className": "feign.SynchronousMethodHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "ReflectiveFeign.java",
+            "lineNumber": 100,
+            "nativeMethod": false,
+            "className": "feign.ReflectiveFeign$FeignInvocationHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": "jdk.proxy2",
+            "moduleVersion": null,
+            "methodName": "getByAccountAndTransactionId",
+            "fileName": null,
+            "lineNumber": -1,
+            "nativeMethod": false,
+            "className": "jdk.proxy2.$Proxy158"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "getByAccountAndTransactionId",
+            "fileName": "AccountService.java",
+            "lineNumber": 86,
+            "nativeMethod": false,
+            "className": "dh.pi.accountservice.service.AccountService"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "getByAccountAndTransactionId",
+            "fileName": "AccountController.java",
+            "lineNumber": 49,
+            "nativeMethod": false,
+            "className": "dh.pi.accountservice.controller.AccountController"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": null,
+            "lineNumber": -1,
+            "nativeMethod": false,
+            "className": "jdk.internal.reflect.GeneratedMethodAccessor161"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": "java.base",
+            "moduleVersion": "17.0.3.1",
+            "methodName": "invoke",
+            "fileName": "DelegatingMethodAccessorImpl.java",
+            "lineNumber": 43,
+            "nativeMethod": false,
+            "className": "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": "java.base",
+            "moduleVersion": "17.0.3.1",
+            "methodName": "invoke",
+            "fileName": "Method.java",
+            "lineNumber": 568,
+            "nativeMethod": false,
+            "className": "java.lang.reflect.Method"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doInvoke",
+            "fileName": "InvocableHandlerMethod.java",
+            "lineNumber": 205,
+            "nativeMethod": false,
+            "className": "org.springframework.web.method.support.InvocableHandlerMethod"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invokeForRequest",
+            "fileName": "InvocableHandlerMethod.java",
+            "lineNumber": 150,
+            "nativeMethod": false,
+            "className": "org.springframework.web.method.support.InvocableHandlerMethod"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invokeAndHandle",
+            "fileName": "ServletInvocableHandlerMethod.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invokeHandlerMethod",
+            "fileName": "RequestMappingHandlerAdapter.java",
+            "lineNumber": 895,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "handleInternal",
+            "fileName": "RequestMappingHandlerAdapter.java",
+            "lineNumber": 808,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "handle",
+            "fileName": "AbstractHandlerMethodAdapter.java",
+            "lineNumber": 87,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doDispatch",
+            "fileName": "DispatcherServlet.java",
+            "lineNumber": 1071,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.DispatcherServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doService",
+            "fileName": "DispatcherServlet.java",
+            "lineNumber": 964,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.DispatcherServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "processRequest",
+            "fileName": "FrameworkServlet.java",
+            "lineNumber": 1006,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.FrameworkServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doGet",
+            "fileName": "FrameworkServlet.java",
+            "lineNumber": 898,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.FrameworkServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "HttpServlet.java",
+            "lineNumber": 670,
+            "nativeMethod": false,
+            "className": "javax.servlet.http.HttpServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "FrameworkServlet.java",
+            "lineNumber": 883,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.FrameworkServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "HttpServlet.java",
+            "lineNumber": 779,
+            "nativeMethod": false,
+            "className": "javax.servlet.http.HttpServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 227,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "WsFilter.java",
+            "lineNumber": 53,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.websocket.server.WsFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "RequestContextFilter.java",
+            "lineNumber": 100,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.RequestContextFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "FormContentFilter.java",
+            "lineNumber": 93,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.FormContentFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "WebMvcMetricsFilter.java",
+            "lineNumber": 96,
+            "nativeMethod": false,
+            "className": "org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "CharacterEncodingFilter.java",
+            "lineNumber": 201,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.CharacterEncodingFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardWrapperValve.java",
+            "lineNumber": 197,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardWrapperValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardContextValve.java",
+            "lineNumber": 97,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardContextValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "AuthenticatorBase.java",
+            "lineNumber": 541,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.authenticator.AuthenticatorBase"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardHostValve.java",
+            "lineNumber": 135,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardHostValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "ErrorReportValve.java",
+            "lineNumber": 92,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.valves.ErrorReportValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardEngineValve.java",
+            "lineNumber": 78,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardEngineValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "CoyoteAdapter.java",
+            "lineNumber": 360,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.connector.CoyoteAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "Http11Processor.java",
+            "lineNumber": 399,
+            "nativeMethod": false,
+            "className": "org.apache.coyote.http11.Http11Processor"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "process",
+            "fileName": "AbstractProcessorLight.java",
+            "lineNumber": 65,
+            "nativeMethod": false,
+            "className": "org.apache.coyote.AbstractProcessorLight"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "process",
+            "fileName": "AbstractProtocol.java",
+            "lineNumber": 893,
+            "nativeMethod": false,
+            "className": "org.apache.coyote.AbstractProtocol$ConnectionHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doRun",
+            "fileName": "NioEndpoint.java",
+            "lineNumber": 1789,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.net.NioEndpoint$SocketProcessor"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "run",
+            "fileName": "SocketProcessorBase.java",
+            "lineNumber": 49,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.net.SocketProcessorBase"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "runWorker",
+            "fileName": "ThreadPoolExecutor.java",
+            "lineNumber": 1191,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.threads.ThreadPoolExecutor"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "run",
+            "fileName": "ThreadPoolExecutor.java",
+            "lineNumber": 659,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "run",
+            "fileName": "TaskThread.java",
+            "lineNumber": 61,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.threads.TaskThread$WrappingRunnable"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": "java.base",
+            "moduleVersion": "17.0.3.1",
+            "methodName": "run",
+            "fileName": "Thread.java",
+            "lineNumber": 833,
+            "nativeMethod": false,
+            "className": "java.lang.Thread"
+        }
+    ],
+    "message": "[404] during [GET] to [http://transaction-service/transaction/6/2] [ITransactionFeignRepository#getByAccountAndTransactionId(Integer,Integer)]: [No se encontro transferencia con este id]",
+    "suppressed": [
+        
+    ],
+    "localizedMessage": "[404] during [GET] to [http://transaction-service/transaction/6/2] [ITransactionFeignRepository#getByAccountAndTransactionId(Integer,Integer)]: [No se encontro transferencia con este id]"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="getTransactionByInvalidIdAndAccountId" classname="Tests.CAccountTests.EAccountTests" time="2.682">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;500&gt; but was &lt;400&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at Tests.CAccountTests.EAccountTests.getTransactionByInvalidIdAndAccountId(EAccountTests.java:241)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:9090/account/2/activity/9878454
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id_account=2
+				id_transaction=9878454
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjQsImlhdCI6MTY3MDkzMzYyNCwianRpIjoiM2E1ZGEyYjAtNGFkZi00OWU3LWEzYTAtOWNmOTA0NzQ4MDRkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiOGM3OWJlOWEtZjk2ZC00NzBmLWJhMWQtZDJjNDRhNDIzYTY4IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjhjNzliZTlhLWY5NmQtNDcwZi1iYTFkLWQyYzQ0YTQyM2E2OCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.Goy2k-1gCugEiiLFnEFHPI0_j6NosAjFnRNKrrZS6oxNsqMWgU5McHpQuWjVMq8bMA8tjKMR1ggP_P5ph1aC1xGM53BiQIlK3qRwYmIm35XTIYgV7uT9gr2bHwu2swqYGRVqg61n_satast_IHFhSfIbtWFvwjeeesVWZBIV_S1-MAqWJgluKuPfHbEzFgm7Dy1pUUF5Wwanq0IvG-a7EeJer2MGtmJ6CRNWZx0FhM5y6SUKz_ccSzh594lrQWFPFU4dpJBMs1qjS4AkybOF731jC9iU8dvZcQWvq2yUGuDXESS-JwGwolK1xyaOpg0LDQMsYRb2pAFziKSCnPtF0g
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	GET
+Request URI:	http://localhost:9090/account/2/activity/9878454
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id_account=2
+				id_transaction=9878454
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjQsImlhdCI6MTY3MDkzMzYyNCwianRpIjoiM2E1ZGEyYjAtNGFkZi00OWU3LWEzYTAtOWNmOTA0NzQ4MDRkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiOGM3OWJlOWEtZjk2ZC00NzBmLWJhMWQtZDJjNDRhNDIzYTY4IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjhjNzliZTlhLWY5NmQtNDcwZi1iYTFkLWQyYzQ0YTQyM2E2OCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.Goy2k-1gCugEiiLFnEFHPI0_j6NosAjFnRNKrrZS6oxNsqMWgU5McHpQuWjVMq8bMA8tjKMR1ggP_P5ph1aC1xGM53BiQIlK3qRwYmIm35XTIYgV7uT9gr2bHwu2swqYGRVqg61n_satast_IHFhSfIbtWFvwjeeesVWZBIV_S1-MAqWJgluKuPfHbEzFgm7Dy1pUUF5Wwanq0IvG-a7EeJer2MGtmJ6CRNWZx0FhM5y6SUKz_ccSzh594lrQWFPFU4dpJBMs1qjS4AkybOF731jC9iU8dvZcQWvq2yUGuDXESS-JwGwolK1xyaOpg0LDQMsYRb2pAFziKSCnPtF0g
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 400 Bad Request
+transfer-encoding: chunked
+Content-Type: application/json
+Date: Tue, 13 Dec 2022 12:13:47 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+{
+    "cause": null,
+    "stackTrace": [
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "clientErrorStatus",
+            "fileName": "FeignException.java",
+            "lineNumber": 219,
+            "nativeMethod": false,
+            "className": "feign.FeignException"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "errorStatus",
+            "fileName": "FeignException.java",
+            "lineNumber": 194,
+            "nativeMethod": false,
+            "className": "feign.FeignException"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "errorStatus",
+            "fileName": "FeignException.java",
+            "lineNumber": 185,
+            "nativeMethod": false,
+            "className": "feign.FeignException"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "decode",
+            "fileName": "ErrorDecoder.java",
+            "lineNumber": 92,
+            "nativeMethod": false,
+            "className": "feign.codec.ErrorDecoder$Default"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "handleResponse",
+            "fileName": "AsyncResponseHandler.java",
+            "lineNumber": 96,
+            "nativeMethod": false,
+            "className": "feign.AsyncResponseHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "executeAndDecode",
+            "fileName": "SynchronousMethodHandler.java",
+            "lineNumber": 138,
+            "nativeMethod": false,
+            "className": "feign.SynchronousMethodHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "SynchronousMethodHandler.java",
+            "lineNumber": 89,
+            "nativeMethod": false,
+            "className": "feign.SynchronousMethodHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "ReflectiveFeign.java",
+            "lineNumber": 100,
+            "nativeMethod": false,
+            "className": "feign.ReflectiveFeign$FeignInvocationHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": "jdk.proxy2",
+            "moduleVersion": null,
+            "methodName": "getByAccountAndTransactionId",
+            "fileName": null,
+            "lineNumber": -1,
+            "nativeMethod": false,
+            "className": "jdk.proxy2.$Proxy158"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "getByAccountAndTransactionId",
+            "fileName": "AccountService.java",
+            "lineNumber": 86,
+            "nativeMethod": false,
+            "className": "dh.pi.accountservice.service.AccountService"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "getByAccountAndTransactionId",
+            "fileName": "AccountController.java",
+            "lineNumber": 49,
+            "nativeMethod": false,
+            "className": "dh.pi.accountservice.controller.AccountController"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": null,
+            "lineNumber": -1,
+            "nativeMethod": false,
+            "className": "jdk.internal.reflect.GeneratedMethodAccessor161"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": "java.base",
+            "moduleVersion": "17.0.3.1",
+            "methodName": "invoke",
+            "fileName": "DelegatingMethodAccessorImpl.java",
+            "lineNumber": 43,
+            "nativeMethod": false,
+            "className": "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": "java.base",
+            "moduleVersion": "17.0.3.1",
+            "methodName": "invoke",
+            "fileName": "Method.java",
+            "lineNumber": 568,
+            "nativeMethod": false,
+            "className": "java.lang.reflect.Method"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doInvoke",
+            "fileName": "InvocableHandlerMethod.java",
+            "lineNumber": 205,
+            "nativeMethod": false,
+            "className": "org.springframework.web.method.support.InvocableHandlerMethod"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invokeForRequest",
+            "fileName": "InvocableHandlerMethod.java",
+            "lineNumber": 150,
+            "nativeMethod": false,
+            "className": "org.springframework.web.method.support.InvocableHandlerMethod"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invokeAndHandle",
+            "fileName": "ServletInvocableHandlerMethod.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invokeHandlerMethod",
+            "fileName": "RequestMappingHandlerAdapter.java",
+            "lineNumber": 895,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "handleInternal",
+            "fileName": "RequestMappingHandlerAdapter.java",
+            "lineNumber": 808,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "handle",
+            "fileName": "AbstractHandlerMethodAdapter.java",
+            "lineNumber": 87,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doDispatch",
+            "fileName": "DispatcherServlet.java",
+            "lineNumber": 1071,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.DispatcherServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doService",
+            "fileName": "DispatcherServlet.java",
+            "lineNumber": 964,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.DispatcherServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "processRequest",
+            "fileName": "FrameworkServlet.java",
+            "lineNumber": 1006,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.FrameworkServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doGet",
+            "fileName": "FrameworkServlet.java",
+            "lineNumber": 898,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.FrameworkServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "HttpServlet.java",
+            "lineNumber": 670,
+            "nativeMethod": false,
+            "className": "javax.servlet.http.HttpServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "FrameworkServlet.java",
+            "lineNumber": 883,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.FrameworkServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "HttpServlet.java",
+            "lineNumber": 779,
+            "nativeMethod": false,
+            "className": "javax.servlet.http.HttpServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 227,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "WsFilter.java",
+            "lineNumber": 53,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.websocket.server.WsFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "RequestContextFilter.java",
+            "lineNumber": 100,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.RequestContextFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "FormContentFilter.java",
+            "lineNumber": 93,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.FormContentFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "WebMvcMetricsFilter.java",
+            "lineNumber": 96,
+            "nativeMethod": false,
+            "className": "org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "CharacterEncodingFilter.java",
+            "lineNumber": 201,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.CharacterEncodingFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardWrapperValve.java",
+            "lineNumber": 197,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardWrapperValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardContextValve.java",
+            "lineNumber": 97,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardContextValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "AuthenticatorBase.java",
+            "lineNumber": 541,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.authenticator.AuthenticatorBase"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardHostValve.java",
+            "lineNumber": 135,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardHostValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "ErrorReportValve.java",
+            "lineNumber": 92,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.valves.ErrorReportValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardEngineValve.java",
+            "lineNumber": 78,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardEngineValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "CoyoteAdapter.java",
+            "lineNumber": 360,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.connector.CoyoteAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "Http11Processor.java",
+            "lineNumber": 399,
+            "nativeMethod": false,
+            "className": "org.apache.coyote.http11.Http11Processor"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "process",
+            "fileName": "AbstractProcessorLight.java",
+            "lineNumber": 65,
+            "nativeMethod": false,
+            "className": "org.apache.coyote.AbstractProcessorLight"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "process",
+            "fileName": "AbstractProtocol.java",
+            "lineNumber": 893,
+            "nativeMethod": false,
+            "className": "org.apache.coyote.AbstractProtocol$ConnectionHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doRun",
+            "fileName": "NioEndpoint.java",
+            "lineNumber": 1789,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.net.NioEndpoint$SocketProcessor"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "run",
+            "fileName": "SocketProcessorBase.java",
+            "lineNumber": 49,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.net.SocketProcessorBase"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "runWorker",
+            "fileName": "ThreadPoolExecutor.java",
+            "lineNumber": 1191,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.threads.ThreadPoolExecutor"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "run",
+            "fileName": "ThreadPoolExecutor.java",
+            "lineNumber": 659,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "run",
+            "fileName": "TaskThread.java",
+            "lineNumber": 61,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.threads.TaskThread$WrappingRunnable"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": "java.base",
+            "moduleVersion": "17.0.3.1",
+            "methodName": "run",
+            "fileName": "Thread.java",
+            "lineNumber": 833,
+            "nativeMethod": false,
+            "className": "java.lang.Thread"
+        }
+    ],
+    "message": "[404] during [GET] to [http://transaction-service/transaction/9878454/2] [ITransactionFeignRepository#getByAccountAndTransactionId(Integer,Integer)]: [No se encontro transferencia con este id]",
+    "suppressed": [
+        
+    ],
+    "localizedMessage": "[404] during [GET] to [http://transaction-service/transaction/9878454/2] [ITransactionFeignRepository#getByAccountAndTransactionId(Integer,Integer)]: [No se encontro transferencia con este id]"
+}
+HTTP/1.1 400 Bad Request
+transfer-encoding: chunked
+Content-Type: application/json
+Date: Tue, 13 Dec 2022 12:13:47 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+{
+    "cause": null,
+    "stackTrace": [
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "clientErrorStatus",
+            "fileName": "FeignException.java",
+            "lineNumber": 219,
+            "nativeMethod": false,
+            "className": "feign.FeignException"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "errorStatus",
+            "fileName": "FeignException.java",
+            "lineNumber": 194,
+            "nativeMethod": false,
+            "className": "feign.FeignException"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "errorStatus",
+            "fileName": "FeignException.java",
+            "lineNumber": 185,
+            "nativeMethod": false,
+            "className": "feign.FeignException"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "decode",
+            "fileName": "ErrorDecoder.java",
+            "lineNumber": 92,
+            "nativeMethod": false,
+            "className": "feign.codec.ErrorDecoder$Default"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "handleResponse",
+            "fileName": "AsyncResponseHandler.java",
+            "lineNumber": 96,
+            "nativeMethod": false,
+            "className": "feign.AsyncResponseHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "executeAndDecode",
+            "fileName": "SynchronousMethodHandler.java",
+            "lineNumber": 138,
+            "nativeMethod": false,
+            "className": "feign.SynchronousMethodHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "SynchronousMethodHandler.java",
+            "lineNumber": 89,
+            "nativeMethod": false,
+            "className": "feign.SynchronousMethodHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "ReflectiveFeign.java",
+            "lineNumber": 100,
+            "nativeMethod": false,
+            "className": "feign.ReflectiveFeign$FeignInvocationHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": "jdk.proxy2",
+            "moduleVersion": null,
+            "methodName": "getByAccountAndTransactionId",
+            "fileName": null,
+            "lineNumber": -1,
+            "nativeMethod": false,
+            "className": "jdk.proxy2.$Proxy158"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "getByAccountAndTransactionId",
+            "fileName": "AccountService.java",
+            "lineNumber": 86,
+            "nativeMethod": false,
+            "className": "dh.pi.accountservice.service.AccountService"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "getByAccountAndTransactionId",
+            "fileName": "AccountController.java",
+            "lineNumber": 49,
+            "nativeMethod": false,
+            "className": "dh.pi.accountservice.controller.AccountController"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": null,
+            "lineNumber": -1,
+            "nativeMethod": false,
+            "className": "jdk.internal.reflect.GeneratedMethodAccessor161"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": "java.base",
+            "moduleVersion": "17.0.3.1",
+            "methodName": "invoke",
+            "fileName": "DelegatingMethodAccessorImpl.java",
+            "lineNumber": 43,
+            "nativeMethod": false,
+            "className": "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": "java.base",
+            "moduleVersion": "17.0.3.1",
+            "methodName": "invoke",
+            "fileName": "Method.java",
+            "lineNumber": 568,
+            "nativeMethod": false,
+            "className": "java.lang.reflect.Method"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doInvoke",
+            "fileName": "InvocableHandlerMethod.java",
+            "lineNumber": 205,
+            "nativeMethod": false,
+            "className": "org.springframework.web.method.support.InvocableHandlerMethod"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invokeForRequest",
+            "fileName": "InvocableHandlerMethod.java",
+            "lineNumber": 150,
+            "nativeMethod": false,
+            "className": "org.springframework.web.method.support.InvocableHandlerMethod"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invokeAndHandle",
+            "fileName": "ServletInvocableHandlerMethod.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invokeHandlerMethod",
+            "fileName": "RequestMappingHandlerAdapter.java",
+            "lineNumber": 895,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "handleInternal",
+            "fileName": "RequestMappingHandlerAdapter.java",
+            "lineNumber": 808,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "handle",
+            "fileName": "AbstractHandlerMethodAdapter.java",
+            "lineNumber": 87,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doDispatch",
+            "fileName": "DispatcherServlet.java",
+            "lineNumber": 1071,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.DispatcherServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doService",
+            "fileName": "DispatcherServlet.java",
+            "lineNumber": 964,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.DispatcherServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "processRequest",
+            "fileName": "FrameworkServlet.java",
+            "lineNumber": 1006,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.FrameworkServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doGet",
+            "fileName": "FrameworkServlet.java",
+            "lineNumber": 898,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.FrameworkServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "HttpServlet.java",
+            "lineNumber": 670,
+            "nativeMethod": false,
+            "className": "javax.servlet.http.HttpServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "FrameworkServlet.java",
+            "lineNumber": 883,
+            "nativeMethod": false,
+            "className": "org.springframework.web.servlet.FrameworkServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "HttpServlet.java",
+            "lineNumber": 779,
+            "nativeMethod": false,
+            "className": "javax.servlet.http.HttpServlet"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 227,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "WsFilter.java",
+            "lineNumber": 53,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.websocket.server.WsFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "RequestContextFilter.java",
+            "lineNumber": 100,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.RequestContextFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "FormContentFilter.java",
+            "lineNumber": 93,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.FormContentFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "WebMvcMetricsFilter.java",
+            "lineNumber": 96,
+            "nativeMethod": false,
+            "className": "org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilterInternal",
+            "fileName": "CharacterEncodingFilter.java",
+            "lineNumber": 201,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.CharacterEncodingFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "OncePerRequestFilter.java",
+            "lineNumber": 117,
+            "nativeMethod": false,
+            "className": "org.springframework.web.filter.OncePerRequestFilter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "internalDoFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 189,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doFilter",
+            "fileName": "ApplicationFilterChain.java",
+            "lineNumber": 162,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.ApplicationFilterChain"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardWrapperValve.java",
+            "lineNumber": 197,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardWrapperValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardContextValve.java",
+            "lineNumber": 97,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardContextValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "AuthenticatorBase.java",
+            "lineNumber": 541,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.authenticator.AuthenticatorBase"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardHostValve.java",
+            "lineNumber": 135,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardHostValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "ErrorReportValve.java",
+            "lineNumber": 92,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.valves.ErrorReportValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "invoke",
+            "fileName": "StandardEngineValve.java",
+            "lineNumber": 78,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.core.StandardEngineValve"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "CoyoteAdapter.java",
+            "lineNumber": 360,
+            "nativeMethod": false,
+            "className": "org.apache.catalina.connector.CoyoteAdapter"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "service",
+            "fileName": "Http11Processor.java",
+            "lineNumber": 399,
+            "nativeMethod": false,
+            "className": "org.apache.coyote.http11.Http11Processor"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "process",
+            "fileName": "AbstractProcessorLight.java",
+            "lineNumber": 65,
+            "nativeMethod": false,
+            "className": "org.apache.coyote.AbstractProcessorLight"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "process",
+            "fileName": "AbstractProtocol.java",
+            "lineNumber": 893,
+            "nativeMethod": false,
+            "className": "org.apache.coyote.AbstractProtocol$ConnectionHandler"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "doRun",
+            "fileName": "NioEndpoint.java",
+            "lineNumber": 1789,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.net.NioEndpoint$SocketProcessor"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "run",
+            "fileName": "SocketProcessorBase.java",
+            "lineNumber": 49,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.net.SocketProcessorBase"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "runWorker",
+            "fileName": "ThreadPoolExecutor.java",
+            "lineNumber": 1191,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.threads.ThreadPoolExecutor"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "run",
+            "fileName": "ThreadPoolExecutor.java",
+            "lineNumber": 659,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker"
+        },
+        {
+            "classLoaderName": "app",
+            "moduleName": null,
+            "moduleVersion": null,
+            "methodName": "run",
+            "fileName": "TaskThread.java",
+            "lineNumber": 61,
+            "nativeMethod": false,
+            "className": "org.apache.tomcat.util.threads.TaskThread$WrappingRunnable"
+        },
+        {
+            "classLoaderName": null,
+            "moduleName": "java.base",
+            "moduleVersion": "17.0.3.1",
+            "methodName": "run",
+            "fileName": "Thread.java",
+            "lineNumber": 833,
+            "nativeMethod": false,
+            "className": "java.lang.Thread"
+        }
+    ],
+    "message": "[404] during [GET] to [http://transaction-service/transaction/9878454/2] [ITransactionFeignRepository#getByAccountAndTransactionId(Integer,Integer)]: [No se encontro transferencia con este id]",
+    "suppressed": [
+        
+    ],
+    "localizedMessage": "[404] during [GET] to [http://transaction-service/transaction/9878454/2] [ITransactionFeignRepository#getByAccountAndTransactionId(Integer,Integer)]: [No se encontro transferencia con este id]"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="getTransactionByIdAndAccountIdInvalidToken" classname="Tests.CAccountTests.EAccountTests" time="0.006"/>
+  <testcase name="getTransactionByIdAndAccountIdEmptyToken" classname="Tests.CAccountTests.EAccountTests" time="0.059"/>
+  <testcase name="editAliasInvalidAccount" classname="Tests.CAccountTests.EAccountTests" time="0.063"/>
+  <testcase name="editEmptyAlias" classname="Tests.CAccountTests.EAccountTests" time="0.015">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at Tests.CAccountTests.EAccountTests.editEmptyAlias(EAccountTests.java:295)
+]]></failure>
+    <system-out><![CDATA[Request method:	PUT
+Request URI:	http://localhost:9090/account/2
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjQsImlhdCI6MTY3MDkzMzYyNCwianRpIjoiM2E1ZGEyYjAtNGFkZi00OWU3LWEzYTAtOWNmOTA0NzQ4MDRkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiOGM3OWJlOWEtZjk2ZC00NzBmLWJhMWQtZDJjNDRhNDIzYTY4IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjhjNzliZTlhLWY5NmQtNDcwZi1iYTFkLWQyYzQ0YTQyM2E2OCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.Goy2k-1gCugEiiLFnEFHPI0_j6NosAjFnRNKrrZS6oxNsqMWgU5McHpQuWjVMq8bMA8tjKMR1ggP_P5ph1aC1xGM53BiQIlK3qRwYmIm35XTIYgV7uT9gr2bHwu2swqYGRVqg61n_satast_IHFhSfIbtWFvwjeeesVWZBIV_S1-MAqWJgluKuPfHbEzFgm7Dy1pUUF5Wwanq0IvG-a7EeJer2MGtmJ6CRNWZx0FhM5y6SUKz_ccSzh594lrQWFPFU4dpJBMs1qjS4AkybOF731jC9iU8dvZcQWvq2yUGuDXESS-JwGwolK1xyaOpg0LDQMsYRb2pAFziKSCnPtF0g
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "alias": ""
+}
+Request method:	PUT
+Request URI:	http://localhost:9090/account/2
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjQsImlhdCI6MTY3MDkzMzYyNCwianRpIjoiM2E1ZGEyYjAtNGFkZi00OWU3LWEzYTAtOWNmOTA0NzQ4MDRkIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiOGM3OWJlOWEtZjk2ZC00NzBmLWJhMWQtZDJjNDRhNDIzYTY4IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjhjNzliZTlhLWY5NmQtNDcwZi1iYTFkLWQyYzQ0YTQyM2E2OCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.Goy2k-1gCugEiiLFnEFHPI0_j6NosAjFnRNKrrZS6oxNsqMWgU5McHpQuWjVMq8bMA8tjKMR1ggP_P5ph1aC1xGM53BiQIlK3qRwYmIm35XTIYgV7uT9gr2bHwu2swqYGRVqg61n_satast_IHFhSfIbtWFvwjeeesVWZBIV_S1-MAqWJgluKuPfHbEzFgm7Dy1pUUF5Wwanq0IvG-a7EeJer2MGtmJ6CRNWZx0FhM5y6SUKz_ccSzh594lrQWFPFU4dpJBMs1qjS4AkybOF731jC9iU8dvZcQWvq2yUGuDXESS-JwGwolK1xyaOpg0LDQMsYRb2pAFziKSCnPtF0g
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "alias": ""
+}
+HTTP/1.1 200 OK
+transfer-encoding: chunked
+Content-Type: application/json
+Date: Tue, 13 Dec 2022 12:13:48 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+{
+    "id": 133,
+    "userId": null,
+    "balance": 0,
+    "transactions": null,
+    "cards": null,
+    "user": null
+}
+HTTP/1.1 200 OK
+transfer-encoding: chunked
+Content-Type: application/json
+Date: Tue, 13 Dec 2022 12:13:48 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+{
+    "id": 133,
+    "userId": null,
+    "balance": 0,
+    "transactions": null,
+    "cards": null,
+    "user": null
+}
+]]></system-out>
+  </testcase>
+  <testcase name="editEmptyAliasInvalidToken" classname="Tests.CAccountTests.EAccountTests" time="0.007"/>
+  <testcase name="editEmptyAliasEmptyToken" classname="Tests.CAccountTests.EAccountTests" time="0.004"/>
+  <testcase name="createTransferenceNullAmount" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.011"/>
+  <testcase name="createTransferenceNullDate" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.005">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;302&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <302>.
+
+	at Tests.DTransactionsTests.DTransactionsTests.createTransferenceNullDate(DTransactionsTests.java:444)
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:9090/8/transferences
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "OriginCardId": "1",
+    "destinyAccountId": "2",
+    "amount": "150.0",
+    "date": " null"
+}
+Request method:	POST
+Request URI:	http://localhost:9090/8/transferences
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "OriginCardId": "1",
+    "destinyAccountId": "2",
+    "amount": "150.0",
+    "date": " null"
+}
+Request method:	POST
+Request URI:	http://localhost:9090/8/transferences
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "OriginCardId": "1",
+    "destinyAccountId": "2",
+    "amount": "150.0",
+    "date": " null"
+}
+HTTP/1.1 302 Found
+Location: /oauth2/authorization/users-client
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+content-length: 0
+HTTP/1.1 302 Found
+Location: /oauth2/authorization/users-client
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+content-length: 0
+HTTP/1.1 302 Found
+Location: /oauth2/authorization/users-client
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+content-length: 0
+]]></system-out>
+  </testcase>
+  <testcase name="createTransferenceNullDestinyAccount" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.015"/>
+  <testcase name="createTransferenceNullOriginCard" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.012">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;302&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <302>.
+
+	at Tests.DTransactionsTests.DTransactionsTests.createTransferenceNullOriginCard(DTransactionsTests.java:382)
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:9090/8/transferences
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "OriginCardId": "null",
+    "destinyAccountId": "2",
+    "amount": "150.0",
+    "date": " 2020-10-22"
+}
+Request method:	POST
+Request URI:	http://localhost:9090/8/transferences
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "OriginCardId": "null",
+    "destinyAccountId": "2",
+    "amount": "150.0",
+    "date": " 2020-10-22"
+}
+Request method:	POST
+Request URI:	http://localhost:9090/8/transferences
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "OriginCardId": "null",
+    "destinyAccountId": "2",
+    "amount": "150.0",
+    "date": " 2020-10-22"
+}
+HTTP/1.1 302 Found
+Location: /oauth2/authorization/users-client
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+content-length: 0
+HTTP/1.1 302 Found
+Location: /oauth2/authorization/users-client
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+content-length: 0
+HTTP/1.1 302 Found
+Location: /oauth2/authorization/users-client
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+content-length: 0
+]]></system-out>
+  </testcase>
+  <testcase name="createTransferenceNullValues" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.013"/>
+  <testcase name="createTransferenceResponse" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.034">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;400&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Tests.DTransactionsTests.DTransactionsTests.createTransferenceResponse(DTransactionsTests.java:466)
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:9090/account/120/transferences
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjksImlhdCI6MTY3MDkzMzYyOSwianRpIjoiNjQ2OTZhYzctN2U2Zi00YjFhLWJmYmMtNWY3MGRmY2FiOTJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMjU1YWNjYjYtZGRhNi00NGZjLTk5MjItMDgyMDRmM2U0OGQyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI1NWFjY2I2LWRkYTYtNDRmYy05OTIyLTA4MjA0ZjNlNDhkMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.TC5BaaWvkZ_ZNNNcD4qszDkQzdu4ECkgeEbr8sMDiA30KSk5jEydN_9UAF64PgMSbuyyiaaElo4a4pPHsv2FCwX7IaOlu_fVkVrlGJTytXPR9ceG_FlozCQQwHN7LKgu_7NVvh8ZF9daLqlYguT_OT970QdQLr2c1p77Mw5a5u4Ai0ReOMM-zmgkrqsjv8C0xSQebsPtLPQxpyuclx-wKdQgfcjzi9MdeX8JL9n2KoVdupdcibn0SY04eh2yalh6_Bj-6jb1lMSqs-A0dZDAylwqBlZ7a4ZPm8ODHAJknx0ZcXEuCYB2RteaZVaEEWq7Jt4FlBZ3ConlWRXBpXx4ug
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "OriginCardId": "120",
+    "destinyAccountId": "2",
+    "amount": "10.0",
+    "date": " 2022-11-26"
+}
+Request method:	POST
+Request URI:	http://localhost:9090/account/120/transferences
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjksImlhdCI6MTY3MDkzMzYyOSwianRpIjoiNjQ2OTZhYzctN2U2Zi00YjFhLWJmYmMtNWY3MGRmY2FiOTJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMjU1YWNjYjYtZGRhNi00NGZjLTk5MjItMDgyMDRmM2U0OGQyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI1NWFjY2I2LWRkYTYtNDRmYy05OTIyLTA4MjA0ZjNlNDhkMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.TC5BaaWvkZ_ZNNNcD4qszDkQzdu4ECkgeEbr8sMDiA30KSk5jEydN_9UAF64PgMSbuyyiaaElo4a4pPHsv2FCwX7IaOlu_fVkVrlGJTytXPR9ceG_FlozCQQwHN7LKgu_7NVvh8ZF9daLqlYguT_OT970QdQLr2c1p77Mw5a5u4Ai0ReOMM-zmgkrqsjv8C0xSQebsPtLPQxpyuclx-wKdQgfcjzi9MdeX8JL9n2KoVdupdcibn0SY04eh2yalh6_Bj-6jb1lMSqs-A0dZDAylwqBlZ7a4ZPm8ODHAJknx0ZcXEuCYB2RteaZVaEEWq7Jt4FlBZ3ConlWRXBpXx4ug
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "OriginCardId": "120",
+    "destinyAccountId": "2",
+    "amount": "10.0",
+    "date": " 2022-11-26"
+}
+Request method:	POST
+Request URI:	http://localhost:9090/account/120/transferences
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjksImlhdCI6MTY3MDkzMzYyOSwianRpIjoiNjQ2OTZhYzctN2U2Zi00YjFhLWJmYmMtNWY3MGRmY2FiOTJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMjU1YWNjYjYtZGRhNi00NGZjLTk5MjItMDgyMDRmM2U0OGQyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI1NWFjY2I2LWRkYTYtNDRmYy05OTIyLTA4MjA0ZjNlNDhkMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.TC5BaaWvkZ_ZNNNcD4qszDkQzdu4ECkgeEbr8sMDiA30KSk5jEydN_9UAF64PgMSbuyyiaaElo4a4pPHsv2FCwX7IaOlu_fVkVrlGJTytXPR9ceG_FlozCQQwHN7LKgu_7NVvh8ZF9daLqlYguT_OT970QdQLr2c1p77Mw5a5u4Ai0ReOMM-zmgkrqsjv8C0xSQebsPtLPQxpyuclx-wKdQgfcjzi9MdeX8JL9n2KoVdupdcibn0SY04eh2yalh6_Bj-6jb1lMSqs-A0dZDAylwqBlZ7a4ZPm8ODHAJknx0ZcXEuCYB2RteaZVaEEWq7Jt4FlBZ3ConlWRXBpXx4ug
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "OriginCardId": "120",
+    "destinyAccountId": "2",
+    "amount": "10.0",
+    "date": " 2022-11-26"
+}
+HTTP/1.1 400 Bad Request
+Date: Tue, 13 Dec 2022 12:13:50 GMT
+content-length: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+HTTP/1.1 400 Bad Request
+Date: Tue, 13 Dec 2022 12:13:50 GMT
+content-length: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+HTTP/1.1 400 Bad Request
+Date: Tue, 13 Dec 2022 12:13:50 GMT
+content-length: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+]]></system-out>
+  </testcase>
+  <testcase name="deleteTransactionByIdStatusCode" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.083">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;204&gt; but was &lt;500&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <204> but was <500>.
+
+	at Tests.DTransactionsTests.DTransactionsTests.deleteTransactionByIdStatusCode(DTransactionsTests.java:325)
+]]></failure>
+    <system-out><![CDATA[Request method:	DELETE
+Request URI:	http://localhost:9090/transaction/8
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjksImlhdCI6MTY3MDkzMzYyOSwianRpIjoiNjQ2OTZhYzctN2U2Zi00YjFhLWJmYmMtNWY3MGRmY2FiOTJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMjU1YWNjYjYtZGRhNi00NGZjLTk5MjItMDgyMDRmM2U0OGQyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI1NWFjY2I2LWRkYTYtNDRmYy05OTIyLTA4MjA0ZjNlNDhkMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.TC5BaaWvkZ_ZNNNcD4qszDkQzdu4ECkgeEbr8sMDiA30KSk5jEydN_9UAF64PgMSbuyyiaaElo4a4pPHsv2FCwX7IaOlu_fVkVrlGJTytXPR9ceG_FlozCQQwHN7LKgu_7NVvh8ZF9daLqlYguT_OT970QdQLr2c1p77Mw5a5u4Ai0ReOMM-zmgkrqsjv8C0xSQebsPtLPQxpyuclx-wKdQgfcjzi9MdeX8JL9n2KoVdupdcibn0SY04eh2yalh6_Bj-6jb1lMSqs-A0dZDAylwqBlZ7a4ZPm8ODHAJknx0ZcXEuCYB2RteaZVaEEWq7Jt4FlBZ3ConlWRXBpXx4ug
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	DELETE
+Request URI:	http://localhost:9090/transaction/8
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjksImlhdCI6MTY3MDkzMzYyOSwianRpIjoiNjQ2OTZhYzctN2U2Zi00YjFhLWJmYmMtNWY3MGRmY2FiOTJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMjU1YWNjYjYtZGRhNi00NGZjLTk5MjItMDgyMDRmM2U0OGQyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI1NWFjY2I2LWRkYTYtNDRmYy05OTIyLTA4MjA0ZjNlNDhkMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.TC5BaaWvkZ_ZNNNcD4qszDkQzdu4ECkgeEbr8sMDiA30KSk5jEydN_9UAF64PgMSbuyyiaaElo4a4pPHsv2FCwX7IaOlu_fVkVrlGJTytXPR9ceG_FlozCQQwHN7LKgu_7NVvh8ZF9daLqlYguT_OT970QdQLr2c1p77Mw5a5u4Ai0ReOMM-zmgkrqsjv8C0xSQebsPtLPQxpyuclx-wKdQgfcjzi9MdeX8JL9n2KoVdupdcibn0SY04eh2yalh6_Bj-6jb1lMSqs-A0dZDAylwqBlZ7a4ZPm8ODHAJknx0ZcXEuCYB2RteaZVaEEWq7Jt4FlBZ3ConlWRXBpXx4ug
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	DELETE
+Request URI:	http://localhost:9090/transaction/8
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjksImlhdCI6MTY3MDkzMzYyOSwianRpIjoiNjQ2OTZhYzctN2U2Zi00YjFhLWJmYmMtNWY3MGRmY2FiOTJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMjU1YWNjYjYtZGRhNi00NGZjLTk5MjItMDgyMDRmM2U0OGQyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI1NWFjY2I2LWRkYTYtNDRmYy05OTIyLTA4MjA0ZjNlNDhkMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.TC5BaaWvkZ_ZNNNcD4qszDkQzdu4ECkgeEbr8sMDiA30KSk5jEydN_9UAF64PgMSbuyyiaaElo4a4pPHsv2FCwX7IaOlu_fVkVrlGJTytXPR9ceG_FlozCQQwHN7LKgu_7NVvh8ZF9daLqlYguT_OT970QdQLr2c1p77Mw5a5u4Ai0ReOMM-zmgkrqsjv8C0xSQebsPtLPQxpyuclx-wKdQgfcjzi9MdeX8JL9n2KoVdupdcibn0SY04eh2yalh6_Bj-6jb1lMSqs-A0dZDAylwqBlZ7a4ZPm8ODHAJknx0ZcXEuCYB2RteaZVaEEWq7Jt4FlBZ3ConlWRXBpXx4ug
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 500 Internal Server Error
+transfer-encoding: chunked
+Content-Type: application/json
+Date: Tue, 13 Dec 2022 12:13:50 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+{
+    "timestamp": "2022-12-13T12:13:50.883+00:00",
+    "status": 500,
+    "error": "Internal Server Error",
+    "trace": "org.springframework.dao.EmptyResultDataAccessException: No class dh.pi.transactionservice.entity.Transaction entity with id 8 exists!\r\n\tat org.springframework.data.jpa.repository.support.SimpleJpaRepository.lambda$deleteById$0(SimpleJpaRepository.java:173)\r\n\tat java.base/java.util.Optional.orElseThrow(Optional.java:403)\r\n\tat org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteById(SimpleJpaRepository.java:172)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)\r\n\tat org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)\r\n\tat org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)\r\n\tat org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)\r\n\tat org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)\r\n\tat org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)\r\n\tat org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:81)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)\r\n\tat org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)\r\n\tat org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)\r\n\tat jdk.proxy4/jdk.proxy4.$Proxy145.deleteById(Unknown Source)\r\n\tat dh.pi.transactionservice.service.TransactionService.delete(TransactionService.java:86)\r\n\tat dh.pi.transactionservice.controller.TransactionController.delete(TransactionController.java:121)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\r\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)\r\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\r\n\tat org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:702)\r\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:779)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\r\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\r\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\r\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\r\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\r\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\r\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\r\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\r\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\r\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)\r\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)\r\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\r\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\r\n\tat java.base/java.lang.Thread.run(Thread.java:833)\r\n",
+    "message": "No class dh.pi.transactionservice.entity.Transaction entity with id 8 exists!",
+    "path": "/transaction/8"
+}
+HTTP/1.1 500 Internal Server Error
+transfer-encoding: chunked
+Content-Type: application/json
+Date: Tue, 13 Dec 2022 12:13:50 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+{
+    "timestamp": "2022-12-13T12:13:50.883+00:00",
+    "status": 500,
+    "error": "Internal Server Error",
+    "trace": "org.springframework.dao.EmptyResultDataAccessException: No class dh.pi.transactionservice.entity.Transaction entity with id 8 exists!\r\n\tat org.springframework.data.jpa.repository.support.SimpleJpaRepository.lambda$deleteById$0(SimpleJpaRepository.java:173)\r\n\tat java.base/java.util.Optional.orElseThrow(Optional.java:403)\r\n\tat org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteById(SimpleJpaRepository.java:172)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)\r\n\tat org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)\r\n\tat org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)\r\n\tat org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)\r\n\tat org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)\r\n\tat org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)\r\n\tat org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:81)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)\r\n\tat org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)\r\n\tat org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)\r\n\tat jdk.proxy4/jdk.proxy4.$Proxy145.deleteById(Unknown Source)\r\n\tat dh.pi.transactionservice.service.TransactionService.delete(TransactionService.java:86)\r\n\tat dh.pi.transactionservice.controller.TransactionController.delete(TransactionController.java:121)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\r\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)\r\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\r\n\tat org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:702)\r\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:779)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\r\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\r\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\r\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\r\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\r\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\r\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\r\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\r\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\r\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)\r\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)\r\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\r\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\r\n\tat java.base/java.lang.Thread.run(Thread.java:833)\r\n",
+    "message": "No class dh.pi.transactionservice.entity.Transaction entity with id 8 exists!",
+    "path": "/transaction/8"
+}
+HTTP/1.1 500 Internal Server Error
+transfer-encoding: chunked
+Content-Type: application/json
+Date: Tue, 13 Dec 2022 12:13:50 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+{
+    "timestamp": "2022-12-13T12:13:50.883+00:00",
+    "status": 500,
+    "error": "Internal Server Error",
+    "trace": "org.springframework.dao.EmptyResultDataAccessException: No class dh.pi.transactionservice.entity.Transaction entity with id 8 exists!\r\n\tat org.springframework.data.jpa.repository.support.SimpleJpaRepository.lambda$deleteById$0(SimpleJpaRepository.java:173)\r\n\tat java.base/java.util.Optional.orElseThrow(Optional.java:403)\r\n\tat org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteById(SimpleJpaRepository.java:172)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)\r\n\tat org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)\r\n\tat org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)\r\n\tat org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:530)\r\n\tat org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:286)\r\n\tat org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:640)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)\r\n\tat org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:139)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:81)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)\r\n\tat org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)\r\n\tat org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)\r\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\r\n\tat org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)\r\n\tat jdk.proxy4/jdk.proxy4.$Proxy145.deleteById(Unknown Source)\r\n\tat dh.pi.transactionservice.service.TransactionService.delete(TransactionService.java:86)\r\n\tat dh.pi.transactionservice.controller.TransactionController.delete(TransactionController.java:121)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:568)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)\r\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)\r\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)\r\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)\r\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)\r\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\r\n\tat org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:702)\r\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\r\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:779)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\r\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\r\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\r\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)\r\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\r\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)\r\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)\r\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\r\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\r\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)\r\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)\r\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\r\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)\r\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)\r\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\r\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\r\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\r\n\tat java.base/java.lang.Thread.run(Thread.java:833)\r\n",
+    "message": "No class dh.pi.transactionservice.entity.Transaction entity with id 8 exists!",
+    "path": "/transaction/8"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="getTransactionResponseNotEmpty" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.338"/>
+  <testcase name="getTransactionResponseNotNull" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.331"/>
+  <testcase name="getTransactionStatusCode" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.35"/>
+  <testcase name="getTransferenceOk" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.732"/>
+  <testcase name="getTransferenceResponseNotNullValues" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.143">
+    <failure message="com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `Data.Factory.Transactions` from Array value (token `JsonToken.START_ARRAY`)&#10; at [Source: (String)&quot;[{&quot;id&quot;:162,&quot;accountOriginId&quot;:2,&quot;accountDestinyId&quot;:120,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;2022-11-10T00:00:00.000+00:00&quot;,&quot;detail&quot;:null,&quot;type&quot;:&quot;D\u00e9bito&quot;},{&quot;id&quot;:163,&quot;accountOriginId&quot;:2,&quot;accountDestinyId&quot;:120,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;2022-11-10T00:00:00.000+00:00&quot;,&quot;detail&quot;:null,&quot;type&quot;:&quot;D\u00e9bito&quot;},{&quot;id&quot;:164,&quot;accountOriginId&quot;:120,&quot;accountDestinyId&quot;:2,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;2022-11-10T00:00:00.000+00:00&quot;,&quot;detail&quot;:&quot;Cuota&quot;,&quot;type&quot;:null},{&quot;id&quot;:165,&quot;accountOriginId&quot;:120,&quot;accountDestinyId&quot;:2,&quot;amount&quot;:150.0,&quot;date&quot;:&quot;&quot;[truncated 733 chars]; line: 1, column: 1]" type="java.lang.RuntimeException">java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `Data.Factory.Transactions` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (String)"[{"id":162,"accountOriginId":2,"accountDestinyId":120,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":null,"type":"D\u00e9bito"},{"id":163,"accountOriginId":2,"accountDestinyId":120,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":null,"type":"D\u00e9bito"},{"id":164,"accountOriginId":120,"accountDestinyId":2,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":"Cuota","type":null},{"id":165,"accountOriginId":120,"accountDestinyId":2,"amount":150.0,"date":""[truncated 733 chars]; line: 1, column: 1]
+	at Tests.DTransactionsTests.DTransactionsTests.getTransferenceResponseNotNullValues(DTransactionsTests.java:487)
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: 
+Cannot deserialize value of type `Data.Factory.Transactions` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (String)"[{"id":162,"accountOriginId":2,"accountDestinyId":120,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":null,"type":"D\u00e9bito"},{"id":163,"accountOriginId":2,"accountDestinyId":120,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":null,"type":"D\u00e9bito"},{"id":164,"accountOriginId":120,"accountDestinyId":2,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":"Cuota","type":null},{"id":165,"accountOriginId":120,"accountDestinyId":2,"amount":150.0,"date":""[truncated 733 chars]; line: 1, column: 1]
+	at Tests.DTransactionsTests.DTransactionsTests.getTransferenceResponseNotNullValues(DTransactionsTests.java:487)
+</failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:9090/account/120/transferences
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjksImlhdCI6MTY3MDkzMzYyOSwianRpIjoiNjQ2OTZhYzctN2U2Zi00YjFhLWJmYmMtNWY3MGRmY2FiOTJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMjU1YWNjYjYtZGRhNi00NGZjLTk5MjItMDgyMDRmM2U0OGQyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI1NWFjY2I2LWRkYTYtNDRmYy05OTIyLTA4MjA0ZjNlNDhkMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.TC5BaaWvkZ_ZNNNcD4qszDkQzdu4ECkgeEbr8sMDiA30KSk5jEydN_9UAF64PgMSbuyyiaaElo4a4pPHsv2FCwX7IaOlu_fVkVrlGJTytXPR9ceG_FlozCQQwHN7LKgu_7NVvh8ZF9daLqlYguT_OT970QdQLr2c1p77Mw5a5u4Ai0ReOMM-zmgkrqsjv8C0xSQebsPtLPQxpyuclx-wKdQgfcjzi9MdeX8JL9n2KoVdupdcibn0SY04eh2yalh6_Bj-6jb1lMSqs-A0dZDAylwqBlZ7a4ZPm8ODHAJknx0ZcXEuCYB2RteaZVaEEWq7Jt4FlBZ3ConlWRXBpXx4ug
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	GET
+Request URI:	http://localhost:9090/account/120/transferences
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjksImlhdCI6MTY3MDkzMzYyOSwianRpIjoiNjQ2OTZhYzctN2U2Zi00YjFhLWJmYmMtNWY3MGRmY2FiOTJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMjU1YWNjYjYtZGRhNi00NGZjLTk5MjItMDgyMDRmM2U0OGQyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI1NWFjY2I2LWRkYTYtNDRmYy05OTIyLTA4MjA0ZjNlNDhkMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.TC5BaaWvkZ_ZNNNcD4qszDkQzdu4ECkgeEbr8sMDiA30KSk5jEydN_9UAF64PgMSbuyyiaaElo4a4pPHsv2FCwX7IaOlu_fVkVrlGJTytXPR9ceG_FlozCQQwHN7LKgu_7NVvh8ZF9daLqlYguT_OT970QdQLr2c1p77Mw5a5u4Ai0ReOMM-zmgkrqsjv8C0xSQebsPtLPQxpyuclx-wKdQgfcjzi9MdeX8JL9n2KoVdupdcibn0SY04eh2yalh6_Bj-6jb1lMSqs-A0dZDAylwqBlZ7a4ZPm8ODHAJknx0ZcXEuCYB2RteaZVaEEWq7Jt4FlBZ3ConlWRXBpXx4ug
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	GET
+Request URI:	http://localhost:9090/account/120/transferences
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjksImlhdCI6MTY3MDkzMzYyOSwianRpIjoiNjQ2OTZhYzctN2U2Zi00YjFhLWJmYmMtNWY3MGRmY2FiOTJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMjU1YWNjYjYtZGRhNi00NGZjLTk5MjItMDgyMDRmM2U0OGQyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI1NWFjY2I2LWRkYTYtNDRmYy05OTIyLTA4MjA0ZjNlNDhkMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.TC5BaaWvkZ_ZNNNcD4qszDkQzdu4ECkgeEbr8sMDiA30KSk5jEydN_9UAF64PgMSbuyyiaaElo4a4pPHsv2FCwX7IaOlu_fVkVrlGJTytXPR9ceG_FlozCQQwHN7LKgu_7NVvh8ZF9daLqlYguT_OT970QdQLr2c1p77Mw5a5u4Ai0ReOMM-zmgkrqsjv8C0xSQebsPtLPQxpyuclx-wKdQgfcjzi9MdeX8JL9n2KoVdupdcibn0SY04eh2yalh6_Bj-6jb1lMSqs-A0dZDAylwqBlZ7a4ZPm8ODHAJknx0ZcXEuCYB2RteaZVaEEWq7Jt4FlBZ3ConlWRXBpXx4ug
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+transfer-encoding: chunked
+Content-Type: application/json
+Date: Tue, 13 Dec 2022 12:13:52 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+[
+    {
+        "id": 162,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 150.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": null,
+        "type": "Débito"
+    },
+    {
+        "id": 163,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 150.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": null,
+        "type": "Débito"
+    },
+    {
+        "id": 164,
+        "accountOriginId": 120,
+        "accountDestinyId": 2,
+        "amount": 150.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": "Cuota",
+        "type": null
+    },
+    {
+        "id": 165,
+        "accountOriginId": 120,
+        "accountDestinyId": 2,
+        "amount": 150.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": "Cuota",
+        "type": null
+    },
+    {
+        "id": 166,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 1.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": "Cuota",
+        "type": "Débito"
+    },
+    {
+        "id": 167,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 150.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": "Cuota",
+        "type": "Débito"
+    },
+    {
+        "id": 168,
+        "accountOriginId": 120,
+        "accountDestinyId": 2,
+        "amount": 1.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": "Cuota",
+        "type": "Débito"
+    },
+    {
+        "id": 160,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 150.0,
+        "date": null,
+        "detail": "Cuota",
+        "type": "Débito"
+    },
+    {
+        "id": 161,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 150.0,
+        "date": null,
+        "detail": "Cuota",
+        "type": "Débito"
+    }
+]
+HTTP/1.1 200 OK
+transfer-encoding: chunked
+Content-Type: application/json
+Date: Tue, 13 Dec 2022 12:13:52 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+[
+    {
+        "id": 162,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 150.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": null,
+        "type": "Débito"
+    },
+    {
+        "id": 163,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 150.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": null,
+        "type": "Débito"
+    },
+    {
+        "id": 164,
+        "accountOriginId": 120,
+        "accountDestinyId": 2,
+        "amount": 150.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": "Cuota",
+        "type": null
+    },
+    {
+        "id": 165,
+        "accountOriginId": 120,
+        "accountDestinyId": 2,
+        "amount": 150.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": "Cuota",
+        "type": null
+    },
+    {
+        "id": 166,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 1.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": "Cuota",
+        "type": "Débito"
+    },
+    {
+        "id": 167,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 150.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": "Cuota",
+        "type": "Débito"
+    },
+    {
+        "id": 168,
+        "accountOriginId": 120,
+        "accountDestinyId": 2,
+        "amount": 1.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": "Cuota",
+        "type": "Débito"
+    },
+    {
+        "id": 160,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 150.0,
+        "date": null,
+        "detail": "Cuota",
+        "type": "Débito"
+    },
+    {
+        "id": 161,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 150.0,
+        "date": null,
+        "detail": "Cuota",
+        "type": "Débito"
+    }
+]
+HTTP/1.1 200 OK
+transfer-encoding: chunked
+Content-Type: application/json
+Date: Tue, 13 Dec 2022 12:13:52 GMT
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+[
+    {
+        "id": 162,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 150.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": null,
+        "type": "Débito"
+    },
+    {
+        "id": 163,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 150.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": null,
+        "type": "Débito"
+    },
+    {
+        "id": 164,
+        "accountOriginId": 120,
+        "accountDestinyId": 2,
+        "amount": 150.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": "Cuota",
+        "type": null
+    },
+    {
+        "id": 165,
+        "accountOriginId": 120,
+        "accountDestinyId": 2,
+        "amount": 150.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": "Cuota",
+        "type": null
+    },
+    {
+        "id": 166,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 1.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": "Cuota",
+        "type": "Débito"
+    },
+    {
+        "id": 167,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 150.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": "Cuota",
+        "type": "Débito"
+    },
+    {
+        "id": 168,
+        "accountOriginId": 120,
+        "accountDestinyId": 2,
+        "amount": 1.0,
+        "date": "2022-11-10T00:00:00.000+00:00",
+        "detail": "Cuota",
+        "type": "Débito"
+    },
+    {
+        "id": 160,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 150.0,
+        "date": null,
+        "detail": "Cuota",
+        "type": "Débito"
+    },
+    {
+        "id": 161,
+        "accountOriginId": 2,
+        "accountDestinyId": 120,
+        "amount": 150.0,
+        "date": null,
+        "detail": "Cuota",
+        "type": "Débito"
+    }
+]
+]]></system-out>
+  </testcase>
+  <testcase name="postTransactionResponseNotEmpty" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.025"/>
+  <testcase name="postTransactionResponseNotNull" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.031"/>
+  <testcase name="postTransactionStatusCode" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.101"/>
+  <testcase name="postTransactionWithoutAccountOriginIdValue" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.017"/>
+  <testcase name="postTransactionWithoutAmountValue" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.022"/>
+  <testcase name="postTransactionWithoutDateValue" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.012"/>
+  <testcase name="postTransactionWithoutDetailValue" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.02"/>
+  <testcase name="postTransactionWithoutTypeValue" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.013"/>
+  <testcase name="postTransaction" classname="Tests.DTransactionsTests.DTransactionsTests" time="0.019">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;400&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Tests.DTransactionsTests.DTransactionsTests.postTransaction(DTransactionsTests.java:69)
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:9090/transaction
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjksImlhdCI6MTY3MDkzMzYyOSwianRpIjoiNjQ2OTZhYzctN2U2Zi00YjFhLWJmYmMtNWY3MGRmY2FiOTJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMjU1YWNjYjYtZGRhNi00NGZjLTk5MjItMDgyMDRmM2U0OGQyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI1NWFjY2I2LWRkYTYtNDRmYy05OTIyLTA4MjA0ZjNlNDhkMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.TC5BaaWvkZ_ZNNNcD4qszDkQzdu4ECkgeEbr8sMDiA30KSk5jEydN_9UAF64PgMSbuyyiaaElo4a4pPHsv2FCwX7IaOlu_fVkVrlGJTytXPR9ceG_FlozCQQwHN7LKgu_7NVvh8ZF9daLqlYguT_OT970QdQLr2c1p77Mw5a5u4Ai0ReOMM-zmgkrqsjv8C0xSQebsPtLPQxpyuclx-wKdQgfcjzi9MdeX8JL9n2KoVdupdcibn0SY04eh2yalh6_Bj-6jb1lMSqs-A0dZDAylwqBlZ7a4ZPm8ODHAJknx0ZcXEuCYB2RteaZVaEEWq7Jt4FlBZ3ConlWRXBpXx4ug
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "date": "2022-12-26",
+    "amount": 1,
+    "accountOriginId": 2,
+    "detail": "Debito",
+    "type": null,
+    "accountDestinyId": 1
+}
+Request method:	POST
+Request URI:	http://localhost:9090/transaction
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjksImlhdCI6MTY3MDkzMzYyOSwianRpIjoiNjQ2OTZhYzctN2U2Zi00YjFhLWJmYmMtNWY3MGRmY2FiOTJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMjU1YWNjYjYtZGRhNi00NGZjLTk5MjItMDgyMDRmM2U0OGQyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI1NWFjY2I2LWRkYTYtNDRmYy05OTIyLTA4MjA0ZjNlNDhkMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.TC5BaaWvkZ_ZNNNcD4qszDkQzdu4ECkgeEbr8sMDiA30KSk5jEydN_9UAF64PgMSbuyyiaaElo4a4pPHsv2FCwX7IaOlu_fVkVrlGJTytXPR9ceG_FlozCQQwHN7LKgu_7NVvh8ZF9daLqlYguT_OT970QdQLr2c1p77Mw5a5u4Ai0ReOMM-zmgkrqsjv8C0xSQebsPtLPQxpyuclx-wKdQgfcjzi9MdeX8JL9n2KoVdupdcibn0SY04eh2yalh6_Bj-6jb1lMSqs-A0dZDAylwqBlZ7a4ZPm8ODHAJknx0ZcXEuCYB2RteaZVaEEWq7Jt4FlBZ3ConlWRXBpXx4ug
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "date": "2022-12-26",
+    "amount": 1,
+    "accountOriginId": 2,
+    "detail": "Debito",
+    "type": null,
+    "accountDestinyId": 1
+}
+Request method:	POST
+Request URI:	http://localhost:9090/transaction
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJxaFVQbnZSb2ZTUllwbjZQRTVPTnhyYnVEQ05NWTdNUkw3bGxpa0Y1SVRvIn0.eyJleHAiOjE2NzA5MzM5MjksImlhdCI6MTY3MDkzMzYyOSwianRpIjoiNjQ2OTZhYzctN2U2Zi00YjFhLWJmYmMtNWY3MGRmY2FiOTJmIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9kbWgiLCJzdWIiOiI4YzUzNzIxNC1hNTI4LTRiN2YtYjUzNC00MDBiMTAzNmM4ZTMiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ1c2Vycy1jbGllbnQiLCJzZXNzaW9uX3N0YXRlIjoiMjU1YWNjYjYtZGRhNi00NGZjLTk5MjItMDgyMDRmM2U0OGQyIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyIqIl0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsInNpZCI6IjI1NWFjY2I2LWRkYTYtNDRmYy05OTIyLTA4MjA0ZjNlNDhkMiIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6Ikxpb25lbCBTY2Fsb25pIiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2NhbG9uZXRhIiwiZ2l2ZW5fbmFtZSI6Ikxpb25lbCIsImZhbWlseV9uYW1lIjoiU2NhbG9uaSIsImVtYWlsIjoic2NhbG9uZXRhQG1haWwuY29tIn0.TC5BaaWvkZ_ZNNNcD4qszDkQzdu4ECkgeEbr8sMDiA30KSk5jEydN_9UAF64PgMSbuyyiaaElo4a4pPHsv2FCwX7IaOlu_fVkVrlGJTytXPR9ceG_FlozCQQwHN7LKgu_7NVvh8ZF9daLqlYguT_OT970QdQLr2c1p77Mw5a5u4Ai0ReOMM-zmgkrqsjv8C0xSQebsPtLPQxpyuclx-wKdQgfcjzi9MdeX8JL9n2KoVdupdcibn0SY04eh2yalh6_Bj-6jb1lMSqs-A0dZDAylwqBlZ7a4ZPm8ODHAJknx0ZcXEuCYB2RteaZVaEEWq7Jt4FlBZ3ConlWRXBpXx4ug
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "date": "2022-12-26",
+    "amount": 1,
+    "accountOriginId": 2,
+    "detail": "Debito",
+    "type": null,
+    "accountDestinyId": 1
+}
+HTTP/1.1 400 Bad Request
+Content-Type: text/plain;charset=UTF-8
+Date: Tue, 13 Dec 2022 12:13:54 GMT
+content-length: 27
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+No existe la cuenta destino
+HTTP/1.1 400 Bad Request
+Content-Type: text/plain;charset=UTF-8
+Date: Tue, 13 Dec 2022 12:13:54 GMT
+content-length: 27
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+No existe la cuenta destino
+HTTP/1.1 400 Bad Request
+Content-Type: text/plain;charset=UTF-8
+Date: Tue, 13 Dec 2022 12:13:54 GMT
+content-length: 27
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+
+No existe la cuenta destino
+]]></system-out>
+  </testcase>
+  <testcase name="postTransactionWithoutAccountDestinyIdValue" classname="Tests.DTransactionsTests.DTransactionsTests" time="0">
+    <failure message="Cannot invoke &quot;java.lang.Integer.intValue()&quot; because &quot;this.accountDestinyId&quot; is null (through reference chain: Data.Model.Transaction.TransactionRequest[&quot;accountDestinyId&quot;])" type="com.fasterxml.jackson.databind.JsonMappingException">com.fasterxml.jackson.databind.JsonMappingException: Cannot invoke "java.lang.Integer.intValue()" because "this.accountDestinyId" is null (through reference chain: Data.Model.Transaction.TransactionRequest["accountDestinyId"])
+	at Tests.DTransactionsTests.DTransactionsTests.postTransactionWithoutAccountDestinyIdValue(DTransactionsTests.java:80)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because "this.accountDestinyId" is null
+	at Tests.DTransactionsTests.DTransactionsTests.postTransactionWithoutAccountDestinyIdValue(DTransactionsTests.java:80)
+</failure>
+  </testcase>
+</testsuite>

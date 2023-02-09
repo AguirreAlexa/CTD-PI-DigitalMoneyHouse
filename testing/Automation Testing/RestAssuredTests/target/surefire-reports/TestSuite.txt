@@ -1,0 +1,80 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 144, Failures: 11, Errors: 0, Skipped: 0, Time elapsed: 66.503 s <<< FAILURE! - in TestSuite
+postCardWithTypeNullValue(Tests.BCardsTests.DCardTests)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at Tests.BCardsTests.DCardTests.postCardWithTypeNullValue(DCardTests.java:437)
+
+getTransactionByIdAndAccountId(Tests.CAccountTests.EAccountTests)  Time elapsed: 4.174 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Tests.CAccountTests.EAccountTests.getTransactionByIdAndAccountId(EAccountTests.java:227)
+
+getTransactionByInvalidIdAndAccountId(Tests.CAccountTests.EAccountTests)  Time elapsed: 2.682 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at Tests.CAccountTests.EAccountTests.getTransactionByInvalidIdAndAccountId(EAccountTests.java:241)
+
+editEmptyAlias(Tests.CAccountTests.EAccountTests)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at Tests.CAccountTests.EAccountTests.editEmptyAlias(EAccountTests.java:295)
+
+createTransferenceNullDate(Tests.DTransactionsTests.DTransactionsTests)  Time elapsed: 0.005 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <302>.
+
+	at Tests.DTransactionsTests.DTransactionsTests.createTransferenceNullDate(DTransactionsTests.java:444)
+
+createTransferenceNullOriginCard(Tests.DTransactionsTests.DTransactionsTests)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <302>.
+
+	at Tests.DTransactionsTests.DTransactionsTests.createTransferenceNullOriginCard(DTransactionsTests.java:382)
+
+createTransferenceResponse(Tests.DTransactionsTests.DTransactionsTests)  Time elapsed: 0.034 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Tests.DTransactionsTests.DTransactionsTests.createTransferenceResponse(DTransactionsTests.java:466)
+
+deleteTransactionByIdStatusCode(Tests.DTransactionsTests.DTransactionsTests)  Time elapsed: 0.083 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <204> but was <500>.
+
+	at Tests.DTransactionsTests.DTransactionsTests.deleteTransactionByIdStatusCode(DTransactionsTests.java:325)
+
+getTransferenceResponseNotNullValues(Tests.DTransactionsTests.DTransactionsTests)  Time elapsed: 0.143 s  <<< FAILURE!
+java.lang.RuntimeException: 
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot deserialize value of type `Data.Factory.Transactions` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (String)"[{"id":162,"accountOriginId":2,"accountDestinyId":120,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":null,"type":"D\u00e9bito"},{"id":163,"accountOriginId":2,"accountDestinyId":120,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":null,"type":"D\u00e9bito"},{"id":164,"accountOriginId":120,"accountDestinyId":2,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":"Cuota","type":null},{"id":165,"accountOriginId":120,"accountDestinyId":2,"amount":150.0,"date":""[truncated 733 chars]; line: 1, column: 1]
+	at Tests.DTransactionsTests.DTransactionsTests.getTransferenceResponseNotNullValues(DTransactionsTests.java:487)
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: 
+Cannot deserialize value of type `Data.Factory.Transactions` from Array value (token `JsonToken.START_ARRAY`)
+ at [Source: (String)"[{"id":162,"accountOriginId":2,"accountDestinyId":120,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":null,"type":"D\u00e9bito"},{"id":163,"accountOriginId":2,"accountDestinyId":120,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":null,"type":"D\u00e9bito"},{"id":164,"accountOriginId":120,"accountDestinyId":2,"amount":150.0,"date":"2022-11-10T00:00:00.000+00:00","detail":"Cuota","type":null},{"id":165,"accountOriginId":120,"accountDestinyId":2,"amount":150.0,"date":""[truncated 733 chars]; line: 1, column: 1]
+	at Tests.DTransactionsTests.DTransactionsTests.getTransferenceResponseNotNullValues(DTransactionsTests.java:487)
+
+postTransaction(Tests.DTransactionsTests.DTransactionsTests)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at Tests.DTransactionsTests.DTransactionsTests.postTransaction(DTransactionsTests.java:69)
+
+postTransactionWithoutAccountDestinyIdValue(Tests.DTransactionsTests.DTransactionsTests)  Time elapsed: 0 s  <<< FAILURE!
+com.fasterxml.jackson.databind.JsonMappingException: Cannot invoke "java.lang.Integer.intValue()" because "this.accountDestinyId" is null (through reference chain: Data.Model.Transaction.TransactionRequest["accountDestinyId"])
+	at Tests.DTransactionsTests.DTransactionsTests.postTransactionWithoutAccountDestinyIdValue(DTransactionsTests.java:80)
+Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because "this.accountDestinyId" is null
+	at Tests.DTransactionsTests.DTransactionsTests.postTransactionWithoutAccountDestinyIdValue(DTransactionsTests.java:80)
+

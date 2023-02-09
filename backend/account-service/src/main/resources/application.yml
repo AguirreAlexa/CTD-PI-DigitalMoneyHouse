@@ -1,0 +1,27 @@
+server:
+  port: 8090
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://eureka-service:8761/eureka
+  instance:
+    preferIpAddress: true
+spring:
+  application:
+    name: account-service
+  datasource:
+    url: jdbc:mysql://mysql:3306/dhmoney
+    username: grupo9
+    password: grupo9
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      dll-auto: update
+    show-sql: true
+    datasource:
+      url: jdbc:mysql://mysql:3306/dhmoney
+      username: grupo9
+      password: grupo9
+
